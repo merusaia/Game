@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ImeAwareAutoCompleteWpf</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.Wpf.IChineseAutoCompletionControl">
+            <summary>
+            暴露支持文本输入的属性和事件。
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.Wpf.IChineseAutoCompletionControl.Text">
+            <summary>
+            获取或设置文本。
+            </summary>
+            <value>文本。</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.Wpf.IChineseAutoCompletionControl.CaretIndex">
+            <summary>
+              获取或设置编辑位置。
+            </summary>
+            <value>编辑位置。</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.Wpf.IChineseAutoCompletionControl.Element">
+            <summary>
+              获取能支持文本输入的元素。
+            </summary>
+            <value>元素。</value>
+        </member>
+        <member name="E:Microsoft.International.ImeAwareAutoComplete.Wpf.IChineseAutoCompletionControl.TextChanged">
+            <summary>
+            IChineseAutoCompletionControl.Text 改变时触发。
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.Wpf.ChineseImeAwareAutoCompleteListener">
+            <summary>
+            通过监听指定的控件实现支持输入法感知。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.ChineseImeAwareAutoCompleteListener.#ctor(System.Windows.Controls.TextBox)">
+            <summary>
+              创建 <see cref="T:Microsoft.International.ImeAwareAutoComplete.Wpf.ChineseImeAwareAutoCompleteListener"/> 类的一个实例。
+            </summary>
+            <param name="ctrl">被监听的 TextBox。</param>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.ChineseImeAwareAutoCompleteListener.#ctor(Microsoft.International.ImeAwareAutoComplete.Wpf.IChineseAutoCompletionControl)">
+            <summary>
+              创建 <see cref="T:Microsoft.International.ImeAwareAutoComplete.Wpf.ChineseImeAwareAutoCompleteListener"/> 类的一个实例。
+            </summary>
+            <param name="ctrl">实现了 IChineseAutoCompletionControl 的控件。</param>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.Wpf.KeysTranslator">
+            <summary>
+              本地键的映射器: 转换 Wpf 键成 InputKeys。
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.Wpf.KeysTranslator.inputKeyConverter">
+            <summary>
+            内部的转换器。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.KeysTranslator.ConvertToInputKeys(System.Windows.Input.Key)">
+            <summary>
+            转换成 Inputkeys。
+            </summary>
+            <param name="key">键。</param>
+            <returns> InputKeys 对象。</returns>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.Wpf.CompositionChangedEventArgs">
+            <summary>
+              为 ImeListener.CompositionChanged 事件提供事件数据。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.CompositionChangedEventArgs.#ctor(System.String,System.String)">
+            <summary>
+             生成 <see cref="T:Microsoft.International.ImeAwareAutoComplete.Wpf.CompositionChangedEventArgs"/> 类的实例.
+            </summary>
+            <param name="previous">之前编辑的字符串。</param>
+            <param name="current">当前编辑的字符串。</param>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.Wpf.CompositionChangedEventArgs.PreviousCompositionString">
+            <summary>
+              获取之前编辑的字符串。
+            </summary>
+            <value>之前编辑的字符串</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.Wpf.CompositionChangedEventArgs.CurrentCompositionString">
+            <summary>
+              获取当前编辑的字符串。
+            </summary>
+            <value>当前编辑的字符串.</value>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeListener">
+            <summary>
+            用来支持输入法感知功能，只在 WPF 程序中可用。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeListener.OnCompositionChanged">
+            <summary>
+              触发 CompositionChanged 事件。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeListener.OnInputComplete">
+            <summary>
+              触发 InputComplete 事件。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeListener.OnImeKeyDown(Microsoft.International.ImeAwareAutoComplete.InputKeys)">
+            <summary>
+              触发 ImeKeyDown 事件。
+            </summary>
+            <param name="key">相关的键。</param>
+          <returns>
+            如果在编辑，则返回 <c>true</c>；否则，返回 <c>false</c>。
+          </returns>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeListener.#ctor(Microsoft.International.ImeAwareAutoComplete.Wpf.IChineseAutoCompletionControl)">
+            <summary>
+              创建 <see cref="T:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeListener"/> 类的一个实例。
+            </summary>
+            <param name="autoCtrl">被监听的空控件。</param>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeListener.CancelComposition">
+            <summary>
+            取消编辑的字符串。
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeListener.InComposition">
+            <summary>
+              获取一个值指示文本输入是否正被输入法编辑。
+            </summary>
+            <value>
+              如果在编辑，则返回 <c>true</c>；否则，返回 <c>false</c>。
+            </value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeListener.CompositionString">
+            <summary>
+              获取输入法的当前的编辑字符串。
+            </summary>
+            <value>编辑字符串。</value>
+        </member>
+        <member name="E:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeListener.CompositionChanged">
+            <summary>
+              当编辑字符串改变时触发。
+            </summary>
+        </member>
+        <member name="E:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeListener.InputComplete">
+            <summary>
+              当输入完成时触发。
+            </summary>
+        </member>
+        <member name="E:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeListener.ImeKeyDown">
+            <summary>
+            当键按下并且输入法可用，按键已被输入法处理时触发。
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.Wpf.SelectionChangedCommittedEventArgs">
+            <summary>
+            为 SelectionChangedCommitted 提供数据。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.SelectionChangedCommittedEventArgs.#ctor(System.Object,System.Int32)">
+            <summary>
+              创建 <see cref="T:Microsoft.International.ImeAwareAutoComplete.Wpf.SelectionChangedCommittedEventArgs"/> 类的一个实例。
+            </summary>
+            <param name="selectedItem">选中的项。</param>
+            <param name="selectedIndex">选中项的索引。</param>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.Wpf.SelectionChangedCommittedEventArgs.SelectedItem">
+            <summary>
+            获取选中的项。
+            </summary>
+            <value>选中的项。</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.Wpf.SelectionChangedCommittedEventArgs.SelectedIndex">
+            <summary>
+              获取选中项的索引。
+            </summary>
+            <value>选中项的索引。</value>
+        </member>
+    </members>
+</doc>

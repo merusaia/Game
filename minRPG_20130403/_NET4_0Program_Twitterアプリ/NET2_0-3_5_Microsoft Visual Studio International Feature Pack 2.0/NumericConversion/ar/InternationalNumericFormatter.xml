@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>InternationalNumericFormatter</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.Formatters.EastAsiaNumericFormatter">
+            <summary>
+           توفر فئة المنسّق تحويل الأرقام في أنواع البيانات الرقمية إلى سلسلة بتمثيل الرقمية المحلية بلغات شرق آسيا
+            </summary>
+            
+            <remarks>
+              تدعم هذه الفئة لغات شرق آسيا التالية:
+          
+            <list type="bullet">
+            <item>
+        الصينية المبسطة
+               </item>
+            <item>
+                الصينية التقليدية 
+           </item>
+            <item>
+            اليابانية
+            </item>
+            <item>
+          الكوريا
+              </item>
+            </list>
+            
+            تدعم هذه الفئة تنسيق السلاسل التالية:
+            <list type="bullet">
+            <item>
+            تنسيق القياسي (L):  أيضاً يسمى الحالة العليا.
+            </item>
+            <item>
+            تنسيق عادي (ln): أيضاً يسمى lower-case.
+            </item>
+            <item>
+            تنسيق العملة (Lc): من ان تستخدم لتمثيل قيم العملات.
+            </item>
+            <item>
+            ترجمة تنسيق (Lt): التمثيلات على البيانات الرقمية الأحرف الأبجدية أرقام. معتمدة في اليابانية فقط.
+            </item>
+            </list>
+            
+             لتوضيح كيفية الجمع بين الثقافة وشكل سنتخذ "12345" كمثال على ذلك.
+           <list type="bullet">
+            <item>
+            الصينية المبسطة
+            <list type="bullet">
+            <item>
+            القياسي: 壹万贰仟叁佰肆拾伍
+            </item>
+            <item>
+            عادي: 一万二千三百四十五
+            </item>
+            <item>
+            العملة: 壹万贰仟叁佰肆拾伍
+            </item>
+            <item>
+            ترجمة: سيتم طرح استثناء وسيطة
+            </item>
+            </list>
+            </item>
+            <item>
+            Chinese-Traditional
+            <list type="bullet">
+            <item>
+            القياسي: 壹萬貳仟參佰肆拾伍
+            </item>
+            <item>
+            عادي: 一萬二千三百四十五
+            </item>
+            <item>
+            العملة: 壹萬貳仟參佰肆拾伍
+            </item>
+            <item>
+            ترجمة: سيتم طرح استثناء وسيطة
+            </item>
+            </list>
+            </item>
+            <item>
+            Japanese
+            <list type="bullet">
+            <item>
+            القياسي: 壱萬弐阡参百四拾伍
+            </item>
+            <item>
+            عادي: 一万二千三百四十五
+            </item>
+            <item>
+            العملة: سيتم طرح استثناء وسيطة
+            </item>
+            <item>
+            Transliterate: 一二三四五
+            </item>
+            </list>
+            </item>
+            <item>
+            Korean
+            <list type="bullet">
+            <item>
+            القياسي: 일만 이천삼백사십오
+            </item>
+            <item>
+            عادي: سيتم طرح استثناء وسيطة
+            </item>
+            <item>
+            العملة 일만 이천삼백사십오
+            </item>
+            <item>
+            ترجمة: سوف سيتم طرح استثناء وسيطة
+            </item>
+            </list>
+            </item>
+            <item>
+            لغات أخرى: سوف سيتم طرح استثناء وسيطة
+            </item>
+            </list>
+           يتم اعتماد أنواع رقمية مضمنة ، بما في ذلك 
+            double, float, int, uint, long, ulong, short, ushort, sbyte, byte and decimal.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.#ctor">
+            <summary>
+	تهيئة مثيل جديد من الفئة EastAsiaNumericFormatter. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.GetFormat(System.Type)">
+            <summary>
+	 تقوم بإرجاع كائن يقوم بتنفيذ ‏‫ICustomFormatter للقيام التنسيق‬
+            </summary>
+            <remarks>
+            انظر <see cref="T:Microsoft.International.Formatters.EastAsiaNumericFormatter"/> للحصول على مثال عن باستخدام EastAsiaNumericFormatter
+            </remarks> 
+            <param name="formatType">تهيئة النوع</param>
+            <returns>
+              إرجاع كائن نفسه إذا كانت المعلمة‫formatType  <see cref="T:System.ICustomFormatter"/>  نوع. وإلا، إرجاع مرجع فارغة 
+            </returns>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.Format(System.String,System.Object,System.IFormatProvider)">
+            <summary>
+              تنسيق الكائن إلى تمثيل الثقافة الحالية
+            </summary>
+            <remarks>
+            انظر <see cref="T:Microsoft.International.Formatters.EastAsiaNumericFormatter">EastAsiaNumericFormatter</see> للحصول على مثال عن باستخدام EastAsiaNumericFormatter
+            </remarks>
+          <param name="format">
+            تدعم هذه الفئة تنسيق السلاسل التالية:
+            <list type="bullet">
+              <item>
+                تنسيق القياسي (L):  أيضاً يسمى الحالة العليا.
+              </item>
+              <item>
+                تنسيق عادي (ln): أيضاً يسمى lower-case.
+              </item>
+              <item>
+                تنسيق العملة (Lc): من ان تستخدم لتمثيل قيم العملات.
+              </item>
+              <item>
+                ترجمة تنسيق (Lt): التمثيلات على البيانات الرقمية الأحرف الأبجدية أرقام. معتمدة في اليابانية فقط.
+              </item>
+            </list>
+          </param>
+            <param name="arg">العدد ليتم تهيئته</param>
+            <param name="formatProvider">موفر التهيئه</param>
+            <returns>ترجمة السلسلة في أشكال شرق آسيا</returns>
+            <exception cref="T:System.ArgumentNullException">
+            تنسيق أو وسيطة أو الثقافة مرجع فارغة
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            التنسيق المعين غير معتمد في هذه الثقافة
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            الوسيطة يقع خارج النطاق
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            الوسيط نوع غير صالح
+            </exception>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)">
+            <summary>
+            تنسيق الكائن إلى تمثيل ثقافة شرق آسيا المحددة
+            </summary>
+            <remarks>
+            انظر <see cref="T:Microsoft.International.Formatters.EastAsiaNumericFormatter"/> للحصول على مثال عن استخدام FormatWithCulture.
+            </remarks>
+          <param name="format">
+            تدعم هذه الفئة تنسيق السلاسل التالية:
+            <list type="bullet">
+              <item>
+                تنسيق القياسي (L):  أيضاً يسمى الحالة العليا.
+              </item>
+              <item>
+                تنسيق عادي (ln): أيضاً يسمى lower-case.
+              </item>
+              <item>
+                تنسيق العملة (Lc): من ان تستخدم لتمثيل قيم العملات.
+              </item>
+              <item>
+                ترجمة تنسيق (Lt): التمثيلات على البيانات الرقمية الأحرف الأبجدية أرقام. معتمدة في اليابانية فقط.
+              </item>
+            </list>
+          </param>
+            <param name="arg">العدد ليتم تهيئته.</param>
+            <param name="formatProvider">موفر التهيئه</param>
+            <param name="culture">نوع الثقافة</param>
+            <returns>ترجمة السلسلة في أشكال شرق آسيا</returns>
+            <exception cref="T:System.ArgumentNullException">
+            تنسيق أو وسيطة أو الثقافة مرجع فارغة
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            التنسيق المعين غير معتمد في هذه الثقافة
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            الوسيطة يقع خارج النطاق
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            الوسيط نوع غير صالح
+            </exception>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.GetIntegralStack(System.Decimal,System.UInt64,Microsoft.International.Formatters.StackWithIndex)">
+            <summary>
+             تقسيم الرقم و
+            تدفع كل رقم و وزن الأرقام إلى مكدس الذاكرة المؤقتة 
+            </summary>
+            <param name="num">الرقم الذي يلزم تقسيمه</param>
+            <param name="position">تقسيم الرقم من هذا الموقف</param>
+            <param name="stack">مكدس الذاكرة المؤقتة التي يتم دفع كل رقم و وزن الأرقام إليه</param>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.ConvertIntergralStackToText(Microsoft.International.Formatters.StackWithIndex,System.Text.StringBuilder)">
+            <summary>
+            تحويل المعلومات أرقام من المكدس إلى StringBuilder
+            </summary>
+            <param name="stack">يقوم بتخزين الأرقام التي يلزم نقلة</param>
+            <param name="text">نقل الأرقام إلى هذا النص</param>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.GetDecimalText(System.Decimal,System.Text.StringBuilder)">
+            <summary>
+            يضيف الجزء العشري لعدد في النص.
+            </summary>
+            <param name="num">ستتم إضافة الجزء العشري من هذا العدد</param>
+            <param name="text">يضاف الجزء العشري في هذا النص</param>
+        </member>
+        <member name="T:Microsoft.International.Formatters.InternationalNumericFormatter">
+             <summary>
+             توفر فئة المنسّق تحويل الأرقام في أنواع البيانات الرقمية إلى سلسلة بتمثيل الرقمية المحلية باللغات الشرق آسيوية والعربية
+             </summary>
+          <remarks>
+            تدعم هذه الفئة لغات شرق آسيا التالية:
+
+            <list type="bullet">
+              <item>
+                الصينية المبسطة
+              </item>
+              <item>
+                الصينية التقليدية
+              </item>
+              <item>
+                اليابانية
+              </item>
+              <item>
+                الكوريا
+              </item>
+            </list>
+
+            تدعم هذه الفئة تنسيق السلاسل التالية:
+            <list type="bullet">
+              <item>
+                تنسيق القياسي (L):  أيضاً يسمى الحالة العليا.
+              </item>
+              <item>
+                تنسيق عادي (ln): أيضاً يسمى lower-case.
+              </item>
+              <item>
+                تنسيق العملة (Lc): من ان تستخدم لتمثيل قيم العملات.
+              </item>
+              <item>
+                ترجمة تنسيق (Lt): التمثيلات على البيانات الرقمية الأحرف الأبجدية أرقام. معتمدة في اليابانية فقط.
+              </item>
+            </list>
+
+            يتم اعتماد أنواع رقمية مضمنة ، بما في ذلك
+            double, float, int, uint, long, ulong, short, ushort, sbyte, byte and decimal.
+          </remarks>
+             <example>
+	وتبين التعليمة البرمجية التالية عينة تحويل الرقم إلى سلسلة بتمثيل الرقمية المحلية باللغات الشرق آسيوية والعربية
+             <code>
+             using System;
+             using Microsoft.International.Formatters;
+             using Microsoft.International;
+             
+             using System.Globalization;
+             using System.Diagnostics;
+             
+             // نموذج التعليمة البرمجية لتحويل الرقم إلى سلسلة بتمثيل الرقمية المحلية باللغات الشرق آسيوية والعربية
+             namespace InternationalNumericFormatterDemo
+             {
+                class Program
+                {
+                    static void Main(string[] args)
+                    {
+                        Debug.WriteLine("The number of 12345 with Normal format and Chinese-Simplified is: " + InternationalNumericFormatter.FormatWithCulture("Ln", 12345, null, new CultureInfo("zh-CHS")));
+                        Debug.WriteLine("The number of 12345 with Currency format and Chinese-Traditional is: " + InternationalNumericFormatter.FormatWithCulture("Lc", 12345, null, new CultureInfo("zh-CHT")));
+                        Debug.WriteLine("The number of 12345 with standard format and Japanese is: " + InternationalNumericFormatter.FormatWithCulture("L", 12345, null, new CultureInfo("ja")));
+                        Debug.WriteLine("The number of 12345 with standard format and Korean is: " + InternationalNumericFormatter.FormatWithCulture("L", 12345, null, new CultureInfo("ko")));
+                        Debug.WriteLine("The number of 12345 with standard format and Arabic is: " + InternationalNumericFormatter.FormatWithCulture("L", 12345, null, new CultureInfo("ar")));
+                    }
+                }
+             }
+             /*
+             وتنتج هذه التعليمة البرمجية الإخراج التالي
+            
+             The number of 12345 with Normal format and Chinese-Simplified is: 一万二千三百四十五
+             The number of 12345 with Currency format and Chinese-Traditional is: 壹萬貳仟參佰肆拾伍
+             The number of 12345 with Standard format and Japanese is: 壱萬弐阡参百四拾伍
+             The number of 12345 with standard format and Korean is: 일만 이천삼백사십오
+             The number of 12345 with standard format and Arabic is:اثنا عشر آلاف و ثلاثة مائة خمسة و أربعون
+             
+             */
+             </code>
+             </example>
+        </member>
+        <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.#ctor">
+            <summary>
+            تهيئة مثيل جديد من الفئة ‏‫InternationalNumericFormatter 
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.GetFormat(System.Type)">
+            <summary>
+            تقوم بإرجاع كائن يقوم بتنفيذ ‏‫ICustomFormatter للقيام التنسيق
+            </summary>
+            <param name="formatType">تهيئة النوع</param>
+            <returns>
+            إرجاع كائن نفسه إذا كان النوع <see cref="T:System.ICustomFormatter"/> هو نفس معلمة formatType .
+            تعود فارغة إذا كان النوع <see cref="T:System.ICustomFormatter"/>يختلف عن  ‏‫formatType المعلمة
+            </returns>
+        </member>
+        <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.Format(System.String,System.Object,System.IFormatProvider)">
+            <summary>
+              تنسيق الكائن إلى تمثيل الثقافة الحالية
+            </summary>
+          <param name="format">
+            تدعم هذه الفئة تنسيق السلاسل التالية:
+            <list type="bullet">
+              <item>
+                تنسيق القياسي (L):  أيضاً يسمى الحالة العليا.
+              </item>
+              <item>
+                تنسيق عادي (ln): أيضاً يسمى lower-case.
+              </item>
+              <item>
+                تنسيق العملة (Lc): من ان تستخدم لتمثيل قيم العملات.
+              </item>
+              <item>
+                ترجمة تنسيق (Lt): التمثيلات على البيانات الرقمية الأحرف الأبجدية أرقام. معتمدة في اليابانية فقط.
+              </item>
+            </list>
+          </param>
+            <param name="arg">العدد ليتم تهيئته</param>
+            <param name="formatProvider">موفر التهيئه</param>
+            <returns>سلسلة مترجمة بأشكال الشرق آسيوية والعربية</returns>
+        </member>
+        <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)">
+            <summary>
+            تنسيق الكائن إلى تمثيل ثقافة الشرق آسيوية والعربية المحدد
+            </summary>
+          <param name="format">
+            تدعم هذه الفئة تنسيق السلاسل التالية:
+            <list type="bullet">
+              <item>
+                تنسيق القياسي (L):  أيضاً يسمى الحالة العليا.
+              </item>
+              <item>
+                تنسيق عادي (ln): أيضاً يسمى lower-case.
+              </item>
+              <item>
+                تنسيق العملة (Lc): من ان تستخدم لتمثيل قيم العملات.
+              </item>
+              <item>
+                ترجمة تنسيق (Lt): التمثيلات على البيانات الرقمية الأحرف الأبجدية أرقام. معتمدة في اليابانية فقط.
+              </item>
+            </list>
+          </param>
+            <param name="arg">العدد ليتم تهيئته</param>
+            <param name="formatProvider">موفر التهيئه</param>
+            <param name="culture">نوع الثقافة</param>
+            <returns>سلسلة مترجمة بأشكال الشرق آسيوية والعربية</returns>
+            <exception cref="T:System.ArgumentNullException">
+            إذا كانت معلمة التنسيق من <see cref="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)"/> الأسلوب فارغ <see cref="T:System.ArgumentNullException"/> سوف يتم طرح
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            إذا كانت معلمة والسيطة من<see cref="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)"/> الأسلوب فارغ <see cref="T:System.ArgumentNullException"/> سوف يتم طرح
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            إذا كانت معلمة الثقافة من <see cref="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)"/> الأسلوب فارغ <see cref="T:System.ArgumentNullException"/> سوف يتم طرح
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            إذا كان الرقم خارج النطاق <see cref="T:System.ArgumentOutOfRangeException"/> سوف يتم طرح
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            نوع وسيطة غير صالحة, يتم اعتماد لنوع رقم مضمن فقط<see cref="T:System.ArgumentException"/> سوف يتم طرح
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            تركيبة غير صالحة بين معلمة التنسيق والثقافة <see cref="T:System.ArgumentException"/> سوف يتم طرح
+            </exception>
+        </member>
+        
+        <member name="T:Microsoft.International.Formatters.AssemblyResource">
+            <summary>
+              فئة مورد نوع-بشدة على البحث عن سلاسل محلية إلخ
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Formatters.AssemblyResource.ResourceManager">
+            <summary>
+              إرجاع مثيل ‏‫ResourceManager المخزنة مؤقتاً المستخدمة من قبل هذه الفئة
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Formatters.AssemblyResource.Culture">
+            <summary>
+              تجاوز الخاصية ‏‫CurrentUICulture مؤشر الترابط الحالي على كافة عمليات البحث موارد باستخدام 
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Formatters.AssemblyResource.INVALID_ARGUMENT_TYPE">
+            <summary>
+              البحث عن سلسلة مترجمة مماثلة إلى Invalid argument type.  Use a numeric type..
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Formatters.AssemblyResource.INVALID_PARAMETER_COMBINATION">
+            <summary>
+              البحث عن سلسلة مترجمة مماثلة إلى التنسيق المعين غير معتمد في هذه الثقافة
+            </summary>
+        </member>
+    </members>
+</doc>

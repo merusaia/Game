@@ -1,0 +1,1372 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>ImeAwareAutoCompleteBase</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase">
+      <summary>
+        實作 ChineseImeAwareAutoCompleteListener 類別所需的基本功能。
+      </summary>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase.#ctor">
+      <summary>
+        起始一個新的 <see cref="T:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase"/> 類別的執行個體。
+      </summary>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase.Initialize">
+      <summary>
+        初始化這個執行個體。這個方法必須建立衍生類別之後才能叫用。
+      </summary>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase.OnIsEnabledChanged">
+      <summary>
+        引發 IsEanbledChanged 事件。
+      </summary>
+    </member>
+    <member name="P:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase.ContextManager">
+      <summary>
+        取得或設置用於管理備選列表的 Contextmanager。
+      </summary>
+      <value>上下文管理。</value>
+    </member>
+    <member name="P:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase.IsEnabled">
+      <summary>
+        取得或設置判斷 AutoCompletion 是否啟動的值。
+      </summary>
+      <value>
+        如果是 <c>true</c>，為被啟動狀態；反之，為未啟動 <c>false</c>。
+      </value>
+    </member>
+    <member name="E:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase.IsEnabledChanged">
+      <summary>
+        此事件在 IsEnabled 屬性值發生改變時生效。
+      </summary>
+    </member>
+    <member name="T:Microsoft.International.ImeAwareAutoComplete.InputKeyConverter">
+      <summary>
+        將其他型別轉換為 InputKeys 物件，通常是 string 型別。
+      </summary>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.InputKeyConverter.#ctor">
+      <summary>
+        初始化一個新的 <see cref="T:Microsoft.International.ImeAwareAutoComplete.InputKeyConverter"/> 類別執行個體。
+      </summary>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.InputKeyConverter.ConvertFromString(System.String)">
+      <summary>
+        將指定文字轉換成 InputKeys 物件。
+      </summary>
+      <param name="text">類型轉換的文本表示。</param>
+      <returns> 描述轉換文本的輸入關鍵字類型。</returns>
+    </member>
+    <member name="T:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs">
+      <summary>
+        提供資料給 InputKeyEvent 事件。
+      </summary>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs.#ctor(Microsoft.International.ImeAwareAutoComplete.InputKeys)">
+      <summary>
+        初始化一個新的 <see cref="T:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs"/> 類別執行個體。
+      </summary>
+      <param name="key"> 按鍵值。</param>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs.#ctor(Microsoft.International.ImeAwareAutoComplete.InputKeys,System.Boolean)">
+      <summary>
+        初始化一個新的 <see cref="T:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs"/> 類別執行個體。
+      </summary>
+      <param name="key"> 按鍵值。</param>
+      <param name="isImeKey">
+        如果設置為 <c>true</c>，則是 Ime 按鍵值。
+      </param>
+    </member>
+    <member name="P:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs.Key">
+      <summary>
+        取得按鍵值。
+      </summary>
+      <value> 按鍵值。</value>
+    </member>
+    <member name="P:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs.Handled">
+      <summary>
+        取得布林值以判斷 <see cref="T:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs"/> 是否已受控制。
+      </summary>
+      <value>
+         如果消息已處理，則是 <c>true</c>；反之，則是 <c>false</c>。
+      </value>
+    </member>
+    <member name="P:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs.IsImeKey">
+      <summary>
+        取得布林值以判斷此按鍵值是否為輸入法所傳送。
+      </summary>
+      <value>
+         如果是來自于 Ime 的按鍵值，則返回 <c>true</c>；否則，返回 <c>false</c>。
+      </value>
+    </member>
+    <member name="T:Microsoft.International.ImeAwareAutoComplete.InputEventArgs">
+      <summary>
+        提供由 InputKey 事件來的資料。
+      </summary>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.InputEventArgs.#ctor(System.String)">
+      <summary>
+        初始化一個新的 <see cref="T:Microsoft.International.ImeAwareAutoComplete.InputEventArgs"/> 類別執行個體。
+      </summary>
+      <param name="text">文本。</param>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.InputEventArgs.#ctor(System.String,System.String,System.String,System.Boolean,System.Boolean)">
+      <summary>
+        初始化一個新的 <see cref="T:Microsoft.International.ImeAwareAutoComplete.InputEventArgs"/> 類別執行個體。
+      </summary>
+      <param name="leftText">左側文字。</param>
+      <param name="compText">編輯文字。</param>
+      <param name="rightText">右側文字。</param>
+      <param name="isFromIme">
+        設置為 <c>true</c>，代表事件來自 Ime。
+      </param>
+      <param name="isContinuous">
+        設置為 <c>true</c>，代表是連續的輸入。
+      </param>
+    </member>
+    <member name="P:Microsoft.International.ImeAwareAutoComplete.InputEventArgs.Text">
+      <summary>
+        取得或設置該文本。
+      </summary>
+      <value>文本。</value>
+    </member>
+    <member name="P:Microsoft.International.ImeAwareAutoComplete.InputEventArgs.CompositionText">
+      <summary>
+        取得或設置撰寫文字（composition text）。
+      </summary>
+      <value>撰寫文字（composition text）。</value>
+    </member>
+    <member name="P:Microsoft.International.ImeAwareAutoComplete.InputEventArgs.RightText">
+      <summary>
+        取得或設置右側文字。
+      </summary>
+      <value>右側文字。</value>
+    </member>
+    <member name="P:Microsoft.International.ImeAwareAutoComplete.InputEventArgs.LeftText">
+      <summary>
+        取得或設置左側文字。
+      </summary>
+      <value>左側文字。</value>
+    </member>
+    <member name="P:Microsoft.International.ImeAwareAutoComplete.InputEventArgs.RightText">
+      <summary>
+        取得或設置右側文字。
+      </summary>
+      <value>右側文字。</value>
+    </member>
+    <member name="P:Microsoft.International.ImeAwareAutoComplete.InputEventArgs.IsFromIme">
+      <summary>
+        用以判斷此事件是否來自輸入法。
+      </summary>
+      <value>
+         如果這個事件來自于 Ime，則返回 <c>true</c>；否則，返回 <c>false</c>。
+      </value>
+    </member>
+    <member name="P:Microsoft.International.ImeAwareAutoComplete.InputEventArgs.IsContinuous">
+      <summary>
+        用以判斷是否為連續輸入。
+      </summary>
+      <value>
+        如果繼續輸入，則是 <c>true</c>；否則，是 <c>false</c>。
+      </value>
+    </member>
+    <member name="T:Microsoft.International.ImeAwareAutoComplete.InputKeyInterop">
+      <summary>
+        提供靜態方法以轉換 Win32 虛擬按鍵碼和 InputKeys 列舉型別。
+      </summary>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.InputKeyInterop.KeyFromVirtualKey(System.Int32)">
+      <summary>
+        將 Win32 虛擬按鍵碼轉換為 InputKeys。
+      </summary>
+      <param name="virtualKey">虛擬按鍵碼。</param>
+      <returns>InputKeys 類型。</returns>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.InputKeyInterop.VirtualKeyFromKey(Microsoft.International.ImeAwareAutoComplete.InputKeys)">
+      <summary>
+        將 InputKeys 轉換為 Win32 虛擬按鍵碼。
+      </summary>
+      <param name="key">將被轉換的按鍵值。</param>
+      <returns>Win32 虛擬按鍵碼。</returns>
+    </member>
+    <member name="T:Microsoft.International.ImeAwareAutoComplete.InputKeys">
+      <summary>
+        由鍵盤指定一個可能的按鍵值。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.None">
+      <summary>
+        沒有按鍵按下。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LButton">
+      <summary>
+        滑鼠左鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.RButton">
+      <summary>
+        滑鼠右鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Cancel">
+      <summary>
+        取消鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.MButton">
+      <summary>
+        滑鼠中鍵（滑鼠第三鍵）。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.XButton1">
+      <summary>
+        滑鼠第一個 X 鍵（滑鼠第四健）。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.XButton2">
+      <summary>
+        滑鼠第二個 X 鍵（滑鼠第五健）。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Back">
+      <summary>
+        倒退鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Tab">
+      <summary>
+        Tab 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LineFeed">
+      <summary>
+        換行鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Clear">
+      <summary>
+        清空鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Enter">
+      <summary>
+        輸入鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Return">
+      <summary>
+        返回鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ShiftKey">
+      <summary>
+        Shift 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ControlKey">
+      <summary>
+        Ctrl 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Menu">
+      <summary>
+        Alt 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Pause">
+      <summary>
+        Pause 鍵
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.CapsLock">
+      <summary>
+        Caps Lock 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Capital">
+      <summary>
+        大寫鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.HangulMode">
+      <summary>
+        韓文 Ime 模式鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.HanguelMode">
+      <summary>
+        韓文 Ime 模式鍵。（為保證相容性，使用 HangulMode）
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.KanaMode">
+      <summary>
+        日文 Ime Kana 模式鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.JunjaMode">
+      <summary>
+        日文 Ime Junja 模式鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.FinalMode">
+      <summary>
+        日文 Ime Final 模式鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.KanjiMode">
+      <summary>
+        日文 Ime Kanji 模式鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.HanjaMode">
+      <summary>
+        日文 Ime Hanja 模式鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Escape">
+      <summary>
+        ESC 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ImeConvert">
+      <summary>
+        Ime 轉換鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ImeNonConvert">
+      <summary>
+        Ime NonConvert 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ImeAccept">
+      <summary>
+        Ime 確認鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ImeModeChange">
+      <summary>
+        Ime 模式改變請求。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Space">
+      <summary>
+        空白鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Prior">
+      <summary>
+        Prior 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.PageUp">
+      <summary>
+        向上翻頁鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.PageDown">
+      <summary>
+        向下翻頁鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Next">
+      <summary>
+
+        Next 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.End">
+      <summary>
+        End 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Home">
+      <summary>
+        Home 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Left">
+      <summary>
+        向左鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Up">
+      <summary>
+        向上鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Right">
+      <summary>
+        向右鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Down">
+      <summary>
+        向下鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Select">
+      <summary>
+        選擇鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Print">
+      <summary>
+        列印鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Execute">
+      <summary>
+        執行鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Snapshot">
+      <summary>
+        快照鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.PrintScreen">
+      <summary>
+        列印螢幕鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Insert">
+      <summary>
+        插入鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Delete">
+      <summary>
+        刪除鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Help">
+      <summary>
+        幫助鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D0">
+      <summary>
+        0(數字 0)鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D1">
+      <summary>
+        1(數字 1)鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D2">
+      <summary>
+        2 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D3">
+      <summary>
+        3 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D4">
+      <summary>
+        4 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D5">
+      <summary>
+        5 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D6">
+      <summary>
+        6 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D7">
+      <summary>
+        7 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D8">
+      <summary>
+        8 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D9">
+      <summary>
+        9 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.A">
+      <summary>
+        A 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.B">
+      <summary>
+        B 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.C">
+      <summary>
+        C 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D">
+      <summary>
+        D 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.E">
+      <summary>
+        E 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F">
+      <summary>
+        F 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.G">
+      <summary>
+        G 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.H">
+      <summary>
+        H 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.I">
+      <summary>
+        I 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.J">
+      <summary>
+        J 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.K">
+      <summary>
+        K 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.L">
+      <summary>
+        L 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.M">
+      <summary>
+        M 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.N">
+      <summary>
+        N 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.O">
+      <summary>
+        O 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.P">
+      <summary>
+        P 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Q">
+      <summary>
+        Q 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.R">
+      <summary>
+        R 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.S">
+      <summary>
+        S 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.T">
+      <summary>
+        T 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.U">
+      <summary>
+        U 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.V">
+      <summary>
+        V 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.W">
+      <summary>
+        W 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.X">
+      <summary>
+        X 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Y">
+      <summary>
+        Y 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Z">
+      <summary>
+        Z 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LWin">
+      <summary>
+        左 Window 鍵。（微軟鍵盤）
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.RWin">
+      <summary>
+        右 Window 鍵。（微軟鍵盤）
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Apps">
+      <summary>
+        應用鍵。（微軟鍵盤）
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Sleep">
+      <summary>
+        電腦睡眠鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad0">
+      <summary>
+        數位鍵盤 0 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad1">
+      <summary>
+        數位鍵盤 1 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad2">
+      <summary>
+        數位鍵盤 2 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad3">
+      <summary>
+        數位鍵盤 3 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad4">
+      <summary>
+        數位鍵盤 4 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad5">
+      <summary>
+        數位鍵盤 5 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad6">
+      <summary>
+        數位鍵盤 6 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad7">
+      <summary>
+        數位鍵盤 7 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad8">
+      <summary>
+        數位鍵盤 8 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad9">
+      <summary>
+        數位鍵盤 9 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Multiply">
+      <summary>
+        數位鍵盤乘號鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Add">
+      <summary>
+        數位鍵盤加號鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Separator">
+      <summary>
+        數位鍵盤除號鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Subtract">
+      <summary>
+        數位鍵盤減號鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Decimal">
+      <summary>
+        數位鍵盤小數點鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Divide">
+      <summary>
+        分隔符號鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F1">
+      <summary>
+        F1 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F2">
+      <summary>
+        F2 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F3">
+      <summary>
+        F3 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F4">
+      <summary>
+        F4 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F5">
+      <summary>
+        F5 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F6">
+      <summary>
+        F6 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F7">
+      <summary>
+        F7 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F8">
+      <summary>
+        F8 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F9">
+      <summary>
+        F9 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F10">
+      <summary>
+        F10 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F11">
+      <summary>
+        F11 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F12">
+      <summary>
+        F12 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F13">
+      <summary>
+        F13 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F14">
+      <summary>
+        F14 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F15">
+      <summary>
+        F15 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F16">
+      <summary>
+        F16 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F17">
+      <summary>
+        F17 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F18">
+      <summary>
+        F18 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F19">
+      <summary>
+        F19 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F20">
+      <summary>
+        F20 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F21">
+      <summary>
+        F21 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F22">
+      <summary>
+        F22 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F23">
+      <summary>
+        F23 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F24">
+      <summary>
+        F24 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumLock">
+      <summary>
+        Num Lock 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Scroll">
+      <summary>
+        Scroll Lock 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LMenu">
+      <summary>
+        左 Alt 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.RMenu">
+      <summary>
+        右 Alt 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.BrowserBack">
+      <summary>
+        Browser Back 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.BrowserForward">
+      <summary>
+        Browser Forward 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.BrowserRefresh">
+      <summary>
+        Browser Refresh 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.BrowserStop">
+      <summary>
+        Browser Stop 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.BrowserSearch">
+      <summary>
+        Browser Search 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.BrowserFavorites">
+      <summary>
+        Browser Favorites 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.BrowserHome">
+      <summary>
+        Browser Home 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.VolumeMute">
+      <summary>
+        Volume Mute 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.VolumeDown">
+      <summary>
+        Volume Down 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.VolumeUp">
+      <summary>
+        Volume Up 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.MediaNextTrack">
+      <summary>
+        Media Next Track 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.MediaPreviousTrack">
+      <summary>
+        Media Previous Track 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.MediaStop">
+      <summary>
+        Media Stop 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.MediaPlayPause">
+      <summary>
+        Media Play Pause 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LaunchMail">
+      <summary>
+        Launch Mail 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.SelectMedia">
+      <summary>
+        Select Media 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LaunchApplication1">
+      <summary>
+        Launch Application1 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LaunchApplication2">
+      <summary>
+        Launch Application2 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemSemicolon">
+      <summary>
+        OEM Semicolon 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem1">
+      <summary>
+        OEM 1 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemPlus">
+      <summary>
+        OEM Addition 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemComma">
+      <summary>
+        OEM Comma 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemMinus">
+      <summary>
+        OEM Minus 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemPeriod">
+      <summary>
+        OEM Period 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem2">
+      <summary>
+        OEM 2 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemQuestion">
+      <summary>
+        OEM Question 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem3">
+      <summary>
+        OEM 3 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemTilde">
+      <summary>
+        OEM Tilde 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem4">
+      <summary>
+        OEM 4 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemOpenBrackets">
+      <summary>
+        OEM Open Brackets 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemPipe">
+      <summary>
+        OEM Pipe 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem5">
+      <summary>
+        OEM 5 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemCloseBrackets">
+      <summary>
+        OEM Close Brackets 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem6">
+      <summary>
+        OEM 6 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemQuotes">
+      <summary>
+        OEM Quotes 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem7">
+      <summary>
+        OEM 7 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem8">
+      <summary>
+        OEM 8 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem102">
+      <summary>
+        OEM 102 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemBackslash">
+      <summary>
+        OEM Backslash 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ProcessKey">
+      <summary>
+        PROCESS KEY 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Packet">
+      <summary>
+        用來跳過 Unicode 字元，當做是一般按鍵。該 Packet 鍵的值是一個32位元虛擬按鍵 (virtual-key) 的前半字，用於非鍵盤輸入。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Attn">
+      <summary>
+        ATTN 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.CrSel">
+      <summary>
+        CRSEL 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ExSel">
+      <summary>
+        EXSEL 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.EraseEof">
+      <summary>
+        ERASE EOF 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Play">
+      <summary>
+        PLAY 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Zoom">
+      <summary>
+        ZOOM 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NoName">
+      <summary>
+        保留供將來使用
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Pa1">
+      <summary>
+        PA1 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemClear">
+      <summary>
+        OEM Clear 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.KeyCode">
+      <summary>
+        位元遮罩從按鍵值中提取按鍵碼。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Shift">
+      <summary>
+        SHIFT modifier 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Control">
+      <summary>
+        CTRL modifier 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Alt">
+      <summary>
+        ALT modifier 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Modifiers">
+      <summary>
+        位元遮罩從按鍵值中提取 Modifiers。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LeftShift">
+      <summary>
+        left Shift 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LeftCtrl">
+      <summary>
+        left CTRL 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LeftAlt">
+      <summary>
+        left ALT 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.RightShift">
+      <summary>
+        right Shift 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.RightCtrl">
+      <summary>
+        right CTRL 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.RightAlt">
+      <summary>
+        right ALT 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.AbntC1">
+      <summary>
+        葡萄牙語（巴西） 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.AbntC2">
+      <summary>
+        葡萄牙語（巴西） 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemAttn">
+      <summary>
+        OEM ATTN 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemFinish">
+      <summary>
+        OEM FINISH 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemCopy">
+      <summary>
+        OEM COPY 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemAuto">
+      <summary>
+        OEM AUTO 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemEnlw">
+      <summary>
+        OEM ENLW 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemBackTab">
+      <summary>
+        OEM BACKTAB 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ImeProcessed">
+      <summary>
+        一個特殊按鍵遮蓋輸入法正在處理的真正按鍵值。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeAlphanumeric">
+      <summary>
+        DBE_ALPHANUMERIC 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeCodeInput">
+      <summary>
+        DBE_CODEINPUT 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeDbcsChar">
+      <summary>
+        DBE_DBCSCHAR 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeDetermineString">
+      <summary>
+        DBE_DETERMINESTRING 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeEnterDialogConversionMode">
+      <summary>
+        DBE_ENTERDLGCONVERSIONMODE 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeEnterImeConfigureMode">
+      <summary>
+        DBE_ENTERIMECONFIGMODE 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeEnterWordRegisterMode">
+      <summary>
+        DBE_ENTERWORDREGISTERMODE 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeFlushString">
+      <summary>
+        DBE_FLUSHSTRING 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeHiragana">
+      <summary>
+        DBE_HIRAGANA 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeKatakana">
+      <summary>
+        DBE_KATAKANA 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeNoCodeInput">
+      <summary>
+        DBE_NOCODEINPUT 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeNoRoman">
+      <summary>
+        DBE_NOROMAN 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeRoman">
+      <summary>
+        DBE_ROMAN 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeSbcsChar">
+      <summary>
+        DBE_SBCSCHAR 鍵。
+      </summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.System">
+      <summary>
+        一個特殊鍵遮蓋當作系統按鍵處理的真正按鍵值。
+      </summary>
+    </member>
+    <member name="T:Microsoft.International.ImeAwareAutoComplete.ContextManager">
+      <summary>
+        ContextManager 用於管理所有候選字元和篩選邏輯。
+      </summary>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.ContextManager.#ctor">
+      <summary>
+        初始化一個新的 <see cref="T:Microsoft.International.ImeAwareAutoComplete.ContextManager"/> 類別執行個體。
+      </summary>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.ContextManager.#ctor(System.Boolean,System.Collections.Generic.IComparer{System.String})">
+      <summary>
+        初始化一個新的 <see cref="T:Microsoft.International.ImeAwareAutoComplete.ContextManager"/> 類別執行個體。
+      </summary>
+      <param name="isSorted">是否有序。</param>
+      <param name="comparer">比較子。</param>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.ContextManager.MatchPrefix(System.String)">
+      <summary>
+       取得符合指定前置字串的候選字集合。
+      </summary>
+      <param name="prefix">首碼。</param>
+      <returns>候選字集合。</returns>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.ContextManager.ClearAllItems">
+      <summary>
+        從候選字資料來源中清除所有項。
+      </summary>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.ContextManager.AddItem(System.String)">
+      <summary>
+        加入新的項目到候選字資料來源。
+      </summary>
+      <param name="item">項被添加。</param>
+      <returns>如果專案被成功添加，則返回 <c>true</c>；否則，返回 <c>false</c>。如果項完全一樣，這個方法也返回 <c>false</c>。</returns>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.ContextManager.RemoveItem(System.String)">
+      <summary>
+        從候選字資料來源中移除一個項目。
+      </summary>
+      <param name="item">項被移除。</param>
+      <returns>如果專案被成功移除，則返回 <c>true</c>；否則，返回 <c>false</c>。如果項沒有被找到這個方法，也返回 <c>false</c>。</returns>
+    </member>
+    <member name="P:Microsoft.International.ImeAwareAutoComplete.ContextManager.SourceCandidates">
+      <summary>
+        獲取整個候選字資料來源的集合。
+      </summary>
+      <value>候選字資料來源的集合。</value>
+    </member>
+    <member name="P:Microsoft.International.ImeAwareAutoComplete.ContextManager.CurrentCandidates">
+      <summary>
+        獲取包含目前候選字項目的集合。
+      </summary>
+      <value>當前候選字項目集合。</value>
+    </member>
+    <member name="P:Microsoft.International.ImeAwareAutoComplete.ContextManager.IsSorted">
+      <summary>
+        判斷候選字項目是否已排序。
+      </summary>
+      <value>
+        如果候選列表排序，則返回 <c>true</c>； 否則，返回 <c>false</c>。預設值為 <c>false</c>。
+      </value>
+    </member>
+    <member name="P:Microsoft.International.ImeAwareAutoComplete.ContextManager.Comparer">
+      <summary>
+        獲取或設置用於排序候選字項目的比較子。
+      </summary>
+      <value>比較子。</value>
+    </member>
+    <member name="P:Microsoft.International.ImeAwareAutoComplete.ContextManager.ItemCount">
+      <summary>
+        獲取候選字項目的數目。
+      </summary>
+      <value>項目的數目。</value>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+  <assembly>
+    <name>ImeAwareAutoCompleteTextBoxWpf</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeAwareAutoCompleteTextBox">
+      <summary>TextBox 的輸入法感知特性。</summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeAwareAutoCompleteTextBox.listener">
+      <summary>內部的 ChineseImeAwareAutoCompleteListener 物件。</summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeAwareAutoCompleteTextBox.candidateCounter">
+      <summary>內部詞典排序。</summary>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeAwareAutoCompleteTextBox.#ctor">
+      <summary>
+        初始化 <see cref="T:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeAwareAutoCompleteTextBox"></see> 類的一個實例。
+      </summary>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeAwareAutoCompleteTextBox.ImeAwareAutoCompleteTextBox_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+      <summary>ImeAwareAutoCompleteTextBox 控制項的控制碼載入事件。</summary>
+      <param name="sender">事件源。</param>
+      <param name="e">
+        <see cref="T:System.Windows.RoutedEventArgs"></see> 實例包含了事件資料
+      </param>
+    </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeAwareAutoCompleteTextBox.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            請求一個未處理的 <see cref="E:System.Windows.UIElement.OnLostFocus"/> 活動事件到源於這個類的路徑下的元素， 執行這個方法為這個事件添加類處理。
+            </summary>
+            <param name="e"> <see cref="T:System.Windows.RoutedEventArgs"/> 包含事件數據</param>
+        </member>
+
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeAwareAutoCompleteTextBox.Compare(System.String,System.String)">
+      <summary>比較兩個指定的 String 物件，並傳回整數，這個整數表示兩者在排序次序中彼此的關聯性。 </summary>
+      <param name="x">比較的第一個字串。</param>
+      <param name="y">比較的第二個字串。</param>
+      <returns>
+        小於零，則 x 小於 y；等於零，則 x 等於 y；大於零，則 x 大於 y。
+      </returns>
+    </member>
+    <member name="T:AutoCompletionTextBoxWpf.Properties.Resources">
+      <summary>一個強類型原始檔案，尋找當地語系化字串等。</summary>
+    </member>
+    <member name="P:AutoCompletionTextBoxWpf.Properties.Resources.ResourceManager">
+      <summary>返回存儲資源管理例如使用這個類。</summary>
+    </member>
+    <member name="P:AutoCompletionTextBoxWpf.Properties.Resources.Culture">
+      <summary>為所有當前執行緒重寫 CurrentUICulture 屬性。               資源查找使用此強類型資源類。</summary>
+    </member>
+  </members>
+</doc>

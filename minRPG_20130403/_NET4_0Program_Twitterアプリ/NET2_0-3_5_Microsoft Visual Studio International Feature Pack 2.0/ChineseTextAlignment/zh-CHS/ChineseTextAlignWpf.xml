@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChineseTextAlignWPF</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">
+            <summary>
+              这个类用指定的对齐信息显示字符串。
+            </summary>
+            <example>
+              以下例子演示了用指定的五种方法显示字符串。
+              <code source = "../../ExampleWpf_CS/Window1.xaml" lang = "cs"></code>
+              <p>当WPF窗体装载完成，实例程序输出如下结果：</p>
+            <p><img src="../Image/WpfResult.jpg"/></p>
+            </example>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.Controls.Utility.DrawChineseString(System.Windows.Media.DrawingContext,System.String,System.Windows.Media.Typeface,System.Double,System.Windows.Media.Color,System.Windows.Rect,Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo)">
+            <summary>
+            用指定的对齐风格画文本。
+            </summary>
+            <remarks>
+            参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility"/> 获取 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility"/> 的使用示例。
+            </remarks>
+            <param name="dc">画文本的 DrawingContext 对象。</param>
+            <param name="text">要画的文本。</param>
+            <param name="typeface">所画文本的 typeface。</param>
+            <param name="fontSize">所画文本的字体。</param>
+            <param name="color">所画文本的颜色。</param>
+            <param name="rect">画文本的区域。</param>
+            <param name="alignmentStyleInfo">包含对齐风格和左右边距的结构。</param>
+            <exception cref="T:System.ArgumentNullException">
+              g，text 和 typeface 为空引用。
+            </exception>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.Controls.Utility.DrawChineseString(System.Windows.Media.DrawingContext,System.String,System.Windows.Media.Typeface,System.Double,System.Windows.Media.Color,System.Windows.Rect,Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo,Microsoft.International.ChineseTextAlignment.IAlignmentUnitInfoProvider)">
+            <summary>
+              用指定的对齐风格画文本。
+            </summary>
+            <remarks>
+            参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility"/> 获取 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility"/> 的使用示例。
+            </remarks>
+            <param name="dc">画文本的 DrawingContext 对象。</param>
+            <param name="text">要画的文本。</param>
+            <param name="typeface">所画文本的 typeface。</param>
+            <param name="fontSize">所画文本的字体。</param>
+            <param name="color">所画文本的颜色。</param>
+            <param name="rect">画文本的区域。</param>
+            <param name="alignmentStyleInfo">包含对齐风格和左右边距的结构。</param>
+            <param name="alignmentUnitInfoProvider">决定文本如何划分成单元的 AlignmentUnitInfoProvider。</param>
+            <exception cref="T:System.ArgumentNullException">
+              g，text 和 typeface 为空引用。
+            </exception>
+        </member>
+    </members>
+</doc>

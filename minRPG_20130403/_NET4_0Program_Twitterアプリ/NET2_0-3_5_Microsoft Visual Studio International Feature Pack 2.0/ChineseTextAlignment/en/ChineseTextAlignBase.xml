@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChineseTextAlignBase</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.ChineseTextAlignment.SmartAlignmentUnitInfoProvider">
+            <summary>
+            This class provides smart alignment unit information.
+            </summary>
+            <remarks>
+            <p>This class implements IAlignmentUnitProvider interface and 
+            provides alignment unit information for one of the most common styles of text alignment.</p>
+            <p>IsNewAlignmentMethod returns true for the following conditions, otherwise the method returns false.</p>
+            <list type="bullet">
+            <item>
+            Previous character is CJK ideographic character.
+            </item>
+            <item>
+            Previous character is not '(' (U+0028), and current character is '('.
+            </item>
+            <item>
+            Previous character is ')' (U+0029), and current character is not ')'.
+            </item>
+            <item>
+            Previous character is alphabet character (a-z and A-Z), numeric character (0-9) or '('.
+            /And current character is not alphabet character, numeric character or ')'.
+            </item>
+            </list>
+            <p>See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> Class in WinForm or <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> Class in Wpf<br /> for an example of using Utility.</p>
+            </remarks>
+        </member>
+        <member name="T:Microsoft.International.ChineseTextAlignment.IAlignmentUnitInfoProvider">
+            <summary>
+             Alignment unit info provider interface.
+            </summary>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> Class in WinForm or <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> Class in Wpf<br /> for an example of using Utility.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.IAlignmentUnitInfoProvider.Initialize(System.String)">
+            <summary>
+            Initializes the instance of <see cref="T:Microsoft.International.ChineseTextAlignment.IAlignmentUnitInfoProvider"/> with the first character of string to process.
+            </summary>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> Class in WinForm or <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> Class in Wpf<br/> for an example of using Utility.
+            </remarks>
+            <param name="s">The first character of string to process.</param>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.IAlignmentUnitInfoProvider.IsNewAlignmentUnit(System.String)">
+            <summary>
+            Determines whether the given char starts a new alignment unit.
+            </summary>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> Class in WinForm or <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> Class in Wpf<br /> for an example of using Utility.
+            </remarks>
+            <param name="s">Current character.</param>
+            <returns>
+            True if new alignment unit is created, false otherwise.
+            </returns>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.SmartAlignmentUnitInfoProvider.#ctor">
+            <summary>
+            Initializes a new instance of SmartAlignmentUnitInfoProvider class. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.SmartAlignmentUnitInfoProvider.Initialize(System.String)">
+            <summary>
+            Initializes the instance of <see cref="T:Microsoft.International.ChineseTextAlignment.SmartAlignmentUnitInfoProvider"/> with the first character of string to process.
+            </summary>
+            <param name="s">The first character of string to process.</param>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> Class in WinForm or <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> Class in Wpf<br/> for an example of using Utility.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            s is a null reference.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Length of s is zero(0).
+            </exception>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.SmartAlignmentUnitInfoProvider.IsNewAlignmentUnit(System.String)">
+            <summary>
+            Determines whether the given char starts a new alignment unit.
+            </summary>
+            <param name="s">Current character.</param>
+            <returns>
+            True if new alignment unit is created, otherwise false.
+            </returns>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> Class in WinForm or <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> Class in Wpf<br/> for an example of using Utility.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            s is a null reference.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Length of s is zero(0).
+            </exception>
+        </member>
+        <member name="T:ChineseTextAlignBase.CommonResouce">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ChineseTextAlignBase.CommonResouce.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ChineseTextAlignBase.CommonResouce.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.ChineseTextAlignment.AssemblyResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.AssemblyResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.AssemblyResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.AssemblyResource.INVALID_PARAMETER_ZEOR_LENGTH_CHARACTER">
+            <summary>
+              Looks up a localized string similar to Invalid parameter - zero length character.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.AssemblyResource.MARGIN_MUST_NOT_BE_NEGATIVE_VALUE">
+            <summary>
+              Looks up a localized string similar to Text margin value cannot be negative. Use a positive value.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.ChineseTextAlignment.SimpleAlignmentUnitInfoProvider">
+            <summary>
+            This class provides simple alignment unit information.
+            </summary>
+            <remarks>
+            <p>This class implements IAlignmentUnitProvider interface and 
+            provides alignment unit information for one of the most common styles of text alignment.</p>
+            <p>IsNewAlignment method always returns true.</p>
+            <p>See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> Class in WinForm or <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> Class in Wpf<br /> for an example of using Utility.</p>
+            </remarks>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.SimpleAlignmentUnitInfoProvider.#ctor">
+            <summary>
+            Initializes a new instance of SimpleAlignmentUnitInfoProvider class. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.SimpleAlignmentUnitInfoProvider.Initialize(System.String)">
+            <summary>
+            Initializes the instance of <see cref="T:Microsoft.International.ChineseTextAlignment.SimpleAlignmentUnitInfoProvider"/> with the first character of string to process.
+            </summary>
+            <param name="s">The first character of string to process.</param>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> Class in WinForm or <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> Class in Wpf<br/> for an example of using Utility.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            s is a null reference.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Length of s is zero(0).
+            </exception>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.SimpleAlignmentUnitInfoProvider.IsNewAlignmentUnit(System.String)">
+            <summary>
+            Determines whether the given char starts a new alignment unit.
+            </summary>
+            <param name="s">Current character.</param>
+            <returns>
+            This method always returns true.
+            </returns>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> Class in WinForm or <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> Class in Wpf<br/> for an example of using Utility.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            s is a null reference.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Length of s is zero(0).
+            </exception>
+        </member>
+        <member name="T:Microsoft.International.ChineseTextAlignment.TextAlignmentStyle">
+            <summary>
+            Text alignment style.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ChineseTextAlignment.TextAlignmentStyle.Left">
+            <summary>
+            Left text alignment
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ChineseTextAlignment.TextAlignmentStyle.Center">
+            <summary>
+            Center text alignment
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ChineseTextAlignment.TextAlignmentStyle.Right">
+            <summary>
+            Right text alignment
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ChineseTextAlignment.TextAlignmentStyle.Justify">
+            <summary>
+            Justify text alignment
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ChineseTextAlignment.TextAlignmentStyle.FullJustify">
+            <summary>
+            Full Justify text alignment
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo">
+            <summary>
+            Alignment style info structure.
+            </summary>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> Class in WinForm or <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> Class in Wpf<br /> for an example of using Utility.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo.Equals(System.Object)">
+            <summary>
+            Determines whether the specified Object is identical to the current Object.
+            </summary>
+            <param name="obj">The specified Object.</param>
+            <returns>
+            True, if the specified Object is identical to the current Object.
+            False, if the specified Object is not identical to the current Object.
+            </returns>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> Class in WinForm or <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> Class in Wpf<br /> for an example of using Utility.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo.op_Equality(Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo,Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo)">
+            <summary>
+             Determines whether the two specified Objects are identical.
+            </summary>
+            <param name="info1">The first specified Object.</param>
+            <param name="info2">The second specified Object.</param>
+            <returns>
+            True, if the two specified Objects are identical.
+            False, if the two specified Objects are not identical.
+            </returns>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> Class in WinForm or <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> Class in Wpf<br /> for an example of using Utility.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo.op_Inequality(Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo,Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo)">
+            <summary>
+             Determines whether the two specified Objects are not identical.
+            </summary>
+            <param name="info1">The first specified Object.</param>
+            <param name="info2">The second specified Object.</param>
+            <returns>
+            True, if the two specified Objects are not identical.
+            False, if the two specified Objects are identical.
+            </returns>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> Class in WinForm or <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> Class in Wpf<br /> for an example of using Utility.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>A hash code for the current Object. </returns>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> Class in WinForm or <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> Class in Wpf<br /> for an example of using Utility.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo.Style">
+            <summary>
+            Alignment style.
+            </summary>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> Class in WinForm or <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> Class in Wpf<br /> for an example of using Utility.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo.LeftMargin">
+            <summary>
+            Left margin. Its value must be greater than zero. Otherwise, an exception will be thrown.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            The value specified for a set operation is less than zero. 
+            </exception>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> Class in WinForm or <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> Class in Wpf<br/> for an example of using Utility.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo.RightMargin">
+            <summary>
+            Right margin. Its value must be greater than zero. Otherwise, an exception will be thrown.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            The value specified for a set operation is less than zero.
+            </exception>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> Class in WinForm or <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> Class in Wpf<br/> for an example of using Utility.
+            </remarks>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ImeAwareAutoCompleteWinForm</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.WinForm.KeysTranslator">
+            <summary>
+            本地键影射器： 转化 WinForm 键成 InputKeys。
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.WinForm.KeysTranslator.inputKeyConverter">
+            <summary>
+              内部键的转换器。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.KeysTranslator.ConvertToInputKeys(System.Windows.Forms.Keys)">
+            <summary>
+              转换成 Inputkeys。
+            </summary>
+            <param name="key">键。</param>
+            <returns>InputKeys 实例。</returns>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener">
+            <summary>
+              用来支持有限的输入法感知功能。只对 Winform 应用程序可用。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.OnCompositionChanged">
+            <summary>
+              触发 CompositionChanged 事件。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.OnInputComplete">
+            <summary>
+            触发 InputComplete 事件。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.OnImeKeyDown(Microsoft.International.ImeAwareAutoComplete.InputKeys)">
+            <summary>
+              触发 ImeKeyDown 事件。
+            </summary>
+            <param name="key">相关的键。</param>
+            <returns>如果事件处理了，则返回 <c>true</c>；否则，返回 <c>false</c>。</returns>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.OnMouseWheel(System.Int32,System.Int32,System.Int32)">
+            <summary>
+              触发 MouseWheel 事件。
+            </summary>
+            <param name="msg">MSG 对象。</param>
+            <param name="wparam">wparam 对象。</param>
+            <param name="lparam">lparam 对象。</param>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            创建 <see cref="T:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener"/> 类的一个实例。
+            </summary>
+            <param name="listenedCtrl">被监听的控件。</param>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.CancelComposition">
+            <summary>
+            取消输入法正在编辑的字符串。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.PreFilterMessage(System.Windows.Forms.Message@)">
+            <summary>
+              在消息被发送之前过滤消息。
+            </summary>
+            <param name="m">消息被的发送。你可以修改这个消息。</param>
+            <returns>如果代表过滤消息并停止发送它，则为 <c>true</c>；如果代表允许消息被发送到下一个过滤器或者控件，则为 <c>false</c>。</returns>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.CompResult">
+            <summary>
+              获得编译结果。
+            </summary>
+            <value>编译结果。</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.IsInComposition">
+            <summary>
+            获取一个值，指示文本是否处于输入法编辑状态。
+            </summary>
+            <value>
+              如果在编辑状态，则返回 <c>true</c>； 否则，返回 <c>false</c>。
+            </value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.CompositionString">
+            <summary>
+            获取输入法在编辑的字符串。
+            </summary>
+            <value>在编辑的字符串。</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.CandidateWindowOpened">
+          <summary>获取一个值，指示输入法候选字窗口是否已打开。</summary>
+          <value>
+            如果输入法候选字窗口已打开，则返回 <c>true</c>；否则，返回 <c>false</c>。
+          </value>
+        </member>
+        <member name="E:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.CompositionChanged">
+            <summary>
+            编辑字符串改变时触发。
+            </summary>
+        </member>
+        <member name="E:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.InputComplete">
+            <summary>
+            输入完成时触发。
+            </summary>
+        </member>
+        <member name="E:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.ImeKeyDown">
+            <summary>
+            输入法可用并且键时被输入法处理过的时触发。
+            </summary>
+        </member>
+        <member name="E:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.MouseWheel">
+            <summary>
+              Mouses 时触发。
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.WinForm.DirectMessageEventArgs">
+            <summary>
+              为所有直接消息提供事件数据。
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.WinForm.CompositionChangedEventArgs">
+            <summary>
+              为 ImeListener.CompositionChanged 提供事件数据。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.CompositionChangedEventArgs.#ctor(System.String,System.String)">
+            <summary>
+            创建 <see cref="T:Microsoft.International.ImeAwareAutoComplete.WinForm.CompositionChangedEventArgs"/> 类的一个实例。
+          </summary>
+            <param name="previous">之前的编辑字符串。</param>
+            <param name="current">当前的编辑字符串。</param>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.WinForm.CompositionChangedEventArgs.PreviousCompositionString">
+            <summary>
+              获取或设置之前的编辑字符串。
+            </summary>
+            <value>之前的编辑字符串。</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.WinForm.CompositionChangedEventArgs.CurrentCompositionString">
+            <summary>
+            获取当前的编辑字符串。
+            </summary>
+            <value>当前的编辑字符串。</value>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.WinForm.ChineseImeAwareAutoCompleteListener">
+            <summary>
+            通过监听控件提供支持输入法感知的功能。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ChineseImeAwareAutoCompleteListener.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            创建 <see cref="T:Microsoft.International.ImeAwareAutoComplete.WinForm.ChineseImeAwareAutoCompleteListener"/> 类的一个实例。
+            </summary>
+            <param name="ctrl">被监听的控件。</param>
+        </member>
+    </members>
+</doc>

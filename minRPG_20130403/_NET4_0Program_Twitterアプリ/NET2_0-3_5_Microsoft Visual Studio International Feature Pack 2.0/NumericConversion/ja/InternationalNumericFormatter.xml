@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>InternationalNumericFormatter</name>
+  </assembly>
+  <members>
+    <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.GetIntegralStack(System.Decimal,System.UInt64,Microsoft.International.Formatters.StackWithIndex)">
+      <summary>
+        数字を分割します。
+        各桁とその桁のdigitWeightをスタックにいれます。
+      </summary>
+      <param name="num">分割必要がある数字。</param>
+      <param name="position">数字の分割場所。</param>
+      <param name="stack">各桁とその桁のdigitWeightをこのスタックにいれます。</param>
+    </member>
+    <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.ConvertIntergralStackToText(Microsoft.International.Formatters.StackWithIndex,System.Text.StringBuilder)">
+      <summary>
+        スタックに保存されている桁情報をStringBuilderに変換します。
+      </summary>
+      <param name="stack">変換必要のある桁を保存します。</param>
+      <param name="text">桁をこのテキストに変換します。</param>
+    </member>
+    <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.GetDecimalText(System.Decimal,System.Text.StringBuilder)">
+      <summary>
+        この数字の整数部分をテキストに追加します。
+      </summary>
+      <param name="num">追加必要のある数字の整数部分。</param>
+      <param name="text">整数部分をこのテキストに追加します。</param>
+    </member>
+    <member name="T:Microsoft.International.Formatters.AssemblyResource">
+      <summary>
+        　ローカライズされた文字列を検索するなどの機能を提供する厳密型リソースクラス。
+      </summary>
+    </member>
+    <member name="P:Microsoft.International.Formatters.AssemblyResource.ResourceManager">
+      <summary>
+        　このクラスが使用したキャッシュされたResourceManagerインスタンスを返します。
+      </summary>
+    </member>
+    <member name="P:Microsoft.International.Formatters.AssemblyResource.Culture">
+      <summary>
+        　この厳密型リソースクラスを利用して、すべてのリソースを検索するため、現スレッドのCurrentUICultureプロパティをオーバーライドします。
+      </summary>
+    </member>
+    <member name="P:Microsoft.International.Formatters.AssemblyResource.INVALID_ARGUMENT_TYPE">
+      <summary>
+        　「無効な引数の型」に類似するローカライズされた文字列を検索します。数字型を使用します。
+      </summary>
+    </member>
+    <member name="P:Microsoft.International.Formatters.AssemblyResource.INVALID_PARAMETER_COMBINATION">
+      <summary>
+        「指定フォーマットはこの地域がサポートしません」に類似するローカライズされた文字列を検索します。
+      </summary>
+    </member>
+    <member name="T:Microsoft.International.Formatters.Properties.Resources">
+      <summary>
+        　ローカライズされた文字列を検索するなどの機能を提供する厳密型リソースクラス。
+      </summary>
+    </member>
+    <member name="P:Microsoft.International.Formatters.Properties.Resources.ResourceManager">
+      <summary>
+        　このクラスが使用したキャッシュされたResourceManagerインスタンスを返します。
+      </summary>
+    </member>
+    <member name="P:Microsoft.International.Formatters.Properties.Resources.Culture">
+      <summary>
+        　この厳密型リソースクラスを利用して、すべてのリソースを検索するため、現スレッドのCurrentUICultureプロパティをオーバーライドします。
+      </summary>
+    </member>
+    <member name="T:Microsoft.International.Formatters.EastAsiaNumericFormatter">
+      <summary>
+        このクラスは数字型データを東アジア地域の表示形式へ変換するための書式指定クラスです。
+      </summary>
+
+      <remarks>
+        このクラスは以下の東アジアの言語をサポートします:
+
+        <list type="bullet">
+          <item>
+            簡体字中国語
+          </item>
+          <item>
+            繁体字中国語
+          </item>
+          <item>
+            日本語
+          </item>
+          <item>
+            韓国語
+          </item>
+        </list>
+
+        このクラスは以下の書式をサポートします:
+        <list type="bullet">
+          <!--Fix Bug 3760-->
+          <item>
+            標準書式(L): 大字とも呼ばれています。
+          </item>
+          <item>
+            既定書式(Ln): 小字とも呼ばれています。
+          </item>
+          <item>
+            通貨書式(Lc): 通貨値を表現します。日本語ではサポートされていません。
+          </item>
+          <item>
+            字訳書式(Lt): 数値型データを数位文字が省略された漢数字で表示します。日本語でのみサポートされます。
+          </item>
+        </list>
+        地域と書式の組み合わせを解説するため、"12345"をサンプルとして説明します。
+        <list type="bullet">
+          <item>
+            簡体字中国語
+            <list type="bullet">
+              <item>
+                標準: 壹万贰仟叁佰肆拾伍
+              </item>
+              <item>
+                既定: 一万二千三百四十五
+              </item>
+              <item>
+                通貨: 壹万贰仟叁佰肆拾伍
+              </item>
+              <!--Fix Bug 3759-->
+              <item>
+                字訳: ArgumentExceptionがスローされます。
+              </item>
+            </list>
+          </item>
+          <item>
+            繁体字中国語
+            <list type="bullet">
+              <item>
+                標準: 壹萬貳仟參佰肆拾伍
+              </item>
+              <item>
+                既定: 一萬二千三百四十五
+              </item>
+              <item>
+                通貨: 壹萬貳仟參佰肆拾伍
+              </item>
+              <item>
+                字訳: ArgumentExceptionがスローされます。
+              </item>
+            </list>
+          </item>
+          <item>
+            日本語
+            <list type="bullet">
+              <item>
+                標準: 壱萬弐阡参百四拾伍
+              </item>
+              <item>
+                既定: 一万二千三百四十五
+              </item>
+              <item>
+                通貨: ArgumentExceptionがスローされます。
+              </item>
+              <item>
+                字訳: 一二三四五
+              </item>
+            </list>
+          </item>
+          <item>
+            韓国語
+            <list type="bullet">
+              <item>
+                標準: 일만 이천삼백사십오
+              </item>
+              <item>
+                既定: ArgumentExceptionがスローされます。
+              </item>
+              <item>
+                通貨: 일만 이천삼백사십오
+              </item>
+              <item>
+                字訳: ArgumentExceptionがスローされます。
+              </item>
+            </list>
+          </item>
+          <item>
+            その他の言語: ArgumentExceptionがスローされます。
+          </item>
+        </list>
+        <!--Fix Bug 3761-->
+        double、float、int、uint、long、ulong、short、ushort、sbyte、byteおよびdecimalなどの組み込みデータ型がサポートされています。 日本語では小数点以下は切り捨てられます。
+      </remarks>
+      <!--<example>
+        以下のコードは、数値を東アジア言語の表示形式へ変換する例を示します。
+        <code source = "../../Example_CS/Program.cs" lang = "cs"></code>
+        <code source = "../../Example_VB/Main.vb" lang = "vbnet"></code>
+        <code source = "../../Example_CPP/Example_CPP.cpp" lang = "cpp"></code>
+      </example>-->
+    </member>
+    <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.#ctor">
+      <summary>
+        EastAsiaNumericFormatterクラスの新しいインスタンスを初期化します。
+      </summary>
+    </member>
+    <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.GetFormat(System.Type)">
+      <summary>
+        ICustomFormatterを実装したオブジェクトを返して、書式指定を行います。
+      </summary>
+      <remarks>
+        EastAsiaNumericFormatter の使用例は、<see cref="T:Microsoft.International.Formatters.EastAsiaNumericFormatter"/> を参照してください。
+      </remarks>
+      <param name="formatType">書式の種類。</param>
+      <returns>
+        パラメータformatTypeは <see cref="T:System.ICustomFormatter"/> の実装クラスの場合、同一オブジェクトを返します。 それ以外の場合、nullを返します。
+      </returns>
+    </member>
+    <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.Format(System.String,System.Object,System.IFormatProvider)">
+      <summary>
+        オブジェクトを東アジア言語の表示形式へ変換します。
+      </summary>
+      <remarks>
+        EastAsiaNumericFormatterの使用例は、<see cref="T:Microsoft.International.Formatters.EastAsiaNumericFormatter">EastAsiaNumericFormatter</see> を参照してください。
+      </remarks>
+      <param name="format">書式の種類。</param>
+      <param name="arg">フォーマットする数字。</param>
+      <param name="formatProvider">フォーマット機能を提供するプロバイダ。</param>
+      <returns>東アジア言語の表示形式に変換された文字列。</returns>
+      <exception cref="T:System.ArgumentNullException">
+        format、arg、culture のいずれかがnull参照です。
+      </exception>
+      <exception cref="T:System.ArgumentException">
+        この地域では、指定した書式がサポートされていません。
+      </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        argは範囲外です。
+      </exception>
+      <exception cref="T:System.ArgumentException">
+        argは無効な型です。
+      </exception>
+    </member>
+    <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)">
+      <summary>
+        オブジェクトを指定した東アジア言語の表示形式へ変換します。
+      </summary>
+      <remarks>
+        FormatWithCulture の使用例は  <see cref="T:Microsoft.International.Formatters.EastAsiaNumericFormatter"/> を参照してください。
+      </remarks>
+      <!--Fix Bug 3762-->
+      <param name="format">書式の種類。</param>
+      <param name="arg">フォーマットする数字。</param>
+      <param name="formatProvider">フォーマット機能を提供するプロバイダ。</param>
+      <param name="culture">地域種類。</param>
+      <returns>東アジア言語の表示形式に変換された文字列。</returns>
+      <exception cref="T:System.ArgumentNullException">
+        format、arg、culture のいずれかがnull参照です。
+      </exception>
+      <exception cref="T:System.ArgumentException">
+        この地域では、指定した書式がサポートされていません。
+      </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        argは範囲外です。
+      </exception>
+      <exception cref="T:System.ArgumentException">
+        argは無効な型です。
+      </exception>
+    </member>
+    - <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.GetIntegralStack(System.Decimal,System.UInt64,Microsoft.International.Formatters.StackWithIndex)">
+      <summary>指定した数値を分けて、数字とそのウエイトをスタックにプッシュします。</summary>
+      <param name="num">分割される数値です。</param>
+      <param name="position">分割開始の位置です。</param>
+      <param name="stack">数字とそのウエイトを蓄えるスタックです。</param>
+    </member>
+    - <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.ConvertIntergralStackToText(Microsoft.International.Formatters.StackWithIndex,System.Text.StringBuilder)">
+      <summary>スタックの数字をテキストに変換します。</summary>
+      <param name="stack">数字を蓄えるスタックです。</param>
+      <param name="text">変換後のテキストを蓄えます。</param>
+    </member>
+     <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.GetDecimalText(System.Decimal,System.Text.StringBuilder)">
+      <summary>テキストに指定した数値の小数点部分を添加します。</summary>
+      <param name="num">小数点を持つ数値です。</param>
+      <param name="text">修正されるテキストです。</param>
+    </member>
+     <member name="T:Microsoft.International.Formatters.InternationalNumericFormatter">
+      <summary>フォーマッタクラスを提供して、数値型の数字を東アジア或いは、アラビアのローカル数字で表示する文字列に変換します。</summary>
+       <remarks>
+        这个类支持以下的东亚语言： このクラスは以下の東アジアとアラビア語をサポートします。
+         <list type="bullet">
+          <item>簡体中国語です。</item>
+          <item>繁体中国語です</item>
+          <item>日本語です。</item>
+          <item>韓国語です。</item>
+        </list>
+        このクラスは以下のフォーマット文字列をサポートします：
+         <list type="bullet">
+          <item>標準書式(L)：大文字。</item>
+          <item>基本書式(Ln)：小文字。</item>
+          <item>通貨書式 (Lc)：通貨を表示します。</item>
+          <item>音訳書式(Lt)：以数字符号字母表示数值型数据，只支持日文。数値データを表示します。日本語だけサポートします。</item>
+        </list>
+        ビルトイン数字タイプだけサポートします。double, float, int, uint, long, ulong, short, ushort, sbyte, byte and decimalなどが含まれています。
+      </remarks>
+       <example>
+        以下のコードは数字から東アジア語とアラビア語に変換することを実演します。
+        <code>using System; using Microsoft.International.Formatters; using Microsoft.International; using System.Globalization; using System.Diagnostics; //数字を東アジア語とアラビア語にフォーマットするサンプルコードです。 namespace InternationalNumericFormatterDemo { class Program { static void Main(string[] args) { Debug.WriteLine("12345の簡体中文の基本書式： " + InternationalNumericFormatter.FormatWithCulture("Ln", 12345, null, new CultureInfo("zh-CHS"))); Debug.WriteLine("12345の繁体中文の通貨書式： " + InternationalNumericFormatter.FormatWithCulture("Lc", 12345, null, new CultureInfo("zh-CHT"))); Debug.WriteLine("12345の日本語の標準書式： " + InternationalNumericFormatter.FormatWithCulture("L", 12345, null, new CultureInfo("ja"))); Debug.WriteLine("12345の韓国語の標準書式： " + InternationalNumericFormatter.FormatWithCulture("L", 12345, null, new CultureInfo("ko"))); Debug.WriteLine("12345のアラビア語の標準書式： " + InternationalNumericFormatter.FormatWithCulture("L", 12345, null, new CultureInfo("ar"))); } } } /* 出力結果： 12345簡体中文の基本書式： 一万二千三百四十五 12345の繁体中文の通貨書式： 壹萬貳仟參佰肆拾伍 12345日本語の標準書式： 壱萬弐阡参百四拾伍 12345の韓国語の標準書式： 일만 이천삼백사십오 12345のアラビア語の標準書式：اثنا عشر آلاف و ثلاثة مائة خمسة و أربعون */</code>
+      </example>
+    </member>
+     <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.#ctor">
+      <summary> InternationalNumericFormatterクラスのインスタンスを初期化します。</summary>
+    </member>
+     <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.GetFormat(System.Type)">
+      <summary> ICustomFormatterインタフェースを実現したフォーマットオブジェクトに戻ります。　</summary>
+      <param name="formatType">書式タイプです。</param>
+       <returns>
+        引数formatTypeは
+        <see cref="T:System.ICustomFormatter" />
+        である場合、 formatTypeに戻ります、逆の場合、nullに戻ります。
+      </returns>
+    </member>
+     <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.Format(System.String,System.Object,System.IFormatProvider)">
+      <summary>当該オブジェクトを目前の文化表示に初期化します。</summary>
+       <param name="format">
+        このクラスは以下のフォーマット文字列をサポートします：
+         <list type="bullet">
+          <item>標準書式(L)：大文字です。</item>
+          <item>基本書式(Ln)：小文字です。</item>
+          <item>通貨書式(Lc)：通貨を表示します。</item>
+          <item>字译格式(Lt)：以数字符号字母表示数值型数据，只支持日文。数値データを表示します。日本語だけサポートします。</item>
+        </list>
+      </param>
+      <param name="arg">フォーマットされる数値です。</param>
+      <param name="formatProvider">ファーマットの提供者です。</param>
+      <returns>東アジア語とアラビア語のローカル文字列です。</returns>
+    </member>
+     <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)">
+      <summary>オブジェクトを指定した東アジア語とアラビア語文化の表記にフォーマットします。</summary>
+       <param name="format">
+        このクラスは以下のフォーマット文字列をサポートします。
+         <list type="bullet">
+          <item>標準書式(L)：大文字です。</item>
+          <item>基本書式(Ln)：小文字です。</item>
+          <item>通貨書式(Lc)：通貨を表示します。</item>
+          <item>字译格式(Lt)：以数字符号字母表示数值型数据，只支持日文。数値データを表示します。日本語だけサポートします。</item>
+        </list>
+      </param>
+      <param name="arg">フォーマットされる数値です。</param>
+      <param name="formatProvider">フォーマットの提供者です。</param>
+      <param name="culture">文化の種類です。</param>
+      <returns>東アジア語とアラビア語でフォーマットされたローカル文字列です。</returns>
+       <exception cref="T:System.ArgumentNullException">
+        <see cref="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)" />
+        方法のフォーマット引数はnullで、
+        <see cref="T:System.ArgumentNullException" />
+        異常を表示します。
+      </exception>
+       <exception cref="T:System.ArgumentNullException">
+        <see cref="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)" />
+        方法のarg引数はnullで、
+        <see cref="T:System.ArgumentNullException" />
+        異常を表示します。
+      </exception>
+       <exception cref="T:System.ArgumentNullException">
+        <see cref="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)" />
+        方法的culture参数为空，方法のculture 引数はnullで、
+        <see cref="T:System.ArgumentNullException" />
+        異常を表示します。
+      </exception>
+       <exception cref="T:System.ArgumentOutOfRangeException">
+        数値は限界を超えて、
+        <see cref="T:System.ArgumentOutOfRangeException" />
+        異常を表示します。
+      </exception>
+       <exception cref="T:System.ArgumentException">
+        不法な引数タイプで、内部数値タイプだけサポートして、
+        <see cref="T:System.ArgumentException" />
+        異常を表示します。
+      </exception>
+       <exception cref="T:System.ArgumentException">
+        Cultureとformatの不法な組合わせで、
+        <see cref="T:System.ArgumentException" />
+        異常を表示します。
+      </exception>
+    </member>
+     <member name="T:Microsoft.International.Formatters.AssemblyResource">
+      <summary>ローカル文字列を検索する用の強く定型化されたリソースクラスです。</summary>
+    </member>
+     <member name="P:Microsoft.International.Formatters.AssemblyResource.ResourceManager">
+      <summary>当該クラスが使っているリソースマネージャのインスタンスに戻ります。</summary>
+    </member>
+     <member name="P:Microsoft.International.Formatters.AssemblyResource.Culture">
+      <summary>スレッドのCurrentUICultureプロパティをオーバロードして、相応する強くて定型化されたりソースクラスを検索します。</summary>
+    </member>
+     <member name="P:Microsoft.International.Formatters.AssemblyResource.INVALID_ARGUMENT_TYPE">
+      <summary>ローカル文字列を検索します：不法な引数タイプ</summary>
+    </member>
+     <member name="P:Microsoft.International.Formatters.AssemblyResource.INVALID_PARAMETER_COMBINATION">
+      <summary>ローカル文字列を検索します：は当地文化は指定した書式をサポートしません。</summary>
+    </member>
+  </members>
+</doc>

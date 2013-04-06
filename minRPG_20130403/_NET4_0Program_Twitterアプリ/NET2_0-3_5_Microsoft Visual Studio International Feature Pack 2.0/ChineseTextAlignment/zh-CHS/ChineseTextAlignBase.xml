@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChineseTextAlignBase</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.ChineseTextAlignment.TextAlignmentStyle">
+            <summary>
+            文本对齐风格。
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ChineseTextAlignment.TextAlignmentStyle.Left">
+            <summary>
+            左对齐。
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ChineseTextAlignment.TextAlignmentStyle.Center">
+            <summary>
+            中间对齐。
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ChineseTextAlignment.TextAlignmentStyle.Right">
+            <summary>
+              右对齐。
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ChineseTextAlignment.TextAlignmentStyle.Justify">
+            <summary>
+            Justify 对齐。
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ChineseTextAlignment.TextAlignmentStyle.FullJustify">
+            <summary>
+            完全 Justify 对齐。
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo">
+            <summary>
+            对齐风格信息。
+            </summary>
+            <remarks>
+              使用 Utility 的实例请参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> 类（WinForm）或 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> 类（Wpf）。<br />
+            </remarks>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo.Equals(System.Object)">
+            <summary>
+            判断是否指定的对象与当前对象相等。
+            </summary>
+            <param name="obj">指定的对象。</param>
+            <returns>
+            相等返回 true，不等返回 false。  
+            </returns>
+            <remarks>
+              使用 Utility 的实例请参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> 类（WinForm）或 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> 类（Wpf）。<br />
+            </remarks>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo.op_Equality(Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo,Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo)">
+            <summary>
+              判断是否指定的对象与当前对象相等。
+            </summary>
+            <param name="info1">第一个对象。</param>
+            <param name="info2">第二个对象。</param>
+            <returns>
+              相等返回 true，不等返回 false。
+            </returns>
+          <remarks>
+            使用 Utility 的实例请参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> 类（WinForm）或 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> 类（Wpf）。<br />
+          </remarks>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo.op_Inequality(Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo,Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo)">
+          <summary>
+            判断是否指定的对象与当前对象相等。
+          </summary>
+          <param name="info1">第一个对象。</param>
+          <param name="info2">第二个对象。</param>
+          <returns>
+            相等返回 true，不等返回 false。
+          </returns>
+            <remarks>
+              使用 Utility 的实例请参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> 类（WinForm）或 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> 类（Wpf）。<br />
+            </remarks>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo.GetHashCode">
+            <summary>
+            作为指定类型的哈希算法。
+            </summary>
+            <returns>当前对象的哈希码。</returns>
+            <remarks>
+              使用 Utility 的实例请参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> 类（WinForm）或 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> 类（Wpf）。<br />
+            </remarks>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo.Style">
+            <summary>
+            对齐风格。
+            </summary>
+            <remarks>
+              使用 Utility 的实例请参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> 类（WinForm）或 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> 类（Wpf）。<br />
+            </remarks>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo.LeftMargin">
+            <summary>
+            小于0左对齐，否则抛出异常。
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            设置的值小于0。
+            </exception>
+            <remarks>
+              使用 Utility 的实例请参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> 类（WinForm）或 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> 类（Wpf）。<br />
+            </remarks>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo.RightMargin">
+            <summary>
+              大于0右对齐，否则抛出异常。
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+              设置的值小于0。
+            </exception>
+            <remarks>
+              使用 Utility 的实例请参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> 类（WinForm）或 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> 类（Wpf）。<br />
+            </remarks>
+        </member>
+        <member name="T:Microsoft.International.ChineseTextAlignment.SmartAlignmentUnitInfoProvider">
+            <summary>
+            这个类提供智能对齐单元信息。
+            </summary>
+            <remarks>
+            <p>
+              这个类实现 IAlignmentUnitProvider 接口并为智能的对齐风格提供提供对齐单元信息。</p>
+            <p>IsNewAlignmentMethod 为下列条件返回 true 否则返回 false。</p>
+            <list type="bullet">
+            <item>
+            之前的字是象形文字。
+            </item>
+            <item>
+              之前的字不是'(' (U+0028)，当前的字是'('。
+            </item>
+            <item>
+              之前的字不是')' (U+0029)，当前的字不是'('。
+            </item>
+            <item>
+              之前的字是字母(a-z 和 A-Z)数字(0-9) 或 '('，当前的字不是字母,数字或'('。
+            </item>
+            </list>
+            <p>
+              使用 Utility 的实例请参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> 类（WinForm）或 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> 类（Wpf）。<br />
+            </p>
+            </remarks>
+        </member>
+        <member name="T:Microsoft.International.ChineseTextAlignment.IAlignmentUnitInfoProvider">
+            <summary>
+             提供对齐信息的接口。
+            </summary>
+            <remarks>
+              使用 Utility 的实例请参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> 类（WinForm）或 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> 类（Wpf）。<br />
+            </remarks>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.IAlignmentUnitInfoProvider.Initialize(System.String)">
+            <summary>
+            用要处理的字符串的第一个字符创建类的一个实例 <see cref="T:Microsoft.International.ChineseTextAlignment.IAlignmentUnitInfoProvider"/>。
+            </summary>
+            <remarks>
+              使用 Utility 的实例请参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> 类（WinForm）或 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> 类（Wpf）。<br />
+            </remarks>
+            <param name="s">要处理的字符串的第一个字符。</param>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.IAlignmentUnitInfoProvider.IsNewAlignmentUnit(System.String)">
+            <summary>
+              判断是否新的对齐单元以这个字符开头。
+            </summary>
+            <remarks>
+              使用 Utility 的实例请参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> 类（WinForm）或 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> 类（Wpf）。<br />
+            </remarks>
+            <param name="s">当前的字符。</param>
+            <returns>
+              如果创建了新的对齐单元返回 true，否则返回 false。
+            </returns>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.SmartAlignmentUnitInfoProvider.#ctor">
+            <summary>
+              创建 <see cref="T:Microsoft.International.ChineseTextAlignment.SmartAlignmentUnitInfoProvider"/> 类的一个实例。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.SmartAlignmentUnitInfoProvider.Initialize(System.String)">
+            <summary>
+            创建 <see cref="T:Microsoft.International.ChineseTextAlignment.SmartAlignmentUnitInfoProvider"/> 类的一个实例。
+            </summary>
+            <param name="s">要处理的字符串得到第一个字符。</param>
+            <remarks>
+              使用 Utility 的实例请参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> 类（WinForm）或 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> 类（Wpf）。<br />
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            s 是空引用。
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            s 长度是0。
+            </exception>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.SmartAlignmentUnitInfoProvider.IsNewAlignmentUnit(System.String)">
+            <summary>
+              判断是否新的对齐单元以这个字符开头。
+            </summary>
+            <param name="s">当前的字符。</param>
+            <returns>
+              如果创建了新的对齐单元返回 true，否则返回 false。
+            </returns>
+            <remarks>
+              使用 Utility 的实例请参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> 类（WinForm）或 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> 类（Wpf）。<br />
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            s 是空引用。
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            s 长度是0。
+            </exception>
+        </member>
+        <member name="T:Microsoft.International.ChineseTextAlignment.SimpleAlignmentUnitInfoProvider">
+            <summary>
+            这个类提供简单文本对齐信息。
+            </summary>
+            <remarks>
+              <p>
+                这个类实现 IAlignmentUnitProvider 接口并为最常用的对齐风格提供提供对齐单元信息。
+              </p>
+              <p>IsNewAlignmentMethod 为下列条件返回 true 否则返回 false。</p>
+            <p>IsNewAlignment 方法总是返回 true。</p>
+            <p>
+              使用 Utility 的实例请参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> 类（WinForm）或 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> 类（Wpf）。<br />
+            </p>
+            </remarks>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.SimpleAlignmentUnitInfoProvider.#ctor">
+            <summary>
+              创建 <see cref="T:Microsoft.International.ChineseTextAlignment.SimpleAlignmentUnitInfoProvider"/> 类的一个实例。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.SimpleAlignmentUnitInfoProvider.Initialize(System.String)">
+            <summary>
+              用要处理的字符串的第一个字符创建 <see cref="T:Microsoft.International.ChineseTextAlignment.SimpleAlignmentUnitInfoProvider"/> 类的一个实例。
+            </summary>
+            <param name="s">要处理的字符串的第一个字符。</param>
+            <remarks>
+              使用 Utility 的实例请参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> 类（WinForm）或 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> 类（Wpf）。<br />
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+           s 是空引用。
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            s 长度是0。
+            </exception>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.SimpleAlignmentUnitInfoProvider.IsNewAlignmentUnit(System.String)">
+            <summary>
+              判断是否新的对齐单元以这个字符开头。
+            </summary>
+            <param name="s">当前的字符。</param>
+            <returns>
+            这个方法总是返回 true。
+            </returns>
+            <remarks>
+              使用 Utility 的实例请参见 <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">Utility</see> 类（WinForm）或 <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">Utility</see> 类（Wpf）。<br />
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+           s 是空引用。
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            s 长度是0。
+            </exception>
+        </member>
+        <member name="T:Microsoft.International.ChineseTextAlignment.AssemblyResource">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.AssemblyResource.ResourceManager">
+            <summary>
+              返回此类使用的、缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.AssemblyResource.Culture">
+            <summary>
+              为所有资源查找重写当前线程的 CurrentUICulture 属性，
+              方法是使用此强类型资源类。
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.AssemblyResource.INVALID_PARAMETER_ZEOR_LENGTH_CHARACTER">
+            <summary>
+              查询一个本地化的字符串类似于不合法参数 - 字符长度为0。
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.AssemblyResource.MARGIN_MUST_NOT_BE_NEGATIVE_VALUE">
+            <summary>
+              查询一个本地化的字符串类似于文本遍距不能为负值。使用正数。
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KoreanInputCommon</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.Windows.SupportType">
+            <summary>
+            Autocomplete 기능을 지원하는 KoreanAutoCompletionComboBox 유형입니다.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.Windows.SupportType.NoSupport">
+            <summary>
+            자동 완료 기능을 지원하지 않습니다.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.Windows.SupportType.IntelliSense">
+            <summary>
+            문자 또는 문자 서열을 입력 시 매칭되는 후보 리스트를 표시하는 기능을 지원합니다.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.Windows.SupportType.AutoCompletion">
+            <summary>
+            문자 또는 문자 서열을 입력 시 제일 매칭되는 문자열을 표시하는 기능을 지원합니다.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.Windows.AssemblyResource">
+            <summary>
+              '강한 타입' 리소스 클래스로서 지역화 문자열 등을 조회합니다.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Windows.AssemblyResource.ResourceManager">
+            <summary>
+              이 클래스에 사용된 캐시 ResourceManager 인스턴스를 반환합니다.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Windows.AssemblyResource.Culture">
+            <summary>
+              강한 타입 리소스 클래스를 사용한 리소스 조회에 대한 현재 트레드의 CurrentUICulture 속성을 덮어씁니다.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.Windows.Properties.Resources">
+            <summary>
+              강제적으로 입력한 리소스 클래스로서 지역화 문자열 등을 조회합니다.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Windows.Properties.Resources.ResourceManager">
+            <summary>
+              이 클래스에 사용된 캐시 ResourceManager 인스턴스를 반환합니다.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Windows.Properties.Resources.Culture">
+            <summary>
+             강한 타입 리소스 클래스를 사용한 리소스 조회에 대한 현재 트레드의 CurrentUICulture 속성을 무시합니다.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.Windows.IKoreanAutoCompleteCandidateSource">
+            <summary>
+              매칭 후보 항목의 소스를 위한 문자열 목록을 가져오도록 메소드를 제공합니다.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.IKoreanAutoCompleteCandidateSource.GetCandidateSource">
+            <summary>
+              매칭 후보 항목의 소스를 위한 문자열 목록을 가져옵니다.
+            </summary>
+            <returns>
+            문자열 목록. 
+            </returns>
+        </member>
+    </members>
+</doc>

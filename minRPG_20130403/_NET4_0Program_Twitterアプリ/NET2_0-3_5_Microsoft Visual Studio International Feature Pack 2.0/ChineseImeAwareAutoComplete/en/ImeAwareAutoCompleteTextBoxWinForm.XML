@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ImeAwareAutoCompleteTextBoxWinForm</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox">
+            <summary>
+            TextBox with Ime-aware feature.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.listener">
+            <summary>
+            Internal ChineseImeAwareAutoCompleteListener object
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.candidateCounter">
+            <summary>
+            Internal Dictionary for sortiing.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.InitLayout">
+            <summary>
+            Called after the control has been added to another container.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.OnLostFocus(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.LostFocus"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.Compare(System.String,System.String)">
+            <summary>
+            Compares two strings and returns a value indicating whether one is less than, equal to, or greater than the other.
+            </summary>
+            <param name="x">The first string to compare.</param>
+            <param name="y">The second string to compare.</param>
+            <returns>
+            Value Condition Less than zero<paramref name="x"/> is less than <paramref name="y"/>.Zero<paramref name="x"/> equals <paramref name="y"/>.Greater than zero<paramref name="x"/> is greater than <paramref name="y"/>.
+            </returns>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.WinForm.CommonResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.WinForm.CommonResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.WinForm.CommonResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

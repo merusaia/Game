@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KoreanAutoCompletionComboBoxWPF</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.Windows.Controls.CommonResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Windows.Controls.CommonResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Windows.Controls.CommonResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.Windows.Controls.KoreanAutoCompleteComboBox">
+            <summary>
+            Provides comboBox with Korean IntelliSense and AutoCompletion support.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.Controls.KoreanAutoCompleteComboBox.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.International.Windows.Controls.KoreanAutoCompleteComboBox"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.Controls.KoreanAutoCompleteComboBox.#ctor(Microsoft.International.Windows.SupportType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.International.Windows.Controls.KoreanAutoCompleteComboBox"/> class.
+            </summary>
+            <param name="supportType"> Supportted type of auto-complete.</param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Controls.KoreanAutoCompleteComboBox.OnSelectionChanged(System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Responds to a <see cref="T:System.Windows.Controls.ComboBox"/> selection change by raising an <see cref="E:System.Windows.Controls.Primitives.Selector.SelectionChanged"/> event.
+            </summary>
+            <param name="e">Provides data for <see cref="T:System.Windows.Controls.SelectionChangedEventArgs"/>.</param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Controls.KoreanAutoCompleteComboBox.OnDropDownOpened(System.EventArgs)">
+            <summary>
+            Raises when a combo box's popup opens.
+            </summary>
+            <param name="e">The event data for the <see cref="E:System.Windows.Controls.ComboBox.DropDownOpened"/> event.</param>
+        </member>
+        <member name="P:Microsoft.International.Windows.Controls.KoreanAutoCompleteComboBox.SupportType">
+            <summary>
+            Gets or sets the support type.
+            </summary>
+        </member>
+    </members>
+</doc>

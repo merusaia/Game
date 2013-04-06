@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>KoreanAutoCompletionWinForm</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener">
+            <summary>
+              리스너를 제공하여 IntelliSence 및 AutoCompletion 모드의 한국어 IME 인식 자동 완성 기능을 지원합니다.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.Delete">
+            <summary>
+              현재 인스턴스를 삭제합니다.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.HideCandidate">
+            <summary>
+              후보 항목을 숨깁니다.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.Create(System.Windows.Forms.Control,Microsoft.International.Windows.SupportType)">
+            <summary>
+              바인딩 컨트롤을 위해 지정된 자동 완성 모드의 KoreanAutoCompleteListener를 구축합니다.
+            </summary>
+            <param name="bindingControl">바인딩 컨트롤.</param>
+            <param name="supportType">자동 완료 기능 지원 유형.</param>
+            <returns>
+             KoreanAutoCompleteListener 의 인스턴스.
+            </returns>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.OnTextChanged(System.EventArgs)">
+      <summary>
+        TextChanged 이벤트를 발생시킵니다.
+      </summary>
+      <param name="e">이벤트 데이터를 포함하는 EventArgs.</param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.OnPaint(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+        Paint 이벤트를 발생시킵니다.
+      </summary>
+      <param name="e">이벤트 데이터를 포함하는 EventArgs.</param>
+    </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+      <summary>
+        KeyDown 이벤트를 발생시킵니다.
+      </summary>
+      <param name="e">이벤트 데이터를 포함하는 EventArgs.</param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+        MouseDown 이벤트를 발생시킵니다.
+      </summary>
+      <param name="e">이벤트 데이터를 포함하는 EventArgs.</param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.OnGotFocus(System.EventArgs)">
+            <summary>
+             GotFocus 이벤트를 발생시킵니다.
+            </summary>
+            <param name="e">이벤트 데이트를 포함.</param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.OnLostFocus(System.EventArgs)">
+      <summary>
+        LostFocus 이벤트를 발생시킵니다.
+      </summary>
+      <param name="e">이벤트 데이터를 포함하는 EventArgs.</param>
+        </member>
+        <member name="P:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.SupportType">
+            <summary>
+            지원 유형을 가져오거나 설정합니다.
+            </summary>
+            <value>자동 완료 기능 지원 유형.</value>
+        </member>
+    </members>
+</doc>

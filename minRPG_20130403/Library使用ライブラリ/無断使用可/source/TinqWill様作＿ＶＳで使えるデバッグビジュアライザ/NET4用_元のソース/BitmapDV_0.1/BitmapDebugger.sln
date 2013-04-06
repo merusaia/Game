@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C# Express 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitmapDebugger", "BitmapDebugger.csproj", "{5EFEBEFF-E000-487F-B6A3-5A0DB9F135AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTestDebug", "..\..\..\FTestDebug\FTestDebug.csproj", "{1DC6AEED-04D7-4C44-B577-F891DBF8DA17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EFEBEFF-E000-487F-B6A3-5A0DB9F135AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EFEBEFF-E000-487F-B6A3-5A0DB9F135AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EFEBEFF-E000-487F-B6A3-5A0DB9F135AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EFEBEFF-E000-487F-B6A3-5A0DB9F135AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DC6AEED-04D7-4C44-B577-F891DBF8DA17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DC6AEED-04D7-4C44-B577-F891DBF8DA17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DC6AEED-04D7-4C44-B577-F891DBF8DA17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DC6AEED-04D7-4C44-B577-F891DBF8DA17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

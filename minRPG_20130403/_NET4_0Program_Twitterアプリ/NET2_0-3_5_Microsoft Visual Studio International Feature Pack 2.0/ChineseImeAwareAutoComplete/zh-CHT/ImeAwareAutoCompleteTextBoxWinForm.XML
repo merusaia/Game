@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+  <assembly>
+    <name>ImeAwareAutoCompleteTextBoxWinForm</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox">
+      <summary>具有輸入法感知自動完成功能的 TextBox。</summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.listener">
+      <summary>內部的 ChineseImeAwareAutoCompleteListener 物件。</summary>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.candidateCounter">
+      <summary>內部詞典排序。</summary>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.#ctor">
+      <summary>
+        初始化 <see cref="T:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox"></see> 類的一個實例。
+      </summary>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.InitLayout">
+      <summary>控制項被添加到另一個容器時調用。</summary>
+    </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.OnLostFocus(System.EventArgs)">
+            <summary>
+            觸發 <see cref="E:System.Windows.Forms.Control.LostFocus"/> 事件。
+            </summary>
+            <param name="e">一個包含了事件資料的 <see cref="T:System.Windows.Forms.EventArgs"/>。</param>
+
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.Compare(System.String,System.String)">
+      <summary>比較兩個指定的 String 物件，並傳回整數，這個整數表示兩者在排序次序中彼此的關聯性。</summary>
+      <param name="x">比較的第一個字串。</param>
+      <param name="y">比較的第二個字串。</param>
+      <returns>
+        小於零，則 x 小於 y；等於零，則 x 等於 y；大於零，則 x 大於 y。
+      </returns>
+    </member>
+    <member name="F:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.components">
+      <summary>需求設計變更。</summary>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.Dispose(System.Boolean)">
+      <summary>清空被使用的資源。</summary>
+      <param name="disposing">
+        <c>true</c>，表示釋放 Managed 和 Unmanaged 資源；<c>false</c>，表示只釋放 Unmanaged 資源。 </param>
+    </member>
+    <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeAwareAutoCompleteTextBox.InitializeComponent">
+      <summary>支援設計的需要方法 - 不修改。               此方法內容在代碼編輯器。</summary>
+    </member>
+  </members>
+</doc>

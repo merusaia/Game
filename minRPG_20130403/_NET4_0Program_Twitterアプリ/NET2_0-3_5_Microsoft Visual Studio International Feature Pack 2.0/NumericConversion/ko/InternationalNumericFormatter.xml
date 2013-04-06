@@ -1,0 +1,398 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>InternationalNumericFormatter</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.International.Formatters.EastAsiaNumericFormatter">
+      <summary>
+        숫자 데이터 형식의 숫자를 동 아시아 언어에서 사용되는 숫자 형식의 문자열로 전환하는 포맷터 클래스를 제공합니다.
+      </summary>
+      <remarks>
+        이 클래스는 다음 동 아시아 언어를 지원합니다.
+        <list type="bullet">
+          <item>
+            중국어 간체
+          </item>
+          <item>
+            중국어 번체
+          </item>
+          <item>
+            일본어
+          </item>
+          <item>
+            한국어
+          </item>
+        </list>
+
+        이 클래스는 다음 서식의 문자열을 지원합니다.
+        <list type="bullet">
+          <item>
+            Standard Format(L): 또는 대문자입니다.
+          </item>
+          <item>
+            Normal Format(Ln): 또는 소문자입니다.
+          </item>
+          <item>
+            Currency Format(Lc): 화폐를 표시합니다.
+          </item>
+          <item>
+            Transliterate Format(Lt): 숫자 알파벳 문자의 숫자 데이터를 표시합니다. 일본어만 지원합니다.
+          </item>
+        </list>
+
+        다음은  “12345”에 대한 문화권 및 서식의 조합의 예제입니다.
+        <list type="bullet">
+          <item>
+            중국어 간체
+            <list type="bullet">
+              <item>
+                대문자: 壹万贰 仟叁 佰肆拾伍
+              </item>
+              <item>
+                소문자: 一万二千三百四十五
+              </item>
+              <item>
+                화폐: 壹万贰仟叁佰肆拾伍
+              </item>
+              <item>
+                Transliterate: ArgumentException 이 발생합니다
+              </item>
+            </list>
+          </item>
+          <item>
+            중국어 번체
+            <list type="bullet">
+              <item>
+                대문자: 壹萬貳仟參佰肆拾伍
+              </item>
+              <item>
+                소문자: 一萬二千三百四十五
+              </item>
+              <item>
+                화폐: 壹萬貳仟參佰肆拾伍
+              </item>
+              <item>
+                Transliterate: ArgumentException 이 발생합니다
+              </item>
+            </list>
+          </item>
+          <item>
+            일본어
+            <list type="bullet">
+              <item>
+                대문자: 壱萬弐阡参百四拾伍
+              </item>
+              <item>
+                소문자: 一万二千三百四十五
+              </item>
+              <item>
+                화폐: ArgumentException 이 발생합니다
+              </item>
+              <item>
+                Transliterate: 一二三四五
+              </item>
+            </list>
+          </item>
+          <item>
+            한국어
+            <list type="bullet">
+              <item>
+                대문자: 일만 이천삼백사십오
+              </item>
+              <item>
+                소문자: ArgumentException 이 발생합니다
+              </item>
+              <item>
+                화폐: 일만 이천삼백사십오
+              </item>
+              <item>
+                Transliterate: ArgumentException 이 발생합니다
+              </item>
+            </list>
+          </item>
+          <item>
+            기타 언어: ArgumentException 이 발생합니다
+          </item>
+        </list>
+        double, float, int, uint, long, ulong, short, ushort, sbyte, byte 및 decimal 등을 포함한 Built-in 숫자 형식을 지원합니다.
+      </remarks>
+      <!--<example>
+        아래 코드는 동 아시아 지역 숫자 형식으로 숫자를 문자열로 전환하는 예제입니다.
+        <code source = "../../Example_CS/Program.cs" lang = "cs"></code>
+        <code source = "../../Example_VB/Main.vb" lang = "vbnet"></code>
+        <code source = "../../Example_CPP/Example_CPP.cpp" lang = "cpp"></code>
+      </example>-->
+    </member>
+    <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.#ctor">
+      <summary>
+        EastAsiaNumericFormatter클래스의 새 인스턴스를 생성합니다.
+      </summary>
+    </member>
+    <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.GetFormat(System.Type)">
+      <summary>
+        서식 지정을 위한 ICustomFormatter를 구현한 개체를 반환 합니다.
+      </summary>
+      <remarks>
+        EastAsiaNumericFormatter를 사용한 샘플 <see cref="T:Microsoft.International.Formatters.EastAsiaNumericFormatter">EastAsiaNumericFormatter</see>를참조하십시오.
+      </remarks>
+      <param name="formatType">포멧 형식입니다.</param>
+      <returns>
+        FormatType 매개 변수가 <see cref="T:System.ICustomFormatter"/> 형식일 경우 같은 개체를 반환합니다. 그렇지 않을 경우, null 참조를 반환합니다.
+      </returns>
+    </member>
+    <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.Format(System.String,System.Object,System.IFormatProvider)">
+      <summary>
+        개체를 지정된 동 아시아 문화권 형식으로 서식을 지정합니다.
+      </summary>
+      <remarks>
+        EastAsiaNumericFormatter를 사용한 샘플 <see cref="T:Microsoft.International.Formatters.EastAsiaNumericFormatter">EastAsiaNumericFormatter</see>를참조하십시오.
+      </remarks>
+      <param name="format">서식 형식입니다.</param>
+      <param name="arg">서식을 지정할 숫자입니다.</param>
+      <param name="formatProvider">서식 공급자입니다.</param>
+      <returns>동 아시아 형식으로 로컬화된 문자열을 반환합니다.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        서식, arg 또는 문화권은 null 참조입니다.
+      </exception>
+      <exception cref="T:System.ArgumentException">
+        지정된 서식은 이 문화권에서 지원되지 않습니다.
+      </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        Arg가 범위를 초과했습니다.
+      </exception>
+      <exception cref="T:System.ArgumentException">
+        Arg가 무효 형식입니다.
+      </exception>
+    </member>
+    <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)">
+      <summary>
+        개체를 지정된 동 아시아 문화권 형식으로 서식을 지정합니다.
+      </summary>
+      <remarks>
+        FormatWithCulture를 사용한 샘플 <see cref="T:Microsoft.International.Formatters.EastAsiaNumericFormatter"/>를 참조하십시오.
+      </remarks>
+      <param name="format">서식 형식입니다.</param>
+      <param name="arg">서식을 지정할 숫자입니다.</param>
+      <param name="formatProvider">서식 공급자입니다.</param>
+      <param name="culture">문화권 형식입니다.</param>
+      <returns>동 아시아 형식으로 로컬화된 문자열을 반환합니다.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        서식, arg 또는 문화권은 null 참조입니다.
+      </exception>
+      <exception cref="T:System.ArgumentException">
+        지정된 서식은 이 문화권에서 지원되지 않습니다.
+      </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        Arg가 범위를 초과했습니다.
+      </exception>
+      <exception cref="T:System.ArgumentException">
+        Arg가 무효 형식입니다.
+      </exception>
+    </member>
+    <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.GetIntegralStack(System.Decimal,System.UInt64,Microsoft.International.Formatters.StackWithIndex)">
+      <summary>
+        숫자를 분리하여 디지털웨이트와 함께 스택에 넣습니다.
+      </summary>
+      <param name="num">분리할 숫자.</param>
+      <param name="position">이 위치에서 숫자를 분리합니다.</param>
+      <param name="stack">모든 숫자와 디지털웨이트를 스텍에 넣습니다.</param>
+    </member>
+    <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.ConvertIntergralStackToText(Microsoft.International.Formatters.StackWithIndex,System.Text.StringBuilder)">
+      <summary>
+        스택으로부터 숫자 정보를 스트링 빌더로 전환합니다.
+      </summary>
+      <param name="stack">전환할 숫자를 저장합니다.</param>
+      <param name="text">숫자를 텍스트로 전환합니다.</param>
+    </member>
+    <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.GetDecimalText(System.Decimal,System.Text.StringBuilder)">
+      <summary>
+        숫자의 소수점 부분을 텍스트에 추가합니다.
+      </summary>
+      <param name="num">숫자의 소수점 부분이 추가됩니다.</param>
+      <param name="text">숫자의 소수점 부분이 텍스트에 추가됩니다.</param>
+    </member>
+    
+    <member name="T:Microsoft.International.Formatters.InternationalNumericFormatter">
+      <summary>
+        숫자형식의 숫자 데이터를 동 아시아 및 아랍 언어로 지역화 문자열로 전환하는 포맷팅 클래스를 제공합니다.
+      </summary>
+      <remarks>
+        이 클래스는 아래 동 아시아 및 아랍 언어를 지원합니다.
+        <list type="bullet">
+          <item>
+            중국어-간체
+          </item>
+          <item>
+            중국어-번체
+          </item>
+          <item>
+            일본어
+          </item>
+          <item>
+            한국어
+          </item>
+          <item>
+            아랍어
+          </item>
+        </list>
+        이 클래스는 아래 포맷 문자열을 지원합니다.
+        <list type="bullet">
+          <item>
+            표준 형식(L): 또는 대문자라고도 합니다.
+          </item>
+          <item>
+            일반 형식(Ln): 또는 소문자라고도 합니다.
+          </item>
+          <item>
+            화폐 형식(Lc): 화폐금액을 표시합니다.
+          </item>
+          <item>
+            전환 형식(Lt): 문자열속의 숫자 데이터를 숫자 형식 데이터로 표시합니다. 일본어에서만 지원이 가능합니다.
+          </item>
+        </list>
+        내장된 숫자형 데이터 유형이 지원됩니다. 지원되는 유형은 double,float, int, uint, long, ulong, short, ushort, sbyte, byte 및 decimal 입니다.
+      </remarks>
+      <example>
+        아래 샘플 코드는 숫자를 동 아시아 및 아랍언어로 지역화 숫자형식으로 전환하는 예제를 보여줍니다.
+        <code>
+          using System;
+          using Microsoft.International.Formatters;
+          using Microsoft.International;
+          using System.Globalization;
+          using System.Diagnostics;
+          // sample code to convert the number to a string with local numeric representation in East Asian and Arabic languages.
+          namespace InternationalNumericFormatterDemo
+          {
+          class Program
+          {
+          static void Main(string[] args)
+          {
+          Debug.WriteLine("The number of 12345 with Normal format and Chinese-Simplified is: " + InternationalNumericFormatter.FormatWithCulture("Ln", 12345, null, new CultureInfo("zh-CHS")));
+          Debug.WriteLine("The number of 12345 with Currency format and Chinese-Traditional is: " + InternationalNumericFormatter.FormatWithCulture("Lc", 12345, null, new CultureInfo("zh-CHT")));
+          Debug.WriteLine("The number of 12345 with standard format and Japanese is: " + InternationalNumericFormatter.FormatWithCulture("L", 12345, null, new CultureInfo("ja")));
+          Debug.WriteLine("The number of 12345 with standard format and Korean is: " + InternationalNumericFormatter.FormatWithCulture("L", 12345, null, new CultureInfo("ko")));
+          Debug.WriteLine("The number of 12345 with standard format and Arabic is: " + InternationalNumericFormatter.FormatWithCulture("L", 12345, null, new CultureInfo("ar")));
+          }
+          }
+          }
+          /*
+          This code produces the following debug output.
+          The number of 12345 with Normal format and Chinese-Simplified is: 一万二千三百四十五
+          The number of 12345 with Currency format and Chinese-Traditional is: 壹萬貳仟參佰肆拾伍
+          The number of 12345 with Standard format and Japanese is: 壱萬弐阡参百四拾伍
+          The number of 12345 with standard format and Korean is: 일만 이천삼백사십오
+          The number of 12345 with standard format and Arabic is:اثنا عشر آلاف و ثلاثة مائة خمسة و أربعون
+          */
+        </code>
+      </example>
+    </member>
+    <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.#ctor">
+      <summary>
+        클래스의 새로운 인스턴스를 초기화 합니다.
+      </summary>
+    </member>
+    <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.GetFormat(System.Type)">
+      <summary>
+        포맷팅 작업하는 ICustomFormatter를 구현한 객체를 반환합니다.
+      </summary>
+      <param name="formatType">포멧 형식.</param>
+      <returns>
+        만약 <see cref="T:System.ICustomFormatter"/> 의 유형이 파라미터 포맷유형과 같으면 같은 객체를 반환합니다.
+        <see cref="T:System.ICustomFormatter"/> 의 유형이 파라미터의 포맷유형과 다르면 NULL을 반환합니다.
+      </returns>
+    </member>
+    <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.Format(System.String,System.Object,System.IFormatProvider)">
+      <summary>
+        객체를 현재 로컬형식으로 포맷합니다.
+      </summary>
+      <param name="format">
+        이 클래스는 아래 포맷 문자열을 지원합니다.
+        <list type="bullet">
+          <item>
+            표준 형식(L): 또는 대문자라고도 합니다.
+          </item>
+          <item>
+            일반 형식(Ln): 또는 소문자라고도 합니다.
+          </item>
+          <item>
+            화폐 형식(Lc): 화폐금액을 표시합니다.
+          </item>
+          <item>
+            전환 형식(Lt): 문자열속의 숫자데이터를 숫자형식 데이터로 표시합니다. 일본어에서만 지원이 가능합니다.
+          </item>
+        </list>
+      </param>
+      <param name="arg">포맷 할 숫자</param>
+      <param name="formatProvider">포맷 제공자</param>
+      <returns>지역화된 동 아시아 및 아랍 형식</returns>
+    </member>
+    <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)">
+      <summary>
+        객체를 특정된 동 아시아 및 아랍권 형식으로 포맷합니다.
+      </summary>
+      <param name="format">
+        이 클래스는 아래 포맷 문자열을 지원합니다.
+        <list type="bullet">
+          <item>
+            표준 형식(L): 또는 대문자라고도 합니다.
+          </item>
+          <item>
+            일반 형식(Ln): 또는 소문자라고도 합니다.
+          </item>
+          <item>
+            화폐 형식(Lc): 화폐금액을 표시합니다.
+          </item>
+          <item>
+            전환 형식(Lt): 문자열속의 숫자데이터를 숫자형식 데이터로 표시합니다. 일본어에서만 지원이 가능합니다.
+          </item>
+        </list>
+      </param>
+      <param name="arg">포맷할 숫자</param>
+      <param name="formatProvider">포맷팅 제공자</param>
+      <param name="culture">문화 유형</param>
+      <returns>동 아시아 및 아랍권 형식으로 지역화 문자열 </returns>
+      <exception cref="T:System.ArgumentNullException">
+        만약 <see cref="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)"/>의 포맷 파라미터가 null이면 <see cref="T:System.ArgumentNullException"/> 이상이 발생합니다.
+      </exception>
+      <exception cref="T:System.ArgumentNullException">
+        만약
+        <see cref="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)"/> 함수의 문화권 파라미터가 null 이면 <see cref="T:System.ArgumentNullException"/>이상이 발생합니다.
+      </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        만약 숫자가 범위를 초월하면 <see cref="T:System.ArgumentOutOfRangeException"/>이상이 발생합니다.
+      </exception>
+      <exception cref="T:System.ArgumentException">
+        무효한 전달 유형입니다. 내장 숫자 형식만 지원합니다.  <see cref="T:System.ArgumentException"/> 이상이 발생합니다.
+      </exception>
+      <exception cref="T:System.ArgumentException">
+        무효한 문화권 파라미터와 포맷의 조합일 경우, <see cref="T:System.ArgumentException"/> 이상이 발생합니다.
+      </exception>
+    </member>
+    <member name="T:Microsoft.International.Formatters.AssemblyResource">
+      <summary>
+        지역화 문자열을 검색하기 위한 강타입 자원 클래스 등입니다.
+      </summary>
+    </member>
+    <member name="P:Microsoft.International.Formatters.AssemblyResource.ResourceManager">
+      <summary>
+        이 클래스에서 사용된 캐쉬된 ResourceManager의 객체를 반환합니다.
+      </summary>
+    </member>
+    <member name="P:Microsoft.International.Formatters.AssemblyResource.Culture">
+      <summary>
+        현재 스레드의 CurrentUICulture의 속성을 오버라이드하고 강타입 자원 클래스 검색에 사용합니다.
+      </summary>
+    </member>
+    <member name="P:Microsoft.International.Formatters.AssemblyResource.INVALID_ARGUMENT_TYPE">
+      <summary>
+        무효한 지역화 문자열을 검색합니다. 숫자 형식을 사용하십시오.
+      </summary>
+    </member>
+    <member name="P:Microsoft.International.Formatters.AssemblyResource.INVALID_PARAMETER_COMBINATION">
+      <summary>
+        지역화 문자열을 검색합니다. 이 포맷유형은 현재 문화권에서 지원되지 않습니다.
+      </summary>
+    </member>
+  </members>
+</doc>

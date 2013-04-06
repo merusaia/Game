@@ -1,0 +1,14 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="WpfSample.Window1"
+    Title="Window1" Height="327" Width="487" xmlns:Microsoft_International_ImeAwareAutoComplete_Wpf="clr-namespace:Microsoft.International.ImeAwareAutoComplete.Wpf;assembly=ImeAwareAutoCompleteTextBoxWpf" xmlns:WpfSample="clr-namespace:WpfSample">
+    <Grid>
+        
+    	<Microsoft_International_ImeAwareAutoComplete_Wpf:ImeAwareAutoCompleteTextBox Margin="226,66,68,0" VerticalAlignment="Top" Height="41" Text="ImeAwareAutoCompleteTextBox" TextWrapping="Wrap"/>
+    	<Label HorizontalAlignment="Left" Margin="24,66,0,0" VerticalAlignment="Top" Width="184" Height="41" Content="ImeAutoCompletion TextBox :"/>
+    	<Label HorizontalAlignment="Left" Margin="23,0,0,102" Width="185" Content="User-Defined Control :" Height="34" VerticalAlignment="Bottom"/>
+    	<WpfSample:MyUserControl Margin="198,130,41,28" x:Name="myUserControl1"/>
+        
+    </Grid>
+</Window>

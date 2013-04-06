@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChineseAlignTextBox</name>
+    </assembly>
+    <members>
+        <member name="T:TextBoxExChinese.CommonResouce">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TextBoxExChinese.CommonResouce.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TextBoxExChinese.CommonResouce.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.Windows.Forms.ExtendedTextAlignment">
+            <summary>
+            Extended text alignment style.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.Windows.Forms.ExtendedTextAlignment.Left">
+            <summary>
+            Left text alignment
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.Windows.Forms.ExtendedTextAlignment.Center">
+            <summary>
+            Center text alignment
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.Windows.Forms.ExtendedTextAlignment.Right">
+            <summary>
+            Right text alignment
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.Windows.Forms.ExtendedTextAlignment.Justify">
+            <summary>
+            Justify text alignment
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.Windows.Forms.ExtendedTextAlignment.FullJustify">
+            <summary>
+            Full Justify text alignment
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.Windows.Forms.ChineseAlignmentTextBox">
+            <summary>
+            Sample TextBox on windows form which supports Chinese Text Alignment.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.ChineseAlignmentTextBox.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.ChineseAlignmentTextBox.OnGotFocus(System.EventArgs)">
+            <summary>
+            Raises the GotFocus event. 
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data. </param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.ChineseAlignmentTextBox.OnLostFocus(System.EventArgs)">
+            <summary>
+            Raises the LostFocus" event. 
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data. </param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.ChineseAlignmentTextBox.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Raises the Paint event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the event data. </param>
+        </member>
+        <member name="P:Microsoft.International.Windows.Forms.ChineseAlignmentTextBox.ExtendedTextAlignment">
+            <summary>
+            Gets or sets text alignment info.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Windows.Forms.ChineseAlignmentTextBox.AlignmentUnitInfoProvider">
+            <summary>
+            Gets and sets alignment unit provider.
+            </summary>
+        </member>
+    </members>
+</doc>

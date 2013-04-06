@@ -1,0 +1,440 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InternationalNumericFormatter</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.GetIntegralStack(System.Decimal,System.UInt64,Microsoft.International.Formatters.StackWithIndex)">
+            <summary>
+            Splits the number.
+            Pushs every digit and its digitWeight into stack. 
+            </summary>
+            <param name="num">the number needed to be splited.</param>
+            <param name="position">Splits the number from this position.</param>
+            <param name="stack">Pushs every digit and its digitWeight this stack.</param>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.ConvertIntergralStackToText(Microsoft.International.Formatters.StackWithIndex,System.Text.StringBuilder)">
+            <summary>
+            Converts the digit information from the stack into a StringBuilder.
+            </summary>
+            <param name="stack">Stores the digits needed to be transfered.</param>
+            <param name="text">Transfers the digits to this text.</param>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.GetDecimalText(System.Decimal,System.Text.StringBuilder)">
+            <summary>
+            Adds decimal part of the number into the text.
+            </summary>
+            <param name="num">The decimal part of this number will be added.</param>
+            <param name="text">Adds decimal part into this text.</param>
+        </member>
+        <member name="T:Microsoft.International.Formatters.InternationalNumericFormatter">
+             <summary>
+             Provides a formatter class that converts the numbers in the numeric data types
+             to a string with local numeric representation in East Asian and Arabic languages.
+             </summary>
+             <remarks>
+             This class supports the following East Asian and Arabic languages:
+             
+             <list type="bullet">
+             <item>
+             Chinese-Simplified
+             </item>
+             <item>
+             Chinese-Traditional
+             </item>
+             <item>
+             Japanese
+             </item>
+             <item>
+             Korean
+             </item>
+             <item>
+             Arabic
+             </item>
+             </list>
+             
+             This class supports the following format strings:
+             <list type="bullet">
+             <item>
+             Standard Format(L): Also called upper-case.
+             </item>
+             <item>
+             Normal Format(Ln): Also called lower-case.
+             </item>
+             <item>
+             Currency Format(Lc): It's used to represent currency values.
+             </item>
+             <item>
+             Transliterate Format(Lt): Represent the numeric data in the characters of digit alphabet. Only supported in Japanese.
+             </item>
+             </list>
+             
+             Built-in numeric types are supported, including 
+             double, float, int, uint, long, ulong, short, ushort, sbyte, byte and decimal.
+             </remarks>
+             <example>
+             The following code demonstrates a sample that converts the number to a string with local numeric representation in East Asian and Arabic languages.
+             <code>
+             using System;
+             using Microsoft.International.Formatters;
+             using Microsoft.International;
+             
+             using System.Globalization;
+             using System.Diagnostics;
+             
+             // sample code to convert the number to a string with local numeric representation in East Asian and Arabic languages.
+             namespace InternationalNumericFormatterDemo
+             {
+                class Program
+                {
+                    static void Main(string[] args)
+                    {
+                        Debug.WriteLine("The number of 12345 with Normal format and Chinese-Simplified is: " + InternationalNumericFormatter.FormatWithCulture("Ln", 12345, null, new CultureInfo("zh-CHS")));
+                        Debug.WriteLine("The number of 12345 with Currency format and Chinese-Traditional is: " + InternationalNumericFormatter.FormatWithCulture("Lc", 12345, null, new CultureInfo("zh-CHT")));
+                        Debug.WriteLine("The number of 12345 with standard format and Japanese is: " + InternationalNumericFormatter.FormatWithCulture("L", 12345, null, new CultureInfo("ja")));
+                        Debug.WriteLine("The number of 12345 with standard format and Korean is: " + InternationalNumericFormatter.FormatWithCulture("L", 12345, null, new CultureInfo("ko")));
+                        Debug.WriteLine("The number of 12345 with standard format and Arabic is: " + InternationalNumericFormatter.FormatWithCulture("L", 12345, null, new CultureInfo("ar")));
+                    }
+                }
+             }
+             /*
+             This code produces the following debug output.
+            
+             The number of 12345 with Normal format and Chinese-Simplified is: 一万二千三百四十五
+             The number of 12345 with Currency format and Chinese-Traditional is: 壹萬貳仟參佰肆拾伍
+             The number of 12345 with Standard format and Japanese is: 壱萬弐阡参百四拾伍
+             The number of 12345 with standard format and Korean is: 일만 이천삼백사십오
+             The number of 12345 with standard format and Arabic is:اثنا عشر آلاف و ثلاثة مائة خمسة و أربعون
+             
+             */
+             </code>
+             </example>
+        </member>
+        <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.#ctor">
+            <summary>
+            Initializes a new instance of InternationalNumericFormatter class. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.GetFormat(System.Type)">
+            <summary>
+            It returns an object that implements ICustomFormatter to do the formatting.
+            </summary>
+            <param name="formatType">Format type.</param>
+            <returns>
+            Returns the same object if the type of <see cref="T:System.ICustomFormatter"/> is the same as the parameter formatType .
+            Returns null if the type of <see cref="T:System.ICustomFormatter"/> is different from the parameter formatType.
+            </returns>
+        </member>
+        <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.Format(System.String,System.Object,System.IFormatProvider)">
+            <summary>
+            Formats the object into representation of the current culture.
+            </summary>
+            <param name="format">
+            This class supports the following format strings:
+            <list type="bullet">
+            <item>
+            Standard Format(L): Also called upper-case.
+            </item>
+            <item>
+            Normal Format(Ln): Also called lower-case.
+            </item>
+            <item>
+            Currency Format(Lc): It's used to represent currency values.
+            </item>
+            <item>
+            Transliterate Format(Lt): Represent the numeric data in the characters of digit alphabet. Only supported in Japanese.
+            </item>
+            </list>
+            </param>
+            <param name="arg">Number to be formatted.</param>
+            <param name="formatProvider">Format provider.</param>
+            <returns>Localized string in East Asian and Arabic forms.</returns>
+        </member>
+        <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)">
+            <summary>
+            Formats the object into representation of specified East Asian and Arabic culture.
+            </summary>
+            <param name="format">
+            This class supports the following format strings:
+            <list type="bullet">
+            <item>
+            Standard Format(L): Also called upper-case.
+            </item>
+            <item>
+            Normal Format(Ln): Also called lower-case.
+            </item>
+            <item>
+            Currency Format(Lc): It's used to represent currency values.
+            </item>
+            <item>
+            Transliterate Format(Lt): Represent the numeric data in the characters of digit alphabet. Only supported in Japanese.
+            </item>
+            </list>
+            </param>
+            <param name="arg">Number to be formatted.</param>
+            <param name="formatProvider">Format provider.</param>
+            <param name="culture">Culture type.</param>
+            <returns>Localized string in East Asian and Arabic forms.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            If the format parameter of <see cref="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)"/> method is null, <see cref="T:System.ArgumentNullException"/> will be thrown.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            If the arg parameter of <see cref="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)"/> method is null, <see cref="T:System.ArgumentNullException"/> will be thrown.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            If the culture parameter of <see cref="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)"/> method is null, <see cref="T:System.ArgumentNullException"/> will be thrown.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            If the number is out of range, <see cref="T:System.ArgumentOutOfRangeException"/> will be thrown.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Invalid argument type, only built-in number type is supported, <see cref="T:System.ArgumentException"/> will be thrown.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Invalid combination of parameter culture and format, <see cref="T:System.ArgumentException"/> will be thrown.
+            </exception>
+        </member>
+        <member name="T:Microsoft.International.Formatters.AssemblyResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Formatters.AssemblyResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Formatters.AssemblyResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Formatters.AssemblyResource.INVALID_ARGUMENT_TYPE">
+            <summary>
+              Looks up a localized string similar to Invalid argument type.  Use a numeric type..
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Formatters.AssemblyResource.INVALID_PARAMETER_COMBINATION">
+            <summary>
+              Looks up a localized string similar to The specified format is not supported in this culture..
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.Formatters.EastAsiaNumericFormatter">
+            <summary>
+            Provides a formatter class that converts the numbers in the numeric data types
+            to a string with local numeric representation in East Asian languages.
+            </summary>
+            
+            <remarks>
+            This class supports the following East Asian languages:
+            
+            <list type="bullet">
+            <item>
+            Chinese-Simplified
+            </item>
+            <item>
+            Chinese-Traditional
+            </item>
+            <item>
+            Japanese
+            </item>
+            <item>
+            Korean
+            </item>
+            </list>
+            
+            This class supports the following format strings:
+            <list type="bullet">
+            <item>
+            Standard Format(L): Also called upper-case.
+            </item>
+            <item>
+            Normal Format(Ln): Also called lower-case.
+            </item>
+            <item>
+            Currency Format(Lc): It's used to represent currency values.
+            </item>
+            <item>
+            Transliterate Format(Lt): Represent the numeric data in the characters of digit alphabet. Only supported in Japanese.
+            </item>
+            </list>
+            
+            In order to explain how culture and format combination works, we will take "12345" as an example.
+            <list type="bullet">
+            <item>
+            Chinese-Simplified
+            <list type="bullet">
+            <item>
+            Standard: 壹万贰仟叁佰肆拾伍
+            </item>
+            <item>
+            Normal: 一万二千三百四十五
+            </item>
+            <item>
+            Currency: 壹万贰仟叁佰肆拾伍
+            </item>
+            <item>
+            Transliterate: ArgumentException will be thrown
+            </item>
+            </list>
+            </item>
+            <item>
+            Chinese-Traditional
+            <list type="bullet">
+            <item>
+            Standard: 壹萬貳仟參佰肆拾伍
+            </item>
+            <item>
+            Normal: 一萬二千三百四十五
+            </item>
+            <item>
+            Currency: 壹萬貳仟參佰肆拾伍
+            </item>
+            <item>
+            Transliterate: ArgumentException will be thrown
+            </item>
+            </list>
+            </item>
+            <item>
+            Japanese
+            <list type="bullet">
+            <item>
+            Standard: 壱萬弐阡参百四拾伍
+            </item>
+            <item>
+            Normal: 一万二千三百四十五
+            </item>
+            <item>
+            Currency: ArgumentException will be thrown
+            </item>
+            <item>
+            Transliterate: 一二三四五
+            </item>
+            </list>
+            </item>
+            <item>
+            Korean
+            <list type="bullet">
+            <item>
+            Standard: 일만 이천삼백사십오
+            </item>
+            <item>
+            Normal: ArgumentException will be thrown
+            </item>
+            <item>
+            Currency: 일만 이천삼백사십오
+            </item>
+            <item>
+            Transliterate: ArgumentException will be thrown
+            </item>
+            </list>
+            </item>
+            <item>
+            Other Languages: ArgumentException will be thrown
+            </item>
+            </list>
+            Built-in numeric types are supported, including 
+            double, float, int, uint, long, ulong, short, ushort, sbyte, byte and decimal.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.#ctor">
+            <summary>
+            Initializes a new instance of EastAsiaNumericFormatter class. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.GetFormat(System.Type)">
+            <summary>
+            It returns an object that implements ICustomFormatter to do the formatting.
+            </summary>
+            <remarks>
+            See <see cref="T:Microsoft.International.Formatters.EastAsiaNumericFormatter"/> for an example of using EastAsiaNumericFormatter.
+            </remarks> 
+            <param name="formatType">Format type.</param>
+            <returns>
+            Returns the same object if formatType parameter is <see cref="T:System.ICustomFormatter"/> type. Otherwise, return a null reference.
+            </returns>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.Format(System.String,System.Object,System.IFormatProvider)">
+            <summary>
+            Formats the object into representation of the current culture.
+            </summary>
+            <remarks>
+            See <see cref="T:Microsoft.International.Formatters.EastAsiaNumericFormatter">EastAsiaNumericFormatter</see> for an example of using EastAsiaNumericFormatter.
+            </remarks>
+            <param name="format">
+            This class supports the following format strings:
+            <list type="bullet">
+            <item>
+            Standard Format(L): Also called upper-case.
+            </item>
+            <item>
+            Normal Format(Ln): Also called lower-case.
+            </item>
+            <item>
+            Currency Format(Lc): It's used to represent currency values.
+            </item>
+            <item>
+            Transliterate Format(Lt): Represent the numeric data in the characters of digit alphabet. Only supported in Japanese.
+            </item>
+            </list>
+            </param>
+            <param name="arg">Number to be formatted.</param>
+            <param name="formatProvider">Format provider.</param>
+            <returns>Localized string in East Asian forms.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            format, arg or culture is a null reference.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            The specified format is not supported in this culture.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            arg is out of range.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            arg is a invalid type.
+            </exception>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)">
+            <summary>
+            Formats the object into representation of specified East Asian culture.
+            </summary>
+            <remarks>
+            See <see cref="T:Microsoft.International.Formatters.EastAsiaNumericFormatter"/> for an example of using FormatWithCulture.
+            </remarks>
+            <param name="format">
+            This class supports the following format strings:
+            <list type="bullet">
+            <item>
+            Standard Format(L): Also called upper-case.
+            </item>
+            <item>
+            Normal Format(Ln): Also called lower-case.
+            </item>
+            <item>
+            Currency Format(Lc): It's used to represent currency values.
+            </item>
+            <item>
+            Transliterate Format(Lt): Represent the numeric data in the characters of digit alphabet. Only supported in Japanese.
+            </item>
+            </list>
+            </param>
+            <param name="arg">Number to be formatted.</param>
+            <param name="formatProvider">Format provider.</param>
+            <param name="culture">Culture type.</param>
+            <returns>Localized string in East Asian forms.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            format, arg or culture is a null reference.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            The specified format is not supported in this culture.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            arg is out of range.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            arg is a invalid type.
+            </exception>
+        </member>
+    </members>
+</doc>

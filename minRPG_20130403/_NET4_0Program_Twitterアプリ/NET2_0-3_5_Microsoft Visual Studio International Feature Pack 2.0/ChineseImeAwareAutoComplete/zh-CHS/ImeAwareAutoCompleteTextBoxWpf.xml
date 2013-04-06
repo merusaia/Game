@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ImeAwareAutoCompleteTextBoxWpf</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeAwareAutoCompleteTextBox">
+            <summary>
+            TextBox 的输入法感知特性。
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeAwareAutoCompleteTextBox.listener">
+            <summary>
+              内部的 ChineseImeAwareAutoCompleteListener 对象。
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeAwareAutoCompleteTextBox.candidateCounter">
+            <summary>
+            内部词典排序。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeAwareAutoCompleteTextBox.#ctor">
+            <summary>
+                初始化 <see cref="T:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeAwareAutoCompleteTextBox"/> 类的一个实例。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeAwareAutoCompleteTextBox.ImeAwareAutoCompleteTextBox_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              ImeAwareAutoCompleteTextBox 控件的句柄加载事件。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e"> <see cref="T:System.Windows.RoutedEventArgs"/> 实例包含了事件数据</param>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeAwareAutoCompleteTextBox.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            请求一个未处理的 <see cref="E:System.Windows.UIElement.OnLostFocus"/> 活动事件到源于这个类的路径下的元素， 执行这个方法为这个事件添加类处理。
+            </summary>
+            <param name="e"> <see cref="T:System.Windows.RoutedEventArgs"/> 包含事件数据</param>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeAwareAutoCompleteTextBox.Compare(System.String,System.String)">
+            <summary>
+            比较两个指定的 String 对象。
+            </summary>
+            <param name="x">比较的第一个字符串</param>
+            <param name="y">比较的第二个字符串</param>
+            <returns>
+               小于零，则 x 小于 y；等于零，则 x 等于 y；大于零，则 x 大于 y。
+            </returns>
+        </member>
+        <member name="T:AutoCompletionTextBoxWpf.Properties.Resources">
+            <summary>
+              一个强类型源文件，寻找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:AutoCompletionTextBoxWpf.Properties.Resources.ResourceManager">
+            <summary>
+              返回存储资源管理例如使用这个类。
+            </summary>
+        </member>
+        <member name="P:AutoCompletionTextBoxWpf.Properties.Resources.Culture">
+            <summary>
+              为所有当前线程重写 CurrentUICulture 属性
+              资源查找使用此强类型资源类。
+            </summary>
+        </member>
+    </members>
+</doc>

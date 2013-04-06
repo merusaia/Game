@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChineseTextAlign</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.ChineseTextAlignment.Forms.CommonResouce">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.Forms.CommonResouce.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.Forms.CommonResouce.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.ChineseTextAlignment.Forms.Utility">
+             <summary>
+             The utility class draws strings with the specified alignment info.
+             </summary>
+             <example>
+             The following code demonstrates drawing string with the specified five layouts.
+             <code source = "../../ExampleWinForm_CS/Program.cs" lang = "cs"></code>
+             <code source = "../../ExampleWinForm_VB/FormDemo.vb" lang = "vbnet"></code>
+             <code source = "../../ExampleWinForm_CPP/ExampleWinForm_CPP.cpp" lang = "cpp"></code>
+            <p>When the WinForm is loaded, the demo produces the following output.</p> 
+             <p><img src="../Image/Result.jpg"/></p>
+             </example>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.Forms.Utility.DrawChineseString(System.Drawing.Graphics,System.String,System.Drawing.Font,System.Drawing.Color,System.Drawing.Rectangle,Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo)">
+            <summary>
+            Draws given text in the specified alignment style.
+            </summary>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility"/> for an example of using <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility"/> and DrawChineseString.
+            </remarks>
+            <param name="g">Graphics object on which the text is drawn.</param>
+            <param name="text">Text to draw.</param>
+            <param name="font">Font used for drawing text.</param>
+            <param name="color">Brush used for drawing text</param>
+            <param name="rectangle">Rectangle used for drawing text in.</param>
+            <param name="alignmentStyleInfo">Struct which holds alignment style and left/right margins.</param>
+            <exception cref="T:System.ArgumentNullException">
+            g,text and font are null references.
+            </exception>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.Forms.Utility.DrawChineseString(System.Drawing.Graphics,System.String,System.Drawing.Font,System.Drawing.Color,System.Drawing.Rectangle,Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo,Microsoft.International.ChineseTextAlignment.IAlignmentUnitInfoProvider)">
+            <summary>
+            Draws given text in the specified alignment style.
+            </summary>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility"/> for an example of using <see cref="T:Microsoft.International.ChineseTextAlignment.Forms.Utility"/> and DrawChineseString.
+            </remarks>
+            <param name="g">Graphics object on which the text is drawn.</param>
+            <param name="text">Text to draw.</param>
+            <param name="font">Font used for drawing text.</param>
+            <param name="color">Brush used for drawing text</param>
+            <param name="rectangle">Rectangle used for drawing text in.</param>
+            <param name="alignmentStyleInfo">Struct which holds alignment style and left/right margins.</param>
+            <param name="alignmentUnitInfoProvider">AlignmentUnitInfoProvider to determine how text is broken into alignment units.</param>
+            <exception cref="T:System.ArgumentNullException">
+            g,text and font are null references.
+            </exception>
+        </member>
+    </members>
+</doc>

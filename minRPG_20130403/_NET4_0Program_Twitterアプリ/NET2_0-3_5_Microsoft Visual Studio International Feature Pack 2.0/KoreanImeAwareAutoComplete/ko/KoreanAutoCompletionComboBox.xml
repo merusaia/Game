@@ -1,0 +1,48 @@
+﻿<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KoreanAutoCompletionComboBox</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.Windows.Forms.KoreanAutoCompletionComboBox">
+            <summary>
+            한국어 IntelliSense 및 AutoCompletion 기능을 지원하는 comboBox를 제공합니다.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompletionComboBox.OnTextChanged(System.EventArgs)">
+            <summary>
+            TextChanged 이벤트를 발생합니다.
+            </summary>
+            <param name="e">이벤트 데이터를 포함한 EventArgs. </param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompletionComboBox.#ctor">
+            <summary>
+            기본 설정으로 KoreanAutoCompletionComboBox 클래스의 새 인스턴스를 생성합니다.
+            </summary>
+            <remarks>
+            KoreanAutoCompletionComboBox 사용 관련 예제는 <see cref="T:Microsoft.International.Windows.Forms.KoreanAutoCompletionComboBox"/> 를 참조하세요.
+            </remarks> 
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompletionComboBox.#ctor(Microsoft.International.Windows.SupportType)">
+            <summary>
+            KoreanAutoCompletionComboBox 클래스의 새 인스턴스를 생성합니다.
+            </summary>
+            <param name="supportType">지원 유형</param>
+            <remarks>
+            KoreanAutoCompletionComboBox 사용 관련 예제는 <see cref="T:Microsoft.International.Windows.Forms.KoreanAutoCompletionComboBox"/> 를 참조하세요.
+            </remarks> 
+        </member>
+
+        <member name="P:Microsoft.International.Windows.Forms.KoreanAutoCompletionComboBox.SupportType">
+            <summary>
+            지원 유형을 가져오거나 설정합니다.
+            </summary>
+            <value>
+            지원 유형입니다.
+            </value>
+            <remarks>
+            KoreanAutoCompletionComboBox 사용 관련 예제는 <see cref="T:Microsoft.International.Windows.Forms.KoreanAutoCompletionComboBox"/> 를 참조하십시오.
+            </remarks> 
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChineseAlignTextBox</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.Windows.Forms.ExtendedTextAlignment">
+            <summary>
+            扩展的对齐风格。
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.Windows.Forms.ExtendedTextAlignment.Left">
+            <summary>
+            Left 对齐。
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.Windows.Forms.ExtendedTextAlignment.Center">
+            <summary>
+            Center 对齐。
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.Windows.Forms.ExtendedTextAlignment.Right">
+            <summary>
+            Right 对齐。
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.Windows.Forms.ExtendedTextAlignment.Justify">
+            <summary>
+            Justify 对齐。
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.Windows.Forms.ExtendedTextAlignment.FullJustify">
+            <summary>
+            Full Justify 对齐。
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.Windows.Forms.ChineseAlignmentTextBox">
+            <summary>
+              支持中文对齐的 WinFrom TextBox。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.ChineseAlignmentTextBox.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.ChineseAlignmentTextBox.OnGotFocus(System.EventArgs)">
+            <summary>
+              触发 GotFocus 事件。
+            </summary>
+            <param name="e">包含事件数据的 <see cref="T:System.EventArgs"/>。</param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.ChineseAlignmentTextBox.OnLostFocus(System.EventArgs)">
+            <summary>
+              触发 LostFocus 事件。
+            </summary>
+            <param name="e">
+              包含事件数据的 <see cref="T:System.EventArgs"/>。</param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.ChineseAlignmentTextBox.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+              触发 Paint 事件。
+            </summary>
+            <param name="e">
+              包含事件数据的 <see cref="T:System.Windows.Forms.PaintEventArgs"/>。</param>
+        </member>
+        <member name="P:Microsoft.International.Windows.Forms.ChineseAlignmentTextBox.ExtendedTextAlignment">
+            <summary>
+           获取或设置对齐信息。
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Windows.Forms.ChineseAlignmentTextBox.AlignmentUnitInfoProvider">
+            <summary>
+              获取或设置 AlignmentUnitInfoProvider。
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,4 @@
+・簡単WAVE録音再生DLL（プロジェクト参照名：WaveIO2_ClassLibrary2.dll、ClassLibrarySub3.dll）
+	制作者：mikeo410様(mikeo_410@hotmail.com) http://mikeo410.lv9.org/lumadcms/~PCMDLLWaveIO2DLL
+	動作環境：.NET Framework2.0以上
+	ライセンス情報等：特に指定はありません（公開時はdllだけを配布するようにと連絡をいただいています。）

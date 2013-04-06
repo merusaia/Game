@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KoreanAutoCompletionWinForm</name>
+    </assembly>
+    <members>
+        <member name="T:KoreanAutoCompletionWinForm.CommonResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:KoreanAutoCompletionWinForm.CommonResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:KoreanAutoCompletionWinForm.CommonResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener">
+            <summary>
+            Provides a listener with Korean IME-aware autocomplete support of IntelliSence and AutoCompletion mode.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.Delete">
+            <summary>
+            Deletes this instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.HideCandidate">
+            <summary>
+            Hides the candidate.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.Create(System.Windows.Forms.Control,Microsoft.International.Windows.SupportType)">
+            <summary>
+            Creates a KoreanAutoCompleteListener instance of specified auto-complete mode for the binding control.
+            </summary>
+            <param name="bindingControl">The binding control.</param>
+            <param name="supportType">Support type of the auto-complete.</param>
+            <returns>
+             An instance of KoreanAutoCompleteListener. 
+            </returns>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.OnTextChanged(System.EventArgs)">
+            <summary>
+            Raises the TextChanged event.
+            </summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Raises the Paint event.
+            </summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Raises the KeyDown event.
+            </summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the MouseDown event.
+            </summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.OnGotFocus(System.EventArgs)">
+            <summary>
+            Raises the GotFocus event. 
+            </summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.OnLostFocus(System.EventArgs)">
+            <summary>
+            Raises the LostFocus event. 
+            </summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="P:Microsoft.International.Windows.Forms.KoreanAutoCompleteListener.SupportType">
+            <summary>
+            Gets or sets the support type of Auto-Complete.
+            </summary>
+            <value>The support type.</value>
+        </member>
+    </members>
+</doc>

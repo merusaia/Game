@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KoreanAutoCompletionComboBox</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.Windows.Forms.CommonResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Windows.Forms.CommonResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Windows.Forms.CommonResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.Windows.Forms.KoreanAutoCompletionComboBox">
+            <summary>
+            Provides comboBox with Korean IntelliSense and AutoCompletion support.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompletionComboBox.OnTextChanged(System.EventArgs)">
+            <summary>
+            Raises the TextChanged event.
+            </summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompletionComboBox.#ctor">
+            <summary>
+            Creates a new instance of the KoreanAutoCompletionComboBox class. 
+            with default settings.
+            </summary>
+            <remarks>
+            See <see cref="T:Microsoft.International.Windows.Forms.KoreanAutoCompletionComboBox"/> for an example of using KoreanAutoCompletionComboBox.
+            </remarks> 
+        </member>
+        <member name="M:Microsoft.International.Windows.Forms.KoreanAutoCompletionComboBox.#ctor(Microsoft.International.Windows.SupportType)">
+            <summary>
+            Creates a new instance of the KoreanAutoCompletionComboBox class. 
+            </summary>
+            <param name="supportType">Support type</param>
+            <remarks>
+            See <see cref="T:Microsoft.International.Windows.Forms.KoreanAutoCompletionComboBox"/> for an example of using KoreanAutoCompletionComboBox.
+            </remarks> 
+        </member>
+        <member name="P:Microsoft.International.Windows.Forms.KoreanAutoCompletionComboBox.SupportType">
+            <summary>
+            Gets or sets the support type.
+            </summary>
+            <value>
+            The support type.
+            </value>
+            <remarks>
+            See <see cref="T:Microsoft.International.Windows.Forms.KoreanAutoCompletionComboBox"/> for an example of using KoreanAutoCompletionComboBox.
+            </remarks> 
+        </member>
+    </members>
+</doc>

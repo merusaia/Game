@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChineseTextAlignWPF</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.ChineseTextAlignment.Controls.Utility">
+            <summary>
+            The utility class draws strings with the specified alignment info.
+            </summary>
+            <example>
+            The following code demonstrates drawing string with the specified five layouts.
+            <code source = "../../ExampleWpf_CS/Window1.xaml" lang = "cs"></code>
+            <p>When the WPF is loaded, the demo produces the following output.</p> 
+            <p><img src="../Image/WpfResult.jpg"/></p>
+            </example>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.Controls.Utility.DrawChineseString(System.Windows.Media.DrawingContext,System.String,System.Windows.Media.Typeface,System.Double,System.Windows.Media.Color,System.Windows.Rect,Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo)">
+            <summary>
+            Draws given text in the specified alignment style.
+            </summary>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility"/> for an example of using <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility"/> and DrawChineseStringWpf.
+            </remarks>
+            <param name="dc">DrawingContext object on which the text is drawn.</param>
+            <param name="text">Text to draw.</param>
+            <param name="typeface">typeface used for drawing text.</param>
+            <param name="fontSize">fontSize used for drawing text.</param>
+            <param name="color">Brush used for drawing text</param>
+            <param name="rect">Rect used for drawing text in.</param>
+            <param name="alignmentStyleInfo">Struct which holds alignment style and left/right margins.</param>
+            <exception cref="T:System.ArgumentNullException">
+            dc,text and typeface are null references.
+            </exception>
+        </member>
+        <member name="M:Microsoft.International.ChineseTextAlignment.Controls.Utility.DrawChineseString(System.Windows.Media.DrawingContext,System.String,System.Windows.Media.Typeface,System.Double,System.Windows.Media.Color,System.Windows.Rect,Microsoft.International.ChineseTextAlignment.TextAlignmentStyleInfo,Microsoft.International.ChineseTextAlignment.IAlignmentUnitInfoProvider)">
+            <summary>
+            Draws given text in the specified alignment style.
+            </summary>
+            <remarks>
+            See <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility"/> for an example of using <see cref="T:Microsoft.International.ChineseTextAlignment.Controls.Utility"/> and DrawChineseStringWpf.
+            </remarks>
+            <param name="dc">DrawingContext object on which the text is drawn.</param>
+            <param name="text">Text to draw.</param>
+            <param name="typeface">typeface used for drawing text.</param>
+            <param name="fontSize">fontSize used for drawing text.</param>&gt;
+            <param name="color">Brush used for drawing text</param>
+            <param name="rect">Rect used for drawing text in.</param>
+            <param name="alignmentStyleInfo">Struct which holds alignment style and left/right margins.</param>
+            <param name="alignmentUnitInfoProvider">AlignmentUnitInfoProvider to determine how text is broken into alignment units.</param>
+            <exception cref="T:System.ArgumentNullException">
+            dc,text and typeface are null references.
+            </exception>
+        </member>
+        <member name="T:Microsoft.International.ChineseTextAlignment.Controls.CommonResouce">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.Controls.CommonResouce.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ChineseTextAlignment.Controls.CommonResouce.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

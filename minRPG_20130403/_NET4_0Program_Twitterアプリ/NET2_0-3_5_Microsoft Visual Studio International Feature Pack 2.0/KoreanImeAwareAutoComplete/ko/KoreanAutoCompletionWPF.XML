@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>KoreanAutoCompletionWPF</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.Windows.Controls.KoreanAutoCompleteListener">
+            <summary>
+              리스너를 제공하여 IntelliSence 및 AutoCompletion 모드의 한국어 IME 인식 자동 완성 기능을 지원합니다.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.Controls.KoreanAutoCompleteListener.HideCandidate">
+            <summary>
+              현재 인스턴스를 삭제합니다.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.Controls.KoreanAutoCompleteListener.Delete">
+            <summary>
+              후보 항목을 숨깁니다.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.Controls.KoreanAutoCompleteListener.Create(System.Windows.Controls.Control,Microsoft.International.Windows.SupportType)">
+            <summary>
+              바인딩 컨트롤을 위해 지정된 자동 완성 모드의 KoreanAutoCompleteListener를 구축합니다.
+            </summary>
+            <param name="bindingControl">바인딩 컨트롤.</param>
+            <param name="supportType">자동 완료 기능 지원 유형.</param>
+            <returns>
+             KoreanAutoCompleteListener 의 인스턴스.
+            </returns>
+        </member>
+        <member name="M:Microsoft.International.Windows.Controls.KoreanAutoCompleteListener.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+             GotFocus 이벤트를 발생시킵니다.
+            </summary>
+            <param name="e">이벤트 데이트를 포함.</param>
+
+        </member>
+        <member name="M:Microsoft.International.Windows.Controls.KoreanAutoCompleteListener.OnLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>
+      처리되지 않은 Keyboard.LostKeyboardFocus가 연결된 이벤트가 이 클래스에서 파생된 경로안에 있는 요소에 도달할 때 발생합니다. 이 메서드를 구현하여 이벤트에 클래스처리를 추가합니다.
+      </summary>
+      <param name="e">이벤트 데이터를 포함합니다.</param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Controls.KoreanAutoCompleteListener.OnPreviewMouseDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+        처리되지 않은 Mouse.PreviewMouseDown 이 연결된 이벤트가 이 클래스에서 파생된 경로안에 있는 요소에 도달할 때 발생합니다. 이 메서드를 구현하여 이벤트에 클래스처리를 추가합니다.
+      </summary>
+      <param name="e">이벤트 데이터를 포함합니다. 이 이벤트 데이터는 마우스 버튼을 한번 또는 그이상 눌렀음을 보고합니다.</param>
+        </member>
+        <member name="M:Microsoft.International.Windows.Controls.KoreanAutoCompleteListener.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)">
+      <summary>
+        PreviewKeyDown 이벤트를 발생시킵니다.
+      </summary>
+      <param name="e">이벤트 데이트를 포함.</param>
+
+        </member>
+        <member name="M:Microsoft.International.Windows.Controls.KoreanAutoCompleteListener.OnTextChanged(System.Windows.Controls.TextChangedEventArgs)">
+      <summary>
+        편집 컨트롤 내용을 변경시 호출됩니다.
+      </summary>
+      <param name="e">TextChanged 이벤트 관련 인수입니다.</param>
+
+        </member>
+        <member name="P:Microsoft.International.Windows.Controls.KoreanAutoCompleteListener.SupportType">
+            <summary>
+            지원 유형을 가져오거나 설정합니다.
+            </summary>
+            <value>자동 완료 기능 지원 유형.</value>
+        </member>
+    </members>
+</doc>

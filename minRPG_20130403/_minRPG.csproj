@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A912A04A-5DF2-422E-9783-050336E2068E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PublicDomain</RootNamespace>
+    <AssemblyName>MyGame</AssemblyName>
+    <StartupObject>PublicDomain.Program・実行ファイル管理者</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>A35D681D132ACE607197B62911B80BC89D383FC5</ManifestCertificateThumbprint>
+    <ManifestKeyFile>_MyGame_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <SignManifests>true</SignManifests>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://merusaia.higoyomi.com/mygame/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClassLibrarySub3, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WaveIO2, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Yanesdk, Version=1.5.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ライブラリ\他の方のソースコード\やねうらお様_YaneSDK_クロスプラットフォームゲーム開発ライブラリ_yanesdkdotnet200712170554v156\bin\Release\Yanesdk.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Programプログラム\C1_MainGameメインゲーム系\ゲーム管理者が持つクラス\CCPU・ＣＰＵ管理者.cs" />
+    <Compile Include="Programプログラム\C2_SystemCoreコアシステム系\戦闘用データ管理\CAttackBase・攻撃基底クラス.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\キャラが持つクラス\戦闘コマンド管理クラス\CDiceCommand・ダイスコマンド.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\キャラが持つクラス\戦闘コマンド管理クラス\コマンドが持つ戦闘行動単位クラス\CBattleAction・戦闘行動.cs" />
+    <Compile Include="Programプログラム\V1_OutFormフォーム画面出力系\FSoundConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programプログラム\V1_OutFormフォーム画面出力系\FSoundConfig.Designer.cs">
+      <DependentUpon>FSoundConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Programプログラム\V1_OutFormフォーム画面出力系\FTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programプログラム\V1_OutFormフォーム画面出力系\FTitle.Designer.cs">
+      <DependentUpon>FTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programプログラム\_Toolsプログラミングツール系\_MyGameIdea・ゲームアイディア.cs" />
+    <Compile Include="Programプログラム\_Toolsプログラミングツール系\MySound_Windows.cs" />
+    <Compile Include="Programプログラム\V1_OutFormフォーム画面出力系\FTestDrawFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programプログラム\V1_OutFormフォーム画面出力系\FTestDrawFrom.Designer.cs">
+      <DependentUpon>FTestDrawFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programプログラム\z_Scrap倉庫（実際使わないが作成中のテストや草案）\draft_CFpsManager・フレーム管理者.cs" />
+    <Compile Include="Programプログラム\z_Scrap倉庫（実際使わないが作成中のテストや草案）\old_CKeyBoardInput.cs" />
+    <Compile Include="Programプログラム\C3_Inputユーザ入力系\キー入力定義系\CJoyStick・ジョイスティック入力定義.cs" />
+    <Compile Include="Programプログラム\C3_Inputユーザ入力系\キー入力定義系\CKey・予めキー配置が定義されたキー入力クラス.cs" />
+    <Compile Include="Programプログラム\C3_Inputユーザ入力系\キー入力定義系\CMouseAndKeyboardKeyInput・キー入力定義.cs" />
+    <Compile Include="Programプログラム\C3_Inputユーザ入力系\キー入力定義系\入力インタフェース\IKeyInput・入力インタフェースに必要な機能定義クラス.cs" />
+    <Compile Include="Programプログラム\C3_Inputユーザ入力系\キー入力定義系\CMouseInput・マウス入力定義.cs" />
+    <Compile Include="Programプログラム\C3_Inputユーザ入力系\キー入力定義系\CVirtualKey・複数の入力をひとまとめにする仮想キークラス.cs" />
+    <Compile Include="Programプログラム\z_Scrap倉庫（実際使わないが作成中のテストや草案）\dragt_CParameterBase・基底パラメータ.cs" />
+    <Compile Include="Programプログラム\M4_Audioサウンド定義系\直接使わないクラス\CAudioData・オーディオデータ.cs" />
+    <Compile Include="Programプログラム\M4_Audioサウンド定義系\直接使わないクラス\CAudioLoader_FromName・オーディオデータ読み込み機.cs" />
+    <Compile Include="Programプログラム\M4_Audioサウンド定義系\CSoundManager・サウンド管理者.cs" />
+    <Compile Include="Programプログラム\M5_Scinarioシナリオ定義系\CYourOwnLegend・伝説シナリオ.cs" />
+    <Compile Include="Programプログラム\C1_MainGameメインゲーム系\ゲーム管理者が持つクラス\タスク詳細\CDiceBattleTask・ダイスバトルタスク.cs" />
+    <Compile Include="Programプログラム\C1_MainGameメインゲーム系\ゲーム管理者が持つクラス\タスク詳細\CGameScenes・ゲームシーン.cs" />
+    <Compile Include="Programプログラム\C1_MainGameメインゲーム系\ゲーム管理者が持つクラス\タスク詳細\CTasks・タスク一覧.cs" />
+    <Compile Include="Programプログラム\_Toolsプログラミングツール系\UndoTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Programプログラム\_Toolsプログラミングツール系\UndoTextBox.Designer.cs">
+      <DependentUpon>UndoTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programプログラム\M2_Dataデータ定義系\CDatabaseFileReader_ReadByString・データベース読み込み機.cs" />
+    <Compile Include="Programプログラム\_Toolsプログラミングツール系\MyFileIO.cs" />
+    <Compile Include="Programプログラム\_Toolsプログラミングツール系\MyTime.cs" />
+    <Compile Include="Programプログラム\M2_Dataデータ定義系\CLogData.cs" />
+    <Compile Include="Programプログラム\z_Scrap倉庫（実際使わないが作成中のテストや草案）\test_CResourceCharaData・資源キャラデータ.cs" />
+    <Compile Include="Programプログラム\M2_Dataデータ定義系\CResourceData・資源データ.cs" />
+    <Compile Include="Programプログラム\M2_Dataデータ定義系\CUnmanagedResourceManager・資源管理者.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\キャラが持つクラス\パラメータ管理クラス\CCPInfo・キャラパラ情報.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\キャラが持つクラス\戦闘コマンド管理クラス\CCommand・コマンド.cs" />
+    <Compile Include="Programプログラム\C1_MainGameメインゲーム系\ゲーム管理者が持つクラス\CGameModeState・モードや状態遷移.cs" />
+    <Compile Include="Programプログラム\C1_MainGameメインゲーム系\ゲーム管理者が持つクラス\CFpsManager・フレーム管理者.cs" />
+    <Compile Include="Programプログラム\C2_SystemCoreコアシステム系\CGameRank・ゲームランク.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\キャラが持つクラス\パラメータ管理クラス\CParasDefault・パラ初期値群.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\キャラが持つクラス\直接使わない親クラス\CPara・パラメータ.cs" />
+    <Compile Include="Programプログラム\z_Scrap倉庫（実際使わないが作成中のテストや草案）\draft_CChara・キャラ.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\CShinreiPara・心霊パラメータ.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\キャラが持つクラス\CParas・パラメータ一覧.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\キャラが持つクラス\CVars・変数一覧.cs" />
+    <Compile Include="Programプログラム\z_Scrap倉庫（実際使わないが作成中のテストや草案）\draft_CSE・効果音.cs" />
+    <Compile Include="Programプログラム\_Toolsプログラミングツール系\MyGraph.cs" />
+    <Compile Include="Programプログラム\z_Scrap倉庫（実際使わないが作成中のテストや草案）\draft_CBattleScreen・戦闘画面.cs" />
+    <Compile Include="Programプログラム\_Toolsプログラミングツール系\MyColor.cs" />
+    <Compile Include="Programプログラム\C4_Otherその他コントロール系\アトラクター重畳\CAtractorIn・X.cs" />
+    <Compile Include="Programプログラム\C4_Otherその他コントロール系\アトラクター重畳\CAtractorManager・世界樹.cs" />
+    <Compile Include="Programプログラム\C4_Otherその他コントロール系\アトラクター重畳\CAtractorOut・ΔX.cs" />
+    <Compile Include="Programプログラム\C4_Otherその他コントロール系\アトラクター重畳\CAtractorSelection・妖精さん.cs" />
+    <Compile Include="Programプログラム\V1_OutFormフォーム画面出力系\FTestScinarioCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programプログラム\V1_OutFormフォーム画面出力系\FTestScinarioCreateForm.Designer.cs">
+      <DependentUpon>FTestScinarioCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programプログラム\z_Testテスト用（正式採用でない代替案）\CTestStrategyManager・CPU思考戦略管理者.cs" />
+    <Compile Include="Programプログラム\V1_OutFormフォーム画面出力系\FDamageCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programプログラム\V1_OutFormフォーム画面出力系\FDamageCalculator.Designer.cs">
+      <DependentUpon>FDamageCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programプログラム\V1_OutFormフォーム画面出力系\FParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programプログラム\V1_OutFormフォーム画面出力系\FParameter.Designer.cs">
+      <DependentUpon>FParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programプログラム\V1_OutFormフォーム画面出力系\FTestBalanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programプログラム\V1_OutFormフォーム画面出力系\FTestBalanceForm.Designer.cs">
+      <DependentUpon>FTestBalanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programプログラム\M2_Dataデータ定義系\乱数発生・保存系\直接使わない親クラス\CMyRandomManager.cs" />
+    <Compile Include="Programプログラム\M2_Dataデータ定義系\乱数発生・保存系\CMyRandomManager・ランダム生成者.cs" />
+    <Compile Include="Programプログラム\z_Scrap倉庫（実際使わないが作成中のテストや草案）\（日本語化＿案３）CBattle.cs" />
+    <Compile Include="Programプログラム\z_Scrap倉庫（実際使わないが作成中のテストや草案）\（日本語化＿案１）C_戦闘.cs" />
+    <Compile Include="Programプログラム\z_Scrap倉庫（実際使わないが作成中のテストや草案）\（日本語化＿案２）GBattle・戦闘.cs" />
+    <Compile Include="Programプログラム\z_Scrap倉庫（実際使わないが作成中のテストや草案）\test_GChoiceSample・選択肢例.cs" />
+    <Compile Include="Programプログラム\M2_Dataデータ定義系\キャッシュ読み込み系\CCachedObjectSmartLoader_ByString・オブジェクト読み込み機.cs" />
+    <Compile Include="Programプログラム\z_Testテスト用（正式採用でない代替案）\サウンド再生_PlaySoundManager\PlaySoundManager・サウンド再生機.cs" />
+    <Compile Include="Programプログラム\z_Testテスト用（正式採用でない代替案）\マイク周波数表示_AudioFC\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programプログラム\z_Testテスト用（正式採用でない代替案）\マイク周波数表示_AudioFC\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programプログラム\z_Testテスト用（正式採用でない代替案）\マイク周波数表示_AudioFC\InPCM.cs" />
+    <Compile Include="Programプログラム\z_Testテスト用（正式採用でない代替案）\マイク録音_SampleRecord\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programプログラム\z_Testテスト用（正式採用でない代替案）\マイク録音_SampleRecord\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programプログラム\z_Testテスト用（正式採用でない代替案）\マイク音程表示_MusicalScale\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programプログラム\z_Testテスト用（正式採用でない代替案）\マイク音程表示_MusicalScale\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programプログラム\z_Testテスト用（正式採用でない代替案）\マイク音程表示_MusicalScale\Wave.cs" />
+    <Compile Include="Programプログラム\z_Testテスト用（正式採用でない代替案）\音楽再生_SamplePlayer\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programプログラム\z_Testテスト用（正式採用でない代替案）\音楽再生_SamplePlayer\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programプログラム\C2_SystemCoreコアシステム系\戦闘用データ管理\CDamageCalc・ダメージ計算機.cs" />
+    <Compile Include="Programプログラム\z_Testテスト用（正式採用でない代替案）\CPersonarity・性格.cs" />
+    <Compile Include="Programプログラム\M2_Dataデータ定義系\キャッシュ読み込み系\直接使わない親クラス\CCachedObjectLoader_ByString.cs" />
+    <Compile Include="Programプログラム\M2_Dataデータ定義系\キャッシュ読み込み系\直接使わない親クラス\CCacheSystem・一時記憶メモリシステム.cs" />
+    <Compile Include="Programプログラム\C1_MainGameメインゲーム系\ゲーム管理者が持つクラス\CBattle・戦闘.cs" />
+    <Compile Include="Programプログラム\C2_SystemCoreコアシステム系\CCharaCreator・キャラ生成機.cs" />
+    <Compile Include="Programプログラム\C1_MainGameメインゲーム系\ゲーム管理者が持つクラス\CQResult・質問結果.cs" />
+    <Compile Include="Programプログラム\C1_MainGameメインゲーム系\ゲーム管理者が持つクラス\タスク詳細\CDrawnTask・描画タスク.cs" />
+    <Compile Include="Programプログラム\M6_ScreenTips画面構成要素定義系\CGameScreen・ゲーム画面.cs" />
+    <Compile Include="Programプログラム\_Toolsプログラミングツール系\MyFont.cs" />
+    <Compile Include="Programプログラム\C2_SystemCoreコアシステム系\パラメータ計算\CBattleParaCalc・戦闘パラ計算機.cs" />
+    <Compile Include="Programプログラム\C1_MainGameメインゲーム系\CTestGame・テストゲーム.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\キャラが持つクラス\CAbility・能力.cs" />
+    <Compile Include="Programプログラム\V1_OutFormフォーム画面出力系\FGameBattleForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programプログラム\V1_OutFormフォーム画面出力系\FGameBattleForm1.Designer.cs">
+      <DependentUpon>FGameBattleForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programプログラム\C1_MainGameメインゲーム系\ゲーム管理者が持つクラス\直接使わない親クラス\CBattleBase・戦闘を管理する基底クラス.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\CChara・キャラ.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\キャラが持つクラス\CCondition・状態変化.cs" />
+    <Compile Include="Programプログラム\C1_MainGameメインゲーム系\CGameManager・ゲーム管理者.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\キャラが持つクラス\CEmotion・感情.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\キャラが持つクラス\CFaceState・顔表情の状態.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\キャラが持つクラス\直接使わない親クラス\CVar・変数.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\キャラが持つクラス\CHoryDark・光陰.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\CItem・アイテム.cs" />
+    <Compile Include="Programプログラム\M6_ScreenTips画面構成要素定義系\ゲーム画面が持つクラス\CMainMessageBox・メインメッセージボックス.cs">
+    </Compile>
+    <Compile Include="Programプログラム\z_Scrap倉庫（実際使わないが作成中のテストや草案）\draft_CParas・パラメータ群.cs" />
+    <Compile Include="Programプログラム\C1_MainGameメインゲーム系\ゲーム管理者が持つクラス\タスク詳細\直接使わない親クラス\CTaskBase・タスクベース.cs" />
+    <Compile Include="Programプログラム\C1_MainGameメインゲーム系\ゲーム管理者が持つクラス\CTaskController・タスク管理者.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\CShinrei・心霊.cs" />
+    <Compile Include="Programプログラム\C1_MainGameメインゲーム系\ゲーム管理者が持つクラス\CSwitchs・スイッチ一覧.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\CUser・ユーザ.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\CVoice・ボイス.cs" />
+    <Compile Include="Programプログラム\M1_Model実世界モデル系\キャラが持つクラス\CSkill・特技.cs" />
+    <Compile Include="Program・プログラム実行管理者.cs" />
+    <Compile Include="Programプログラム\_Toolsプログラミングツール系\MyTools.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Programプログラム\V1_OutFormフォーム画面出力系\FSoundConfig.resx">
+      <DependentUpon>FSoundConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programプログラム\V1_OutFormフォーム画面出力系\FTitle.resx">
+      <DependentUpon>FTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programプログラム\_Toolsプログラミングツール系\UndoTextBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UndoTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programプログラム\V1_OutFormフォーム画面出力系\FDamageCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FDamageCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programプログラム\V1_OutFormフォーム画面出力系\FGameBattleForm1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FGameBattleForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programプログラム\V1_OutFormフォーム画面出力系\FTestDrawFrom.resx">
+      <DependentUpon>FTestDrawFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programプログラム\V1_OutFormフォーム画面出力系\FParameter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programプログラム\V1_OutFormフォーム画面出力系\FTestScinarioCreateForm.resx">
+      <DependentUpon>FTestScinarioCreateForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programプログラム\V1_OutFormフォーム画面出力系\FTestBalanceForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FTestBalanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programプログラム\z_Testテスト用（正式採用でない代替案）\マイク周波数表示_AudioFC\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programプログラム\z_Testテスト用（正式採用でない代替案）\マイク録音_SampleRecord\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programプログラム\z_Testテスト用（正式採用でない代替案）\マイク音程表示_MusicalScale\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programプログラム\z_Testテスト用（正式採用でない代替案）\音楽再生_SamplePlayer\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Programプログラム\C3_Inputユーザ入力系\CInputButton・入力ボタン定義.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Programプログラム\_FAQ★プログラムの説明書_フォルダはMVC（Model_Veiw_Control）に分けて整理.txt" />
+    <Content Include="twitterizer2_GettingStarted.txt" />
+    <Content Include="_Read Me★はじめにお読みください.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MSHTML">
+      <Guid>{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラー 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Programプログラム\M3_Image画像定義系\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

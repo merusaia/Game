@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ImeAwareAutoCompleteWinForm</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.WinForm.CompositionChangedEventArgs">
+            <summary>
+            Provide event data for ImeListener.CompositionChanged event.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.CompositionChangedEventArgs.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.International.ImeAwareAutoComplete.WinForm.CompositionChangedEventArgs"/> class.
+            </summary>
+            <param name="previous">The previous.</param>
+            <param name="current">The current composition.</param>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.WinForm.CompositionChangedEventArgs.PreviousCompositionString">
+            <summary>
+            Gets or sets the previous composition string.
+            </summary>
+            <value>The previous composition string.</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.WinForm.CompositionChangedEventArgs.CurrentCompositionString">
+            <summary>
+            Gets the current composition string.
+            </summary>
+            <value>The current composition string.</value>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.WinForm.ChineseImeAwareAutoCompleteListener">
+            <summary>
+            Add Ime-Aware AutoComplete feature to the specified control.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ChineseImeAwareAutoCompleteListener.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.International.ImeAwareAutoComplete.WinForm.ChineseImeAwareAutoCompleteListener"/> class.
+            </summary>
+            <param name="ctrl">The listened Control.</param>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.WinForm.KeysTranslator">
+            <summary>
+            Key translator that converts WinForm key to InputKeys.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.WinForm.KeysTranslator.inputKeyConverter">
+            <summary>
+            Internal converter.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.KeysTranslator.ConvertToInputKeys(System.Windows.Forms.Keys)">
+            <summary>
+            Converts to InputKeys.
+            </summary>
+            <param name="key">The key.</param>
+            <returns>The InputKeys object</returns>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener">
+            <summary>
+            Add limitted Ime-Aware feature to the specified control. Only available in WinForm applications.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.OnCompositionChanged">
+            <summary>
+            Raise the CompositionChanged event.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.OnInputComplete">
+            <summary>
+            Raise the InputComplete event.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.OnImeKeyDown(Microsoft.International.ImeAwareAutoComplete.InputKeys)">
+            <summary>
+            Raise the ImeKeyDown event
+            </summary>
+            <param name="key">The key.</param>
+            <returns><c>true</c> if this event is handled; otherwise, <c>false</c></returns>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.OnMouseWheel(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Raise the MouseWheel event
+            </summary>
+            <param name="msg">The MSG.</param>
+            <param name="wparam">The wparam.</param>
+            <param name="lparam">The lparam.</param>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener"/> class.
+            </summary>
+            <param name="listenedCtrl">The listened control.</param>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.CancelComposition">
+            <summary>
+            Cancel the current composition holded by Ime.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.PreFilterMessage(System.Windows.Forms.Message@)">
+            <summary>
+            Filters out a message before it is dispatched.
+            </summary>
+            <param name="m">The message to be dispatched. You cannot modify this message.</param>
+            <returns>true to filter the message and stop it from being dispatched; false to allow the message to continue to the next filter or control.</returns>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.CompResult">
+            <summary>
+              Gets the result of composition string.
+            </summary>
+            <value>The result of composition string.</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.IsInComposition">
+            <summary>
+            Gets a value indicating whether the text input is in composition holded by Ime.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is in composition; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.CompositionString">
+            <summary>
+            Gets the current composition string holded by Ime.
+            </summary>
+            <value>The composition string.</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.CandidateWindowOpened">
+            <summary>
+            Gets a value indicating whether the candidate window is opened.
+            </summary>
+            <value><c>true</c> if the candidate window is opened; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="E:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.CompositionChanged">
+            <summary>
+            Occurs when the composition changes.
+            </summary>
+        </member>
+        <member name="E:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.InputComplete">
+            <summary>
+            Occurs when input complete.
+            </summary>
+        </member>
+        <member name="E:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.ImeKeyDown">
+            <summary>
+            Occurs when a key is pressed while Ime is available and this key is processed by Ime.
+            </summary>
+        </member>
+        <member name="E:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.MouseWheel">
+            <summary>
+            Occurs when Mouse wheel.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.WinForm.DirectMessageEventArgs">
+            <summary>
+            Provide data for all direct message events.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.WinForm.CommonResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.WinForm.CommonResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.WinForm.CommonResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

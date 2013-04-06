@@ -1,0 +1,435 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InternationalNumericFormatter</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.GetIntegralStack(System.Decimal,System.UInt64,Microsoft.International.Formatters.StackWithIndex)">
+            <summary>
+            拆分指定数值并将数字和它的权重压入堆栈。
+            </summary>
+            <param name="num">将被拆分的数值。</param>
+            <param name="position">拆分的起始位置。</param>
+            <param name="stack">存储数字和它的权重的堆栈。</param>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.ConvertIntergralStackToText(Microsoft.International.Formatters.StackWithIndex,System.Text.StringBuilder)">
+            <summary>
+            将堆栈中的数字转换后为文本。
+            </summary>
+            <param name="stack">存储数字的堆栈。</param>
+            <param name="text">存储转换后的文本。</param>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaFormatter.GetDecimalText(System.Decimal,System.Text.StringBuilder)">
+            <summary>
+            向文本添加指定数值的小数部分。
+            </summary>
+            <param name="num">带小数部分的数值。</param>
+            <param name="text">将被修改的文本。</param>
+        </member>
+        
+        <member name="T:Microsoft.International.Formatters.InternationalNumericFormatter">
+             <summary>
+             提供一个格式化类，把数值型的数据转换为东亚或阿拉伯的本地数字表示形式的字符串。
+             </summary>
+             <remarks>
+            这个类支持以下的东亚语言：            
+            <list type="bullet">
+            <item>
+            简体中文
+            </item>
+            <item>
+            繁体中文
+            </item>
+            <item>
+            日语
+            </item>
+            <item>
+            韩语
+            </item>
+            </list>
+             
+			这个类支持以下格式化字符串：
+			<list type="bullet">
+			<item>
+			标准格式(L)：又称大写。
+			</item>
+			<item>
+			普通格式(Ln)：又称小写。
+			</item>
+			<item>
+			货币格式(Lc)：用来表示货币。
+			</item>
+			<item>
+			字译格式(Lt)：以数字符号字母表示数值型数据，只支持日文。
+			</item>
+			</list>
+			 
+             仅支持内置数值类型，包括double, float, int, uint, long, ulong, short, ushort, sbyte, byte and decimal.
+             </remarks>
+             <example>
+             以下代码演示了如何将数字格式化成东亚文化和阿拉伯文化表示。
+             <code>
+             using System;
+             using Microsoft.International.Formatters;
+             using Microsoft.International;
+             
+             using System.Globalization;
+             using System.Diagnostics;
+             
+             // sample code to convert the number to a string with local numeric representation in East Asian and Arabic languages.
+             namespace InternationalNumericFormatterDemo
+             {
+                class Program
+                {
+                    static void Main(string[] args)
+                    {
+                        Debug.WriteLine("The number of 12345 with Normal format and Chinese-Simplified is: " + InternationalNumericFormatter.FormatWithCulture("Ln", 12345, null, new CultureInfo("zh-CHS")));
+                        Debug.WriteLine("The number of 12345 with Currency format and Chinese-Traditional is: " + InternationalNumericFormatter.FormatWithCulture("Lc", 12345, null, new CultureInfo("zh-CHT")));
+                        Debug.WriteLine("The number of 12345 with standard format and Japanese is: " + InternationalNumericFormatter.FormatWithCulture("L", 12345, null, new CultureInfo("ja")));
+                        Debug.WriteLine("The number of 12345 with standard format and Korean is: " + InternationalNumericFormatter.FormatWithCulture("L", 12345, null, new CultureInfo("ko")));
+                        Debug.WriteLine("The number of 12345 with standard format and Arabic is: " + InternationalNumericFormatter.FormatWithCulture("L", 12345, null, new CultureInfo("ar")));
+                    }
+                }
+             }
+             /*
+             This code produces the following debug output.
+            
+             The number of 12345 with Normal format and Chinese-Simplified is: 一万二千三百四十五
+             The number of 12345 with Currency format and Chinese-Traditional is: 壹萬貳仟參佰肆拾伍
+             The number of 12345 with Standard format and Japanese is: 壱萬弐阡参百四拾伍
+             The number of 12345 with standard format and Korean is: 일만 이천삼백사십오
+             The number of 12345 with standard format and Arabic is:اثنا عشر آلاف و ثلاثة مائة خمسة و أربعون
+             
+             */
+             </code>
+             </example>
+        </member>
+        <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.#ctor">
+            <summary>
+            初始化InternationalNumericFormatter类的一个的新实例。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.GetFormat(System.Type)">
+            <summary>
+            返回一个实现了ICustomFormatter接口的格式化对象。
+            </summary>
+            <param name="formatType">格式类型。</param>
+            <returns>
+            如果参数formatType是<see cref="T:System.ICustomFormatter"/>，则返回formatType本身，否则返回一个空引用。
+            </returns>
+        </member>
+        <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.Format(System.String,System.Object,System.IFormatProvider)">
+            <summary>
+            将对象格式化为当前文化表示形式。
+            </summary>
+            <param name="format">
+            格式化类型，这个类支持以下格式化字符串：
+            <list type="bullet">
+            <item>
+            标准格式(L)：又称大写。
+            </item>
+            <item>
+            普通格式(Ln)：又称小写。
+            </item>
+            <item>
+            货币格式(Lc)：用来表示货币。
+            </item>
+            <item>
+            字译格式(Lt)：以数字符号字母表示数值型数据，只支持日文。
+            </item>
+            </list>
+            </param>
+            <param name="arg">Number to be formatted.</param>
+            <param name="formatProvider">Format provider.</param>
+            <returns>Localized string in East Asian and Arabic forms.</returns>
+        </member>
+        <member name="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)">
+            <summary>
+            将对象格式化为指定的东亚文化或阿拉伯文化表示形式。
+            </summary>
+            <param name="format">
+			格式化类型，这个类支持以下格式化字符串：
+            <list type="bullet">
+            <item>
+            标准格式(L)：又称大写。
+            </item>
+            <item>
+            普通格式(Ln)：又称小写。
+            </item>
+            <item>
+            货币格式(Lc)：用来表示货币。
+            </item>
+            <item>
+            字译格式(Lt)：以数字符号字母表示数值型数据，只支持日文。
+            </item>
+            </list>
+            </param>
+            <param name="arg">将被格式化的数据。</param>
+            <param name="formatProvider">格式提供器。</param>
+            <param name="culture">文化类型</param>
+            <returns>用东亚语言或阿拉伯文格式化过的本地化字符串。</returns>
+            <exception cref="T:System.ArgumentNullException">
+            <see cref="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)"/>方法的format参数为空，抛出<see cref="T:System.ArgumentNullException"/>异常。
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            <see cref="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)"/>方法的arg参数为空，抛出<see cref="T:System.ArgumentNullException"/>异常。
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            <see cref="M:Microsoft.International.Formatters.InternationalNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)"/>方法的culture参数为空，抛出<see cref="T:System.ArgumentNullException"/>异常。
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            数值越界，抛出<see cref="T:System.ArgumentOutOfRangeException"/>异常。
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            非法参数类型，仅支持内建数值类型，抛出<see cref="T:System.ArgumentException"/>异常。
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            culture和format的非法组合，抛出<see cref="T:System.ArgumentException"/>异常。
+            </exception>
+        </member>
+        <member name="T:Microsoft.International.Formatters.EastAsiaNumericFormatter">
+            <summary>
+            提供一个格式化类，把数值型的数据转换为东亚的本地数字表示形式的字符串。
+            </summary>
+            
+            <remarks>
+            这个类支持以下的东亚语言：            
+            <list type="bullet">
+            <item>
+            简体中文
+            </item>
+            <item>
+            繁体中文
+            </item>
+            <item>
+            日语
+            </item>
+            <item>
+            韩语
+            </item>
+            </list>
+            
+            这个类支持以下格式化字符串：
+            <list type="bullet">
+            <item>
+            标准格式(L)：又称大写。
+            </item>
+            <item>
+            普通格式(Ln)：又称小写。
+            </item>
+            <item>
+            货币格式(Lc)：用来表示货币。
+            </item>
+            <item>
+            字译格式(Lt)：以数字符号字母表示数值型数据，只支持日文。
+            </item>
+            </list>
+            
+            为了解释文化和格式化组合如何工作，我们将以“12345”举例。
+            <list type="bullet">
+            <item>
+            简体中文
+            <list type="bullet">
+            <item>
+            标准：壹万贰仟叁佰肆拾伍
+            </item>
+            <item>
+            普通：一万二千三百四十五
+            </item>
+            <item>
+            货币：壹万贰仟叁佰肆拾伍
+            </item>
+            <item>
+            字译：抛出ArgumentException异常
+            </item>
+            </list>
+            </item>
+            <item>
+            繁体中文
+            <list type="bullet">
+            <item>
+            标准：壹萬貳仟參佰肆拾伍
+            </item>
+            <item>
+            普通：一萬二千三百四十五
+            </item>
+            <item>
+            货币：壹萬貳仟參佰肆拾伍
+            </item>
+            <item>
+            字译：抛出ArgumentException异常
+            </item>
+            </list>
+            </item>
+            <item>
+            日语
+            <list type="bullet">
+            <item>
+            标准：壱萬弐阡参百四拾伍
+            </item>
+            <item>
+            普通：一万二千三百四十五
+            </item>
+            <item>
+            货币：ArgumentException will be thrown
+            </item>
+            <item>
+            字译：一二三四五
+            </item>
+            </list>
+            </item>
+            <item>
+            韩语
+            <list type="bullet">
+            <item>
+            标准：일만 이천삼백사십오
+            </item>
+            <item>
+            普通：抛出ArgumentException异常
+            </item>
+            <item>
+            货币：일만 이천삼백사십오
+            </item>
+            <item>
+            字译：抛出ArgumentException异常
+            </item>
+            </list>
+            </item>
+            <item>
+            其他语言：抛出ArgumentException异常
+            </item>
+            </list>
+            被支持的数据类型，包括 double、float、int、uint、long、ulong、short、ushort、sbyte、byte和decimal。
+            </remarks>
+			<!--<example>
+			以下的代码演示了一个把数值转换为东亚的本地数字表示形式的字符串的实例。
+			<code source = "../../Example_CS/Program.cs" lang = "cs"></code>
+			<code source = "../../Example_VB/Main.vb" lang = "vbnet"></code>
+			<code source = "../../Example_CPP/Example_CPP.cpp" lang = "cpp"></code>
+			</example>-->
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.#ctor">
+            <summary>
+            初始化EastAsiaNumericFormatter类的一个新实例。
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.GetFormat(System.Type)">
+            <summary>
+            返回一个实现了ICustomFormatter接口的格式化对象。
+            </summary>
+            <remarks>
+            请参阅<see cref="T:Microsoft.International.Formatters.EastAsiaNumericFormatter"/>来查看使用EastAsiaNumericFormatter的实例。
+            </remarks> 
+            <param name="formatType">格式类型。</param>
+            <returns>
+            如果参数formatType是<see cref="T:System.ICustomFormatter"/>，则返回formatType本身，否则返回一个空引用。
+            </returns>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.Format(System.String,System.Object,System.IFormatProvider)">
+            <summary>
+            将对象格式化为东亚文化表示形式。
+            </summary>
+            <remarks>
+            请参阅<see cref="T:Microsoft.International.Formatters.EastAsiaNumericFormatter">EastAsiaNumericFormatter</see>来查看使用EastAsiaNumericFormatter的实例。
+            </remarks>
+            <param name="format">
+			格式类型。这个类支持如下格式类型:
+            <list type="bullet">
+			  <item>
+				标准格式(L)：又称大写。
+			  </item>
+			  <item>
+				普通格式(Ln)：又称小写。
+			  </item>
+			  <item>
+				货币格式(Lc)：用来表示货币。
+			  </item>
+			  <item>
+				字译格式(Lt)：以数字符号字母表示数值型数据，只支持日文。
+			  </item>
+			</list>
+            </param>
+            <param name="arg">将被格式化的数据。</param>
+            <param name="formatProvider">格式提供器。</param>
+            <returns>用东亚语言格式化过的本地化字符串。</returns>
+            <exception cref="T:System.ArgumentNullException">
+            format，arg或者culture是一个空引用。
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            指定的格式化类型在此文化中不被支持。
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            arg超出范围。
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            arg是一个无效类型。
+            </exception>
+        </member>
+        <member name="M:Microsoft.International.Formatters.EastAsiaNumericFormatter.FormatWithCulture(System.String,System.Object,System.IFormatProvider,System.Globalization.CultureInfo)">
+            <summary>
+            将对象格式化为指定的东亚文化表示形式。
+            </summary>
+            <remarks>
+            请参阅<see cref="T:Microsoft.International.Formatters.EastAsiaNumericFormatter"/>以获取使用EastAsiaNumericFormatter的实例。
+            </remarks>
+            <param name="format">
+            格式类型。这个类支持如下格式类型:
+            <list type="bullet">
+			  <item>
+				标准格式(L)：又称大写。
+			  </item>
+			  <item>
+				普通格式(Ln)：又称小写。
+			  </item>
+			  <item>
+				货币格式(Lc)：用来表示货币。
+			  </item>
+			  <item>
+				字译格式(Lt)：以数字符号字母表示数值型数据，只支持日文。
+			  </item>
+			</list>
+            </param>
+            <param name="arg">将被格式化的数据。</param>
+            <param name="formatProvider">格式提供者。</param>
+            <param name="culture">文化类型。</param>
+            <returns>用东亚语言格式化过的本地化字符串。</returns>
+            <exception cref="T:System.ArgumentNullException">
+            format，arg或者culture是一个空引用。
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            指定的格式化类型在此文化中不被支持。
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            arg超出范围。
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            arg是一个无效类型。
+            </exception>
+        </member>
+        <member name="T:Microsoft.International.Formatters.AssemblyResource">
+            <summary>
+              强类型资源类，用来查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Formatters.AssemblyResource.ResourceManager">
+            <summary>
+              返回当前类使用的ResourceManager实例。
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Formatters.AssemblyResource.Culture">
+            <summary>
+              重载当前线程的CurrentUICulture属性，用来查找相应的强类型资源类。
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Formatters.AssemblyResource.INVALID_ARGUMENT_TYPE">
+            <summary>
+              查找本地化字符串：非法参数类型
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Formatters.AssemblyResource.INVALID_PARAMETER_COMBINATION">
+            <summary>
+              查找本地化字符串：指定的格式在当前文化中不支持。
+            </summary>
+        </member>
+    </members>
+</doc>

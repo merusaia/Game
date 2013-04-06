@@ -1,0 +1,1365 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ImeAwareAutoCompleteBase</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.InputKeys">
+            <summary>
+            Specifies the possible key values on a keyboard.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.None">
+            <summary>
+            No key pressed. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LButton">
+            <summary>
+            The left mouse button.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.RButton">
+            <summary>
+            The right mouse button.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Cancel">
+            <summary>
+            The Cancel key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.MButton">
+            <summary>
+            The middle mouse button (three-button mouse).
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.XButton1">
+            <summary>
+            The first x mouse button (five-button mouse).
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.XButton2">
+            <summary>
+            The second x mouse button (five-button mouse).
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Back">
+            <summary>
+            The Backspace key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Tab">
+            <summary>
+            The Tab key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LineFeed">
+            <summary>
+            The Linefeed key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Clear">
+            <summary>
+            The Clear key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Enter">
+            <summary>
+            The Enter key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Return">
+            <summary>
+            The Return key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ShiftKey">
+            <summary>
+            The SHIFT key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ControlKey">
+            <summary>
+            The CTRL key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Menu">
+            <summary>
+            The ALT key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Pause">
+            <summary>
+            The Pause key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.CapsLock">
+            <summary>
+            The Caps Lock key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Capital">
+            <summary>
+            The Caps Lock key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.HangulMode">
+            <summary>
+            The IME Hangul mode key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.HanguelMode">
+            <summary>
+            The IME Hanguel mode key. (maintained for compatibility; use HangulMode)
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.KanaMode">
+            <summary>
+            The IME Kana mode key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.JunjaMode">
+            <summary>
+            The IME Junja mode key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.FinalMode">
+            <summary>
+            The IME Final mode key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.KanjiMode">
+            <summary>
+            The IME Kanji mode key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.HanjaMode">
+            <summary>
+            The IME Hanja mode key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Escape">
+            <summary>
+            The ESC key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ImeConvert">
+            <summary>
+            The IME Convert key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ImeNonConvert">
+            <summary>
+            The IME NonConvert key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ImeAccept">
+            <summary>
+            The IME Accept key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ImeModeChange">
+            <summary>
+            The IME Mode change request. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Space">
+            <summary>
+            The Spacebar key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Prior">
+            <summary>
+            The Page Up key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.PageUp">
+            <summary>
+            The Page Up key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.PageDown">
+            <summary>
+            The Page Down key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Next">
+            <summary>
+            The Page Down key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.End">
+            <summary>
+            The End key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Home">
+            <summary>
+            The Home key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Left">
+            <summary>
+            The Left Arrow key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Up">
+            <summary>
+            The Up Arrow key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Right">
+            <summary>
+            The Right Arrow key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Down">
+            <summary>
+            The Down Arrow key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Select">
+            <summary>
+            The Select key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Print">
+            <summary>
+            The Print key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Execute">
+            <summary>
+            The Execute key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Snapshot">
+            <summary>
+            The Print Screen key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.PrintScreen">
+            <summary>
+            The Print Screen key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Insert">
+            <summary>
+            The Insert key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Delete">
+            <summary>
+            The Delete key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Help">
+            <summary>
+            The Help key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D0">
+            <summary>
+            The 0 (zero) key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D1">
+            <summary>
+            The 1 (one) key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D2">
+            <summary>
+            The 2 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D3">
+            <summary>
+            The 3 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D4">
+            <summary>
+            The 4 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D5">
+            <summary>
+            The 5 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D6">
+            <summary>
+            The 6 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D7">
+            <summary>
+            The 7 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D8">
+            <summary>
+            The 8 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D9">
+            <summary>
+            The 9 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.A">
+            <summary>
+            The A key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.B">
+            <summary>
+            The B key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.C">
+            <summary>
+            The C key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.D">
+            <summary>
+            The D key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.E">
+            <summary>
+            The E key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F">
+            <summary>
+            The F key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.G">
+            <summary>
+            The G key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.H">
+            <summary>
+            The H key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.I">
+            <summary>
+            The I key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.J">
+            <summary>
+            The J key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.K">
+            <summary>
+            The K key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.L">
+            <summary>
+            The L key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.M">
+            <summary>
+            The M key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.N">
+            <summary>
+            The N key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.O">
+            <summary>
+            The O key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.P">
+            <summary>
+            The P key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Q">
+            <summary>
+            The Q key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.R">
+            <summary>
+            The R key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.S">
+            <summary>
+            The S key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.T">
+            <summary>
+            The T key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.U">
+            <summary>
+            The U key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.V">
+            <summary>
+            The V key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.W">
+            <summary>
+            The W key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.X">
+            <summary>
+            The X key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Y">
+            <summary>
+            The Y key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Z">
+            <summary>
+            The Z key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LWin">
+            <summary>
+            The left Windows logo key (Microsoft Natural Keyboard). 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.RWin">
+            <summary>
+            The right Windows logo key (Microsoft Natural Keyboard). 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Apps">
+            <summary>
+            The Application key (Microsoft Natural Keyboard). 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Sleep">
+            <summary>
+            The Computer Sleep key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad0">
+            <summary>
+            The 0 key on the numeric keypad. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad1">
+            <summary>
+            The 1 key on the numeric keypad. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad2">
+            <summary>
+            The 2 key on the numeric keypad. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad3">
+            <summary>
+            The 3 key on the numeric keypad. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad4">
+            <summary>
+            The 4 key on the numeric keypad. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad5">
+            <summary>
+            The 5 key on the numeric keypad. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad6">
+            <summary>
+            The 6 key on the numeric keypad. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad7">
+            <summary>
+            The 7 key on the numeric keypad. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad8">
+            <summary>
+            The 8 key on the numeric keypad. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumPad9">
+            <summary>
+            The 9 key on the numeric keypad. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Multiply">
+            <summary>
+            The Multiply key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Add">
+            <summary>
+            The Add key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Separator">
+            <summary>
+            The Separator key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Subtract">
+            <summary>
+            The Subtract key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Decimal">
+            <summary>
+            The Decimal key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Divide">
+            <summary>
+            The Divide key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F1">
+            <summary>
+            The F1 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F2">
+            <summary>
+            The F2 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F3">
+            <summary>
+            The F3 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F4">
+            <summary>
+            The F4 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F5">
+            <summary>
+            The F5 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F6">
+            <summary>
+            The F6 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F7">
+            <summary>
+            The F7 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F8">
+            <summary>
+            The F8 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F9">
+            <summary>
+            The F9 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F10">
+            <summary>
+            The F10 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F11">
+            <summary>
+            The F11 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F12">
+            <summary>
+            The F12 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F13">
+            <summary>
+            The F13 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F14">
+            <summary>
+            The F14 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F15">
+            <summary>
+            The F15 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F16">
+            <summary>
+            The F16 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F17">
+            <summary>
+            The F17 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F18">
+            <summary>
+            The F18 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F19">
+            <summary>
+            The F19 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F20">
+            <summary>
+            The F20 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F21">
+            <summary>
+            The F21 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F22">
+            <summary>
+            The F22 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F23">
+            <summary>
+            The F23 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.F24">
+            <summary>
+            The F24 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NumLock">
+            <summary>
+            The Num Lock key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Scroll">
+            <summary>
+            The Scroll Lock key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LMenu">
+            <summary>
+            The left ALT key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.RMenu">
+            <summary>
+            The right ALT key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.BrowserBack">
+            <summary>
+            The Browser Back key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.BrowserForward">
+            <summary>
+            The Browser Forward key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.BrowserRefresh">
+            <summary>
+            The Browser Refresh key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.BrowserStop">
+            <summary>
+            The Browser Stop key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.BrowserSearch">
+            <summary>
+            The Browser Search key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.BrowserFavorites">
+            <summary>
+            The Browser Favorites key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.BrowserHome">
+            <summary>
+            The Browser Home key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.VolumeMute">
+            <summary>
+            The Volume Mute key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.VolumeDown">
+            <summary>
+            The Volume Down key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.VolumeUp">
+            <summary>
+            The Volume Up key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.MediaNextTrack">
+            <summary>
+            The Media Next Track key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.MediaPreviousTrack">
+            <summary>
+            The Media Previous Track key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.MediaStop">
+            <summary>
+            The Media Stop key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.MediaPlayPause">
+            <summary>
+            The Media Play Pause key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LaunchMail">
+            <summary>
+            The Launch Mail key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.SelectMedia">
+            <summary>
+            The Select Media key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LaunchApplication1">
+            <summary>
+            The Launch Application1 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LaunchApplication2">
+            <summary>
+            The Launch Application2 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemSemicolon">
+            <summary>
+            The OEM Semicolon key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem1">
+            <summary>
+            The OEM 1 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemPlus">
+            <summary>
+            The OEM Addition key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemComma">
+            <summary>
+            The OEM Comma key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemMinus">
+            <summary>
+            The OEM Minus key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemPeriod">
+            <summary>
+            The OEM Period key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem2">
+            <summary>
+            The OEM 2 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemQuestion">
+            <summary>
+            The OEM Question key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem3">
+            <summary>
+            The OEM 3 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemTilde">
+            <summary>
+            The OEM Tilde key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem4">
+            <summary>
+            The OEM 4 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemOpenBrackets">
+            <summary>
+            The OEM Open Brackets key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemPipe">
+            <summary>
+            The OEM Pipe key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem5">
+            <summary>
+            The OEM 5 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemCloseBrackets">
+            <summary>
+            The OEM Close Brackets key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem6">
+            <summary>
+            The OEM 6 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemQuotes">
+            <summary>
+            The OEM Quotes key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem7">
+            <summary>
+            The OEM 7 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem8">
+            <summary>
+            The OEM 8 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Oem102">
+            <summary>
+            The OEM 102 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemBackslash">
+            <summary>
+            The OEM Backslash key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ProcessKey">
+            <summary>
+            The PROCESS KEY key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Packet">
+            <summary>
+            Used to pass Unicode characters as if they were keystrokes. The Packet key value is the low word of a 32-bit virtual-key value used for non-keyboard input methods.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Attn">
+            <summary>
+            The ATTN key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.CrSel">
+            <summary>
+            The CRSEL key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ExSel">
+            <summary>
+            The EXSEL key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.EraseEof">
+            <summary>
+            The ERASE EOF key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Play">
+            <summary>
+            The PLAY key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Zoom">
+            <summary>
+            The ZOOM key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.NoName">
+            <summary>
+            A constant reserved for future use. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Pa1">
+            <summary>
+            The PA1 key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemClear">
+            <summary>
+            The OEM Clear key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.KeyCode">
+            <summary>
+            The bitmask to extract a key code from a key value.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Shift">
+            <summary>
+            The SHIFT modifier key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Control">
+            <summary>
+            The CTRL modifier key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Alt">
+            <summary>
+            The ALT modifier key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.Modifiers">
+            <summary>
+            The bitmask to extract modifiers from a key value.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LeftShift">
+            <summary>
+            The left Shift key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LeftCtrl">
+            <summary>
+            The left CTRL key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.LeftAlt">
+            <summary>
+            The left ALT key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.RightShift">
+            <summary>
+            The right Shift key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.RightCtrl">
+            <summary>
+            The right CTRL key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.RightAlt">
+            <summary>
+            The right ALT key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.AbntC1">
+            <summary>
+            The Portuguese (Brazil) key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.AbntC2">
+            <summary>
+            The Portuguese (Brazil) key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemAttn">
+            <summary>
+            The OEM ATTN key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemFinish">
+            <summary>
+            The OEM FINISH key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemCopy">
+            <summary>
+            The OEM COPY key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemAuto">
+            <summary>
+            The OEM AUTO key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemEnlw">
+            <summary>
+            The OEM ENLW key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.OemBackTab">
+            <summary>
+            The OEM BACKTAB key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.ImeProcessed">
+            <summary>
+            A special key masking the real key being processed by an IME. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeAlphanumeric">
+            <summary>
+            The DBE_ALPHANUMERIC key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeCodeInput">
+            <summary>
+            The DBE_CODEINPUT key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeDbcsChar">
+            <summary>
+            The DBE_DBCSCHAR key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeDetermineString">
+            <summary>
+            The DBE_DETERMINESTRING key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeEnterDialogConversionMode">
+            <summary>
+            The DBE_ENTERDLGCONVERSIONMODE key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeEnterImeConfigureMode">
+            <summary>
+            The DBE_ENTERIMECONFIGMODE key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeEnterWordRegisterMode">
+            <summary>
+            The DBE_ENTERWORDREGISTERMODE key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeFlushString">
+            <summary>
+            The DBE_FLUSHSTRING key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeHiragana">
+            <summary>
+            The DBE_HIRAGANA key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeKatakana">
+            <summary>
+            The DBE_KATAKANA key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeNoCodeInput">
+            <summary>
+            The DBE_NOCODEINPUT key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeNoRoman">
+            <summary>
+            The DBE_NOROMAN key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeRoman">
+            <summary>
+            The DBE_ROMAN key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.DbeSbcsChar">
+            <summary>
+            The DBE_SBCSCHAR key. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.ImeAwareAutoComplete.InputKeys.System">
+            <summary>
+            A special key masking the real key being processed as a system key.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.CommonResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.CommonResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.CommonResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.InputKeyInterop">
+            <summary>
+            Provides static methods to convert between Win32 Virtual-Keys and the <see cref="T:Microsoft.International.ImeAwareAutoComplete.InputKeys"/> enumeration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.InputKeyInterop.KeyFromVirtualKey(System.Int32)">
+            <summary>
+            Converts a Win32 Virtual-Key into an InputKeys.
+            </summary>
+            <param name="virtualKey">The virtual key to convert.</param>
+            <returns>The InputKeys object.</returns>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.InputKeyInterop.VirtualKeyFromKey(Microsoft.International.ImeAwareAutoComplete.InputKeys)">
+            <summary>
+            Converts an InputKeys into a Win32 Virtual-Key.
+            </summary>
+            <param name="key">The key to convert.</param>
+            <returns>The Win32 Virtual-Key.</returns>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase">
+            <summary>
+            Implements the basic functionality required by <see cref="T:Microsoft.International.ImeAwareAutoComplete.WinForm.ChineseImeAwareAutoCompleteListener"/> class in WinForm or <see cref="T:Microsoft.International.ImeAwareAutoComplete.Wpf.ChineseImeAwareAutoCompleteListener"/> class in Wpf.
+            </summary>
+        </member>
+      <member name="M:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase.#ctor">
+        <summary>
+          Initializes a new instance of the <see cref="T:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase"/> class.
+        </summary>
+      </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase.Initialize">
+            <summary>
+            Initializes this instance. This method <b>MUST</b> be called in derived classes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase.OnIsEnabledChanged">
+            <summary>
+            Raise the <see cref="E:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase.IsEnabledChanged"/> event.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase.ContextManager">
+            <summary>
+            Gets or sets the context manager.
+            </summary>
+            <value>The context manager.</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase.IsEnabled">
+            <summary>
+            Gets or sets a value indicating whether Ime-Aware AutoComplete feature is enabled.
+            </summary>
+            <value>
+            	<c>true</c> if this feature is enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="E:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase.IsEnabledChanged">
+            <summary>
+            Occurs when <see cref="P:Microsoft.International.ImeAwareAutoComplete.ChineseImeAwareAutoCompleteListenerBase.IsEnabled"/> property value changes.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.ContextManager">
+            <summary>
+            Manage candidiate source.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.ContextManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.International.ImeAwareAutoComplete.ContextManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.ContextManager.#ctor(System.Boolean,System.Collections.Generic.IComparer{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.International.ImeAwareAutoComplete.ContextManager"/> class with specified comparer.
+            </summary>
+            <param name="isSorted"><c>true</c>, the candidates will be sorted by specified comparer; otherwise, <c>false</c>. </param>
+            <param name="comparer">The comparer that is used to sort candidates.</param>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.ContextManager.MatchPrefix(System.String)">
+            <summary>
+            Gets a collection of candidates that match the specified prefix.
+            </summary>
+            <param name="prefix">The prefix string.</param>
+            <returns>The collection of candidates from candidate source. It's sorted by specified comparer if <see cref="P:Microsoft.International.ImeAwareAutoComplete.ContextManager.IsSorted"/> is <c>true</c>.</returns>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.ContextManager.ClearAllItems">
+            <summary>
+            Clears all items from the candidates source.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.ContextManager.AddItem(System.String)">
+            <summary>
+            Adds this item to the candidate source.
+            </summary>
+            <param name="item">The item to be added.</param>
+            <returns>true if item is successfully added; otherwise, false. This method also returns false if there is a duplicate.</returns>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.ContextManager.RemoveItem(System.String)">
+            <summary>
+            Removes this item from the candidate source.
+            </summary>
+            <param name="item">The item to be removed.</param>
+            <returns>true if item is successfully removed; otherwise, false. This method also returns false if the item is not found.</returns>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.ContextManager.SourceCandidates">
+            <summary>
+            Gets the collection containing all candidates.
+            </summary>
+            <value>Collection of all candidates.</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.ContextManager.CurrentCandidates">
+            <summary>
+              Gets the collection containing current candidates filtered by <see cref="M:Microsoft.International.ImeAwareAutoComplete.ContextManager.MatchPrefix(System.String)">MatchPrefix</see>.
+            </summary>
+            <value>Collection of current candidates.</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.ContextManager.IsSorted">
+            <summary>
+            Gets or sets a value indicating whether this candidate list is sorted. Ususally used for filter logic.
+            </summary>
+            <value><c>true</c> if this candidate list is sorted; otherwise, <c>false</c>.The default value is false.</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.ContextManager.Comparer">
+            <summary>
+            Gets or sets the comparer used to sort candidates.
+            </summary>
+            <value>The comparer. The default value is a default comparer.</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.ContextManager.ItemCount">
+            <summary>
+            Gets the number of items in the candidate source.
+            </summary>
+            <value>The number of items in the candidate source.</value>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.InputKeyConverter">
+            <summary>
+            Converts an <see cref="T:Microsoft.International.ImeAwareAutoComplete.InputKeyConverter"/> object from string.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.InputKeyConverter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.International.ImeAwareAutoComplete.InputKeyConverter"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.InputKeyConverter.ConvertFromString(System.String)">
+            <summary>
+            Converts the specified text to an <see cref="T:Microsoft.International.ImeAwareAutoComplete.InputKeys"/> object.
+            </summary>
+            <param name="text">The text representation of the object to convert.</param>
+            <returns>An InputKeys object that represents the converted text.</returns>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs">
+            <summary>
+            Provides data for <see cref="E:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.ImeKeyDown" /> event in WinForm or <see cref="E:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeListener.ImeKeyDown" /> event in Wpf.
+          </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs.#ctor(Microsoft.International.ImeAwareAutoComplete.InputKeys)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs"/> class.
+            </summary>
+            <param name="key">The key.</param>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs.#ctor(Microsoft.International.ImeAwareAutoComplete.InputKeys,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs"/> class.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="isImeKey">A value indicating whether the key is from Ime.</param>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs.Key">
+            <summary>
+              Gets the key for <see cref="E:Microsoft.International.ImeAwareAutoComplete.WinForm.ImeListener.ImeKeyDown" /> event in WinForm or <see cref="E:Microsoft.International.ImeAwareAutoComplete.Wpf.ImeListener.ImeKeyDown" /> event in Wpf.
+            </summary>
+            <value>The key.</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs.Handled">
+            <summary>
+            Gets a value indicating whether this <see cref="T:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs"/> is handled.
+            </summary>
+            <value><c>true</c> if handled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.InputKeyEventArgs.IsImeKey">
+            <summary>
+            Gets or sets a value indicating whether the key is from Ime.
+            </summary>
+            <value>
+            	<c>true</c> if the key is from Ime; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Microsoft.International.ImeAwareAutoComplete.InputEventArgs">
+            <summary>
+            Provides data from ImeKeyDown event.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.InputEventArgs.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.International.ImeAwareAutoComplete.InputEventArgs"/> class.
+            </summary>
+            <param name="text">The text.</param>
+        </member>
+        <member name="M:Microsoft.International.ImeAwareAutoComplete.InputEventArgs.#ctor(System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.International.ImeAwareAutoComplete.InputEventArgs"/> class.
+            </summary>
+            <param name="leftText">The left text.</param>
+            <param name="compText">The comp text.</param>
+            <param name="rightText">The right text.</param>
+            <param name="isFromIme">A value indicating whether the key is from Ime.</param>
+            <param name="isContinuous">A value indicating whether it's a continuous input key together with the previous one.</param>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.InputEventArgs.LeftText">
+            <summary>
+            Gets or sets the left text.
+            </summary>
+            <value>The left text.</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.InputEventArgs.CompositionText">
+            <summary>
+            Gets or sets the composition text.
+            </summary>
+            <value>The composition text.</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.InputEventArgs.RightText">
+            <summary>
+            Gets or sets the right text.
+            </summary>
+            <value>The right text.</value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.InputEventArgs.IsFromIme">
+            <summary>
+            Gets or sets a value indicating whether this event is from Ime.
+            </summary>
+            <value>
+            	<c>true</c> if this event is from Ime; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Microsoft.International.ImeAwareAutoComplete.InputEventArgs.IsContinuous">
+            <summary>
+            Gets or sets a value indicating whether this intput is continuous.
+            </summary>
+            <value>
+            	<c>true</c> if this intput is continuous; otherwise, <c>false</c>.
+            </value>
+        </member>
+    </members>
+</doc>

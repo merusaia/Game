@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KoreanInputCommon</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.International.Windows.CommonResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Windows.CommonResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Windows.CommonResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.Windows.AssemblyResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Windows.AssemblyResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Windows.AssemblyResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.Windows.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Windows.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.International.Windows.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.International.Windows.IKoreanAutoCompleteCandidateSource">
+            <summary>
+             Provides a method to get a list of string as the source for matching candidates.
+            </summary>
+        </member>
+        <member name="M:Microsoft.International.Windows.IKoreanAutoCompleteCandidateSource.GetCandidateSource">
+            <summary>
+            Gets a list of string as the source for matching candidates.
+            </summary>
+            <returns>
+            A list of string.
+            </returns>
+        </member>
+        <member name="T:Microsoft.International.Windows.SupportType">
+            <summary>
+            Autocomplete support type of KoreanAutoCompletionComboBox.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.Windows.SupportType.NoSupport">
+            <summary>
+            Supports no autocomplete feature.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.Windows.SupportType.IntelliSense">
+            <summary>
+            Supports displaying matched candidate list when input character or sequence of characters.
+            </summary>
+        </member>
+        <member name="F:Microsoft.International.Windows.SupportType.AutoCompletion">
+            <summary>
+            Supports displaying best matched string when input character or sequence of characters.
+            </summary>
+        </member>
+    </members>
+</doc>
