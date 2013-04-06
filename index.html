@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Game : ゲーム創作ライブラリ等（Ｃ＃。大部分が著作権フリーなので、ご自由にお使いください）" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Game</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/merusaia/Game">View on GitHub</a>
+
+          <h1 id="project_title">Game</h1>
+          <h2 id="project_tagline">ゲーム創作ライブラリ等（Ｃ＃。大部分が著作権フリーなので、ご自由にお使いください）</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/merusaia/Game/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/merusaia/Game/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1></h1>
+
+<p>■ソースコードなど最新版のダウンロード
+※gitからダウンロードする場合、から
+$ git pull <a href="https://github.com/merusaia/Game">https://github.com/merusaia/Game</a>
+とするか、他のGitHubなど他のやり方で取得してください。</p>
+
+<p>※DropBoxからダウンロードする場合、下記ＵＲＬの「minRPG_みんつくプロジェクト」ディレクトリ（フォルダ）から、
+<a href="https://www.dropbox.com/sh/t52la8g6yt5c6s4/I5gg5xG9lf/minRPG_%E3%81%BF%E3%82%93%E3%81%A4%E3%81%8F%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88">https://www.dropbox.com/sh/t52la8g6yt5c6s4/I5gg5xG9lf/minRPG_%E3%81%BF%E3%82%93%E3%81%A4%E3%81%8F%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88</a>
+    画面右上にある青色のボタン「ダウンロード」 → 「zipファイルとしてダウンロード」を選んでください。</p>
+
+<h1></h1>
+
+<p>【ソ フ ト名】　　皆で創るRPG ダイスバトル
+【ファイル名】　　Game.exeを実行（ダブルクリック）
+【代　表　者】　　メルサイア  <a href="https://twitter.com/merusaia">https://twitter.com/merusaia</a>
+【動作  環境】　　WindowsXP SP2以上、Vista、7</p>
+
+<h1>　　　　　　　（.NET Framework2.0以上がインストールされたパソコン）</h1>
+
+<p>【はじめに】
+皆で創るゲーム（みんつく）第３弾、「ダイスバトル」をダウンロードしてもらい、ありがとうございます。</p>
+
+<p>私が子どもの頃流行った、ドラクエバトル鉛筆をもじった、ちょっとした簡易戦闘ゲームを作ってみました＾＾。
+現在の試作ゲームは、ランダムコマンドで敵を倒してレベルをあげていくだけの簡単なゲームですが、
+これをたたき台として、ストーリー、キャラカスタマイズ、技カスタマイズ、twitter連携などを模索しています。
+少しでも遊んでもらい、今後の可能性を温かく見守っていただければ…幸いです。</p>
+
+<p>【ダイスバトルって？】
+ドラクエなどに代表される、ターン制バトルです。
+味方のターンになったら、そのターンの行動（コマンド）を決めます。
+キャラのターンが回ってきたら、ダイスを止めて行動（ダイスコマンド）を選択します。
+ダイスコマンドは、完全ランダムで、ランダムで決める自動戦闘モードと、自分で決めるマニュアル戦闘モードがあります。
+（ゲーム上部メニューの「設定」で変更できます）。</p>
+
+<p>ダイスバトルの特徴、普通のRPGと違うのは、それぞれの行動に、様々な確率要素がある（ダイスの目がちりばめられている）という点です。
+具体的には、選んだ行動により、そのターンの攻撃力、クリティカル率はもちろんのこと、
+次のターンが来るまでの防御力、回避率、ガード率、反撃率などが変わってきます。
+また、同じ行動ばかりを使っていると、一定ターン経過しないと再度使用できなくなります。
+さらに、奇跡の一撃／まぐれの一撃、攻撃無効化、かすり、回避返し、ガードインパクトなど、
+その他の運だめし要素も豊富に用意してあります。</p>
+
+<p>【使用方法】
+「MyGame.exe」を実行（ダブルクリックなど）してください。
+（プログラムソースをダウンロードした人は、この（ディレクトリ）フォルダ\bin\Release\MyGame.exe）</p>
+
+<p>【操作方法】
+基本的に、キーボードの「十字」キーと「Enter」または「Z」キー、もしくは、マウスで操作します。</p>
+
+<p>・選択:      マウスで「項目を選択クリック」、            または、キーボードの「十字（←↑→↓）」キー
+・決定:      マウスの「項目を選択後、もう一度クリック」 または、キーボードの「Enter」または「Z」キー</p>
+
+<p>【ゲームの流れ】
+現段階では、テストゲームが遊べます。
+初めに、主人公として、新しく自分でキャラを作るか、これまでテストプレイヤーが作ったキャラを使うか聞かれます。
+「マウスで選択」と「クリック」（選択してから再度クリックで決定）で進めてください。
+あとは、適当に進めて遊んでください。</p>
+
+<p>【おまけ】
+・自分の好きなBGMで遊ぶ
+    → MyGame.exeと同じディレクトリにある「データベース」にmp3ファイルを置くと、
+        その曲が戦闘中にランダム再生されます♪</p>
+
+<p>【裏技】
+○ゲームスピード変更　（スピードが遅いと感じたら…）
+    「s」キーでスピードUP／「d」キーでスピードDOWNを押しまくると、だんだん早く／遅くなります＾＾。</p>
+
+<p>○決定ボタン自動押し
+    「A」＋「1」キーで、一定時間（標準スピードで1秒）毎に自動的にEnterキーが押されます。
+    解除は、「A」＋「2」ボタンの同時押し。
+        何も押してなかったら、1秒間後に自動的にEnterキーが押されるしくみですので、
+        1秒以内にキーを押せば、ちゃんと自分で選択もできます。（ゲストキャラ／プレイヤーキャラとも戦えます。）
+・・・退出時のLV上げ、眺めながらの観戦にどうぞ＾＿＾。</p>
+
+<p>【留意点】
+・このゲームはまだテスト段階のため、たくさんのバグがあること、どうかご留意ください。</p>
+
+<p>・現段階では、たまに「×」ボタンをクリックするとエラーメッセージが３回ほど出ることがありますが、
+これはバグが取りきれてない仕様です。三回ともＯＫか×ボタンを押して閉じてください。
+（…何回やってもなんかいやっても、バグが倒せ、、取れないんです…ごめんなさいorz。）</p>
+
+<p>・他にもたくさんバグがあると思いますが、なにとぞ温かく見守ってやってください。</p>
+
+<p>【ゲーム中の用語説明】
+●色パラメータ
+キャラの個性を色で表現する、「皆で創るRPG」共通のパラメータ表現方法です。
+虹色の６色（赤、橙、黄、緑、青、紫）を基本にしています（基本6色パラメータと呼びます）。
+色パラメータを使って、
+例えば、ダイスバトルでは、
+基本6色パラメータを、RPGなどでよくある身体パラメータに、以下の式により、
+６種類の身体パラメータ（ちから、体力、器用さ、素早さ、精神力、魔力）に置き換えて、戦闘に使用しています。</p>
+
+<p>●キャラクタークリエーション（キャラクリ）
+ユーザが独自の発想力を生かして、新しくキャラクターを作れるシステムのことを指します。
+現段階では、色パラメータの振り分け、性別・メイン武器・ひとことセリフなどを編集する機能位しかありませんが、
+将来的には、キャラ画像の生成、ボイスなども追加する予定です。
+なお、キャラクターには、一定のボーナス値を振り分けることができます（ウルティマなどを参考）。
+それ以外の色パラメータは、自動で振り分けられますが、ウルティマと違って、元の数値を下回らせることも可能です。
+自分だけのオリジナルなキャラを作成する楽しさを、少しでも多くの人に知ってもらえれば、幸いです。</p>
+
+<p>※キャラ名の公表について
+現段階では、新しく作成したキャラは、オフラインで使用されるだけです。（いずれ、オンラインに対応する予定です）
+ですので、人目を気にせず、好きな名前を付けてＯＫです。
+また、ユーザID、パスワードは空白でもかまいません。（今は使ってないです）
+後ほどネット対戦可能にする際には、過去オフラインで作ったキャラをネット上に公開するかを、
+いつでも編集可能ににする予定です。</p>
+
+<p>●キャラの種類（亡霊キャラ、ゲストキャラ、プレイヤーキャラ）
+亡霊キャラとは、主人公キャラにパラメータ合計値がとても近いので、戦いやすい相手になっています。総勢３０名位います。
+ゲストキャラとは、開発者のスタッフが作ったキャラです。ストーリー登場予定のキャラや、神々など。総勢３００名位います。
+プレイヤーキャラとは、今まで遊んでくれたテストユーザやあなたが作成したキャラです。あなたが作ったキャラの数だけ増えていきます。</p>
+
+<p>・戦闘後のＬＶ
+勝ったらレベルが上がり、
+リベンジしたらレベルがもっと上がり、
+諦めたらレベルが下がります＾＾；（ユーザによるＬＶ調整を可能にするためです）。
+次のステージに進むと、
+なお、新しくキャラは、ゲーム終了時に保存するか聞かれ、保存すると次回からは「強くてニューゲーム」が選択できます。
+（現段階では「\データベース\プレイヤーデータ.csv」に、作成したキャラのデータやＬＶが記録されます。
+　なお、ゲストキャラでゲームを進めた場合も、プレイヤーデータとして記録されますが、同じ名前では保存できません。
+　キャラ名をオリジナルと少し変えて保存してください。）</p>
+
+<p>【免責事項】
+このプログラムを使用したことにより、何らかの損害が生じても、作者は責任を負えません。ごめんなさい。
+ただし、「ゲームがうまく動かない」、「ストレスが溜まる」、「もっと○○だったらいいのに…」など
+精神的な苦情や要望であれば、多少の責任は負いますし、何か力になれるかもしれません。
+もしよろしければ、ゲーム中のご意見BOX（只今実装中）や、ツイッター、メールなどでご相談ください。
+その他、感想・バグ報告・要望・改善案・提案など、お気づきの点があれば、
+私はメルサイアのツイッター（<a href="https://twitter.com/merusaia%EF%BC%89%E3%82%84%E3%83%A1%E3%83%BC%E3%83%AB%EF%BC%88tetsugaku85@gmail.com%EF%BC%89%E3%81%AA%E3%81%A9%E3%81%AB%E3%81%8A%E9%A1%98%E3%81%84%E3%81%97%E3%81%BE%E3%81%99%E3%80%82">https://twitter.com/merusaia）やメール（tetsugaku85@gmail.com）などにお願いします。</a></p>
+
+<p>【開発スタッフ】
+プログラム等全般：　      メルサイア 
+ゲストキャラクリエーター：　SPLECT
+サウンドクリエーター　：　 Sharu</p>
+
+<p>【著作権フリーについて】
+皆で創るRPGのプログラムソース（「プログラム」ディレクトリ（フォルダ）に入っているもの）は、
+著作権フリー（パブリックドメイン）です。
+メルサイアやＳＰＬＥＣＴが作ったものは、プログラム、キャラクタデータベース、その他全てのアイディアなど
+全て著作権ごと放棄しますので、ご自由に改変・転用・商業利用などしていただいて結構です。使用報告も、どちらでも構いません。
+作者は、将来、全てのゲーム開発環境や素材を著作権フリーで使えるような、
+「皆で創るゲーム」のプラットフォームを世に提供したいと夢みています。
+ゲームを作りたいと願う、あなたの助けになれば幸いです。</p>
+
+<p>【その他の著作権について】
+ただ、その他のクリエータさんが作った素材（「\データベース内の」音楽、画像など）は、
+クリエータさんが苦労して作った素材であり、クリエーターさん個人の意志も尊重しなければなりません。
+ですので、これらの素材の無断での改変、転載等はご遠慮いただけるようお願いします。
+使用したい方は、私メルサイアか、個々のクリエータさんに許可を取ってください。</p>
+
+<p>■音楽・効果音
+・メインサウンドクリエーター（ゲーム中で流れるメインの音楽・効果音）
+    制作者：Sharu（HIDE）様　<a href="http://hazymoon.a.la9.jp/%E3%80%80twitter:">http://hazymoon.a.la9.jp/　twitter:</a> <a href="https://twitter.com/Hazy_Moon_Sharu">https://twitter.com/Hazy_Moon_Sharu</a>
+    ライセンス情報等：楽曲使用の際は、本人に直接連絡 （上記HPのBBS、またはツイッターにて）
+        ※ゲーム創作仲間の一人であり、メルサイアの小学校時代からの親友です。素晴らしいゲーム音楽を多数作曲しています。
+        彼の曲をゲームで使いたいと申請すれば、快く承諾してくれるでしょう（たぶん）。</p>
+
+<p>■画像
+・HOT TOKE （モンスターの画像）　（ゲーム内ではまだ使用していません）
+    製作者：野プリン様（<a href="mailto:yebuding@hotmail.com">yebuding@hotmail.com</a>） サイト閉鎖　移行先ブログ <a href="http://wildpd.blog76.fc2.com/">http://wildpd.blog76.fc2.com/</a>
+    ライセンス情報等：　製作者名を明記し、二次配布をしなければ、自由に使用できます。
+        ※2013年現在、サイトは閉鎖されています。HOT TOKE時代の素材については再配布の予定はないそうです。参考URL　<a href="http://nurseryweb.net/kouryu/link/sozai.htm">http://nurseryweb.net/kouryu/link/sozai.htm</a></p>
+
+<p>■プログラム
+・YaneSDKライブラリ（.NET用のマルチプラットフォームなゲーム開発ライブラリ。プロジェクト参照名：Yanesdk）
+    製作者：やねうらお様、他 <a href="http://yanesdkdotnet.sourceforge.jp/">http://yanesdkdotnet.sourceforge.jp/</a>
+    動作環境：.NET Framework2.0以上
+    ライセンス情報等：GNU LGPL/GPL、BSD License。
+        プログラムに組み込む場合の連絡は不要ですが、実行ファイルにソースコードを送付する必要があります。
+        （つまり「ソースコードは、みんなのおかげで発展してきたので、みんなで使えるよう、ソースを積極的に公開しようよ」という意味です。）
+　     なお、やねうらお様は、
+　         「Yanesdk.NETのうち、やねうらおが書いた部分に関しては、うるさいことは一切言いませんので
+            改変等は自由にしていただいて、商用利用でも何でもしていただいて構いません。」
+        とあります。詳しくはここを参照してください。　<a href="http://yanesdkdotnet.sourceforge.jp/wiki/index.php?Yanesdk.NET%E3%81%AE%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9">http://yanesdkdotnet.sourceforge.jp/wiki/index.php?Yanesdk.NET%E3%81%AE%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9</a></p>
+
+<p>・簡単WAVE録音再生DLL（プロジェクト参照名：WaveIO2_ClassLibrary2.dll、ClassLibrarySub3.dll）
+    制作者：mikeo410様(<a href="mailto:mikeo_410@hotmail.com">mikeo_410@hotmail.com</a>) <a href="http://mikeo410.lv9.org/lumadcms/%7EPCMDLLWaveIO2DLL">http://mikeo410.lv9.org/lumadcms/~PCMDLLWaveIO2DLL</a>
+    動作環境：.NET Framework2.0以上
+    ライセンス情報等：特に指定はありません（公開時はdllだけを配布するようにと連絡をいただいています。）</p>
+
+<p>・Twitterizer2（.NET用ツイッターAPIラッパーライブラリ。プロジェクト参照名：Twitterizer2）
+    制作者：digitallyborn様(<a href="mailto:ricky@digitally-born.com">ricky@digitally-born.com</a>), Copyright 2012 Patrick "Ricky" Smith, Twitterizer Group <a href="http://www.twitterizer.net/">http://www.twitterizer.net/</a>
+    動作環境：.NET Framework4.0以上（※注意:ここだけ、4.0以上。.NET Framework2.0や、.NET Framework4.0 Client Profileでもダメです）
+    ライセンス情報等：著作情報さえ表示すれば無償・商用問わず利用可とあります　<a href="http://www.twitterizer.net/license/">http://www.twitterizer.net/license/</a>
+        ※使い方の参考URL：Twitterizer2の使い方（日本語） <a href="http://mimumimu.net/blog/2011/11/23/twitterizer-%E3%81%A7-userstream-%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B%E3%80%82/">http://mimumimu.net/blog/2011/11/23/twitterizer-%E3%81%A7-userstream-%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B%E3%80%82/</a></p>
+
+<p>【募集・PR】
+「自分が創ったキャラ・モンスター・特技・音楽・シナリオもゲームに使って欲しい！」という方は、
+「\データベース」フォルダの中の「キャラクタデータベース_プレイヤー.csv」とその他関連素材を、
+ <a href="mailto:tetsugaku85@gmail.com">tetsugaku85@gmail.com</a> 　もしくは　スカイプID: merusaia
+までファイルを添付して送ってください。
+将来的なお約束でよろしければ、全て採用させていただけます＾＾。
+なお、一緒にゲームを創ってくれるクリエイターの方もも大募集中！
+特に.NETプログラミングが好きな方や、ネットワークに詳しいエンジニアの方、
+キャライメージ画像を描いてくれる絵師さん、ボイスなどを作ってくれる声優さんなどを募集しています。
+興味がある方は一度ご連絡ください。</p>
+
+<p>【今後の予定】
+・ネット対戦可能に
+・RumTumさんの方眼紙マッピングを用いたマップの作成、戦闘システムとの統合　<a href="http://tyaya.net/graph-paper/">http://tyaya.net/graph-paper/</a>
+・twitter連動
+・プレイヤーが即席声優さんになれる（ゲームをしながらボイス録音できる）機能の実現
+・Webゲーム化
+・PSMStudioによるPlayStationVita版ゲームとして開発 
+・etc...</p>
+
+<p>【作者情報・お問い合わせ】：　メルサイア（中塚　哲博）
+ツイッター(<a href="https://github.com/merusaia" class="user-mention">@merusaia</a>)：               <a href="https://twitter.com/merusaia">https://twitter.com/merusaia</a>
+スカイプID：                       merusaia
+メール：                            <a href="mailto:tetsugaku85@gmail.com">tetsugaku85@gmail.com</a>
+個人HP（その他連絡先を含む）：        <a href="http://merusaia.higoyomi.com">http://merusaia.higoyomi.com</a></p>
+
+<h1>(CopyLEFT)2013 merusaia All Right released.（著作権フリー。複製・改変・宣伝・無断配布・商用使用などはご自由に）</h1>
+
+<h3>Welcome to GitHub Pages.</h3>
+
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+
+<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
+
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+
+<h3>Designer Templates</h3>
+
+<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+
+<h3>Rather Drive Stick?</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Game maintained by <a href="https://github.com/merusaia">merusaia</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
